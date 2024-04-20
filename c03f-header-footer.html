@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header & Footer</title>
+    <link rel="stylesheet" href="./assets/css/c03f-header-footer.css">
+  </head>
+  <body>
+    <!-- header.c03f-header>h2{Header}^main>h2{Contenido}^footer.c03f-footer>h2{Footer} -->
+    <header class="c03f-header c03f-titulares noprint">
+      <!-- .c03f-logo{Logo}+nav.c03f-menu>ul>li*4>a[href="#"]{Sección $} -->
+      <div class="c03f-logo">Logo</div>
+      <nav class="c03f-menu">
+        <ul>
+          <li><a href="#t01-hero-img">Hero Img</a></li>
+          <li><a href="#t02-maquetacion-zigzag">Maquetación zigzag</a></li>
+          <li><a href="#t03-responsive-design">Responsive Design</a></li>
+          <li><a href="#t04-code-header">Code header</a></li>
+          <li><a href="Cap03_flex.html">Cap03-flex</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- main>article.c03f-hero-image>h3{Flexbox is fuckin' COOL} -->
+      <article class="c03f-hero-image" id="t01-hero-img">
+        <div>
+          <p>Hero Image</p>
+          <p class="p-code">main>article.c03f-hero-image>h3{Hero Image}</p>
+          <div class="c03f-flex-responsive-subtxt">
+            <div class="c03f-flex-responsive-text">
+              <pre><code>
+    /* Existe solo una main por documento html */
+    main {
+      flex-grow: 1;
+    }
+    .c03f-hero-image {
+      min-height: 100vh;
+      min-width: 100vw;
+      background-image: url("https://placeimg.com/1280/720/animals");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+    }
+    .c03f-hero-image > div {
+      background-color: rgba(0, 0, 0, 0.75);
+      min-height: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+              </code></pre>
+            </div>
+            <div class="c03f-flex-responsive-text">
+              <pre><code>
+    .c03f-hero-image div>p:nth-child(1) {
+      font-size: 5vw;
+      font-weight: bolder;
+    }
+    .c03f-hero-image div>p:nth-child(2) {
+      font-size: 1.5vw;
+      font-weight: bolder;
+      padding: 0.3rem 0;
+    }
+    .c03f-hero-image div>p:nth-child(3) {
+      font-size: 1.2vw;
+      padding: 0.3rem 0;
+    }
+              </code></pre>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- (section.c03f-container.c03f-flex-row-reverse>article.c03f-flex-item>h2{Titulo $}+p{Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit, reprehenderit officiis. Labore ut autem consectetur omnis impedit! Explicabo assumenda, ab sit repellat labore laborum ut! Rerum ab dolorem quasi inventore!}^article.c03f-flex-item>img[src="https://placeimg.com/400/400/people"])*2 -->
+      <section class="c03f-container c03f-flex-row-reverse" id="t02-maquetacion-zigzag">
+        <article class="c03f-flex-item">
+          <h2>Maquetación en zigzag tipo card</h2>
+          <p class="p-code-div">
+            section.c03f-container.c03f-flex-row-reverse>article.c03f-flex-item>h2{Maquetación en zigzag tipo card}+p{Contenido de texto modificable}^article.c03f-flex-item>img[src="https://placeimg.com/400/400/people"]
+          </p>
+          <pre class="pre-code-css"><code>
+    @media screen and (min-width: 1024px) {
+      .c03f-container {
+        display: flex;
+        align-items: center;
+      }
+      .c03f-flex-item {
+        flex: 0 0 50%;
+      }
+      .c03f-flex-order-1 {
+        order: 1;
+      }
+      .c03f-flex-row-reverse {
+        flex-direction: row-reverse;
+      }
+    }
+          </code></pre>
+        </article>
+        <article class="c03f-flex-item">
+          <img src="https://placeimg.com/400/400/people" alt="" />
+        </article>
+      </section>
+      <section class="c03f-container">
+        <article class="c03f-flex-item">
+          <h2>Continuando con la maquetación</h2>
+          <p class="p-code-div">
+            section.c03f-container>article.c03f-flex-item>h2{Maquetación en zigzag tipo card}+p{Contenido de texto modificable}^article.c03f-flex-item>img[src="https://placeimg.com/400/400/tech"]
+          </p>
+          <pre class="pre-code-css"><code>
+    .c03f-flex-item {
+      padding: 0 3rem;
+    }
+    .c03f-flex-item h2 {
+      padding: 0.4rem 0;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: bolder;
+    }
+    .c03f-flex-item > p{
+      padding: 0.3rem 0;
+      font-size: 1.08rem;        
+    }
+    .p-code-div {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.05rem;
+    }
+    .pre-code-css {
+      font-size: 1.05rem;
+    }
+          </code></pre>
+        </article>
+        <article class="c03f-flex-item">
+          <img src="https://placeimg.com/400/400/tech" alt="" />
+        </article>
+      </section>
+      <section class="c03f-flex-responsive" id="t03-responsive-design">
+        <h2>Responsive Design sin necesidad de media querys con Flexbox</h2>
+        <div>
+          <p>
+            section.c03f-flex-responsive>article.c03f-flex-responsive-item*19{Item
+            Responsivo $}
+          </p>
+        </div>
+        <div class="c03f-flex-responsive-subtxt">
+          <div class="c03f-flex-responsive-text">
+            <p><pre><code>
+      @media screen and (min-width: 1024px) {
+        .c03f-flex-responsive-subtxt {
+          flex-direction: row;
+        }
+      }
+      .c03f-flex-responsive {
+        display: flex;
+        flex-flow: row wrap;
+      }
+      .c03f-flex-responsive h2 {
+        padding: 0.2rem 3rem;
+        width: 100%;
+      }
+      .c03f-flex-responsive div {
+        width: 100%;
+      }
+            </code></pre></p>
+          </div>
+          <div class="c03f-flex-responsive-text">
+            <p><pre><code>
+      .c03f-flex-responsive div p {
+        text-align: center;
+        font-weight: bold;
+        padding: 0.3rem 0;
+      }
+      .c03f-flex-responsive-item {
+        flex: 1 1 200px;
+        border: thin solid #eee;
+      }
+      .c03f-flex-responsive-subtxt {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-around;
+      }
+      .c03f-flex-responsive-text {
+        font-size: 1.3vw;
+        text-align: left;
+      }
+            </code></pre></p>
+          </div>
+        </div>
+
+        <article class="c03f-flex-responsive-item">Item Responsivo 1</article>
+        <article class="c03f-flex-responsive-item">Item Responsivo 2</article>
+        <article class="c03f-flex-responsive-item">Item Responsivo 3</article>
+        <article class="c03f-flex-responsive-item">Item Responsivo 4</article>
+        <article class="c03f-flex-responsive-item">Item Responsivo 5</article>
+        <article class="c03f-flex-responsive-item">Item Responsivo 6</article>
+        <article class="c03f-flex-responsive-item">Item Responsivo 7</article>
+        <article class="c03f-flex-responsive-item">Item Responsivo 8</article>
+        <article class="c03f-flex-responsive-item">Item Responsivo 9</article>
+        <article class="c03f-flex-responsive-item">Item Responsivo 10</article>
+        <article class="c03f-flex-responsive-item">Item Responsivo 11</article>
+        <article class="c03f-flex-responsive-item">Item Responsivo 12</article>
+        <article class="c03f-flex-responsive-item">Item Responsivo 13</article>
+        <article class="c03f-flex-responsive-item">Item Responsivo 14</article>
+        <article class="c03f-flex-responsive-item">Item Responsivo 15</article>
+        <article class="c03f-flex-responsive-item">Item Responsivo 16</article>
+        <article class="c03f-flex-responsive-item">Item Responsivo 17</article>
+        <article class="c03f-flex-responsive-item">Item Responsivo 18</article>
+        <article class="c03f-flex-responsive-item">Item Responsivo 19</article>
+      </section>
+      <br>
+      <hr>
+      <section class="c03f-flex-responsive" id="t04-code-header">
+        <h2>Código de header con nav menu</h2>
+        <div>
+          <p>
+            header.c03f-header.c03f-titulares>div.c03f-logo{Logo}+nav.c03f-menu>ul>li*4>a[href="#"]{Sección $}
+          </p>
+        </div>
+        <div class="c03f-flex-responsive-subtxt">
+          <div class="c03f-flex-responsive-text">
+            <p><pre><code>
+    @media screen and (min-width: 1024px) {
+      .c03f-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .c03f-menu ul {
+        display: flex;
+      }
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+            </code></pre></p>
+          </div>
+          <div class="c03f-flex-responsive-text">
+            <p><pre><code>
+    .c03f-titulares {
+      background-color: #222;
+      color: #eee;
+      padding: 1rem;
+    }
+    .c03f-menu ul {
+      list-style-type: none;
+    }
+    .c03f-menu ul li {
+      padding: 0.4rem 0.6rem;
+    }
+    .c03f-menu ul li a {
+      text-decoration: none;
+      color: #eee;
+    }
+    .c03f-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+            </code></pre></p>
+          </div>
+        </div>
+
+      </section>
+    </main>
+    <footer class="c03f-footer c03f-titulares">
+      <h2>Sticky Footer</h2>
+    </footer>
+  </body>
+</html>

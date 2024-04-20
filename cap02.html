@@ -1,0 +1,2183 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Máximo 165 caracteres -->
+    <meta name="description" content="Conceptos para iniciar en CSS"/>
+    <meta name="keywords" content="CSS3, ing-l2v2, l2v2-ing, conceptos, introduccion"/>
+    <!-- Entre 55 y 65 caracteres -->
+    <title>Reforzando con CSS</title>
+    <!-- Fuentes descargadas de google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;0,900;1,700&display=swap" rel="stylesheet">    
+    <!-- Fin de fuentes descargadas de google fonts -->
+    <!-- Iconos gestionados de google icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
+    <!-- Fin de Iconos gestionados de google icons -->
+    <!-- Fuentes descargadas de Bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <!-- Fin de Fuentes descargadas de Bootstrap icons-->
+    <!-- Fuentes descagadas de FontAwesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fuentes descagadas de FontAwesome icons -->    
+    <link rel="stylesheet" href="assets/css/cap02/normalize.css">
+    <link rel="stylesheet" href="assets/css/cap02/estilos.css" />
+    <link rel="stylesheet" href="assets/cap02.css" />
+    <!-- Parámetros para CEO -->
+    <link rel="canonical" href="https://tudomino.com/la-url-canonical" />
+    <link rel="icon" href="assets/img/animal-bird-domestic-svgrepo-com.svg" />
+    <link rel="apple-touch-icon" href="assets/img/animal-bird-domestic-svgrepo-com.svg" />
+    <meta name="theme-color" content="#F60" />
+    <meta property="og:title" content="Reforzando con CSS" />
+    <meta property="og:description" content="Conceptos para iniciar en CSS" />
+    <meta
+    property="og:image"
+    content="http://tudominio.com/img/nombre-imagen.png"
+    />
+    <meta property="og:url" content="http://tudominio.com/index.html" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@leonelvilla" />
+    <!-- Fin de parámetros para CEO -->
+  </head>
+  <body>
+    <article>
+      <h1>Reforzando con CSS</h1>
+      <h2 id="indice">Indice Temático Capítulo 2</h2>
+      <ul role="list" aria-details="Indice de temas">
+        <li role="listitem"><a href="#primer-punto">Primer tema</a></li>
+        <li role="listitem"><a href="#referencias">Referencias</a></li>
+        <li role="listitem"><a href="#selectores-basicos">Selectores básicos: Etiquetas, Identificadores y Clases</a></li>
+        <li role="listitem">
+          <a href="#selectores-avanzados">Selectores Avanzados</a>
+          <ul>
+            <li>
+              Selectores de hijos
+              <ul>
+                <li>Selectores de hijos directos</li>
+                <li>Selectores de hijos descendientes</li>
+              </ul>
+            </li>
+            <li>
+              Selectores de hermanos
+              <ul>
+                <li>Selectores de hermanos (General - Sucesores al selector)</li>
+                <li>Selectores de hermanos adyacentes, Sucesor inmediato</li>
+              </ul>
+            </li>
+            <li>Selectores de atributos</li>
+          </ul>
+        </li>
+        <li role="listitem"><a href="#pseudoclases">Pseudoclases</a></li>
+        <li role="listitem"><a href="#pseudo-elementos">Pseudo-Elementos</a></li>
+        <li role="listitem">
+          <a href="#algoritmo-css">El algoritmo CSS</a> 
+          <ol>
+            <li>La cascada</li>
+            <li>La especificidad</li>
+            <li>La herencia</li>
+          </ol>
+        </li>
+        <li role="listitem"><a href="#prefijos-navegadores">Prefijos de los Navegadores</a></li>
+        <li role="listitem">
+          <a href="#modelo-caja">Modelo de Caja</a>
+          <ul>
+            <li>Cajas de linea vs cajas de bloque</li>
+            <li>Propiedad display</li>
+            <li>Propiedad visibility</li>
+            <li>Propiedad overflow</li>
+            <li>Tamaño de caja</li>
+            <li>Colapso de margenes verticales</li>
+            <li>Adición de margenes horizontales</li>
+            <li>Centrado de cajas</li>
+          </ul>
+        </li>
+        <li role="listitem"><a href="#posicionamiento-css">Posicionamiento CSS</a></li>
+        <li role="listitem"><a href="#position-example">Cabecera fixed VS Cabecera sticky</a></li>
+        <li role="listitem"><a href="#colors">Colores</a></li>
+        <li role="listitem"><a href="#unidades-medida">Unidades de Medida en CSS</a></li>
+        <li role="listitem"><a href="#variables-funciones">Variables y Funciones en CSS</a></li>
+        <li role="listitem">
+          <a href="#estilos-tipografia">Estilos de Fuentes y Texto</a>
+          <ul>
+            <li>Estilos de fuentes tipográficas</li>
+            <li>Fuentes externas</li>
+            <li>Google Fonts</li>
+            <li>Estilos de texto</li>
+            <li>Tipográficos de iconos vectoriales</li>
+          </ul>
+        </li>
+        <li role="listitem">
+          <a href="#border-outlines">Border y Outlines</a>
+          <ul>
+            <li>Propiedad border-radius</li>
+            <li>Propiedad outline, borde paralelo</li>
+          </ul>
+        </li>
+        <li role="listitem">
+          <a href="#background-style">Estilos del Fondo</a>
+          <ul>
+            <li>Propiedad background-image</li>
+            <li>Propiedad background-size</li>
+            <li>Propiedad background-repeat</li>
+            <li>Propiedad background-position</li>
+            <li>Propiedad background-clip</li>
+            <li>Propiedad background-origin</li>
+            <li>Propiedad background-attachment</li>
+            <li>Propiedad background</li>
+            <li>Fondos multiples</li>
+          </ul>
+        </li>
+        <li role="listitem"><a href="#image-style">Estilos de imagenes</a></li>
+        <li role="listitem"><a href="#list-style">Estilos de listas</a></li>
+        <li role="listitem"><a href="#text-column">Texto en columnas</a></li>
+        <li role="listitem"><a href="#table-style">Estilos de tablas</a></li>
+        <li role="listitem"><a href="#form-style">Estilos de formularios</a></li>
+        <li role="listitem"><a href="#form-contact">Formulario de contacto con CSS</a></li>
+        <li role="listitem"><a href="cap03.html" target="_blank">Capítulo 3</a></li>
+        <li role="listitem"><a href="Cap03_flex.html" target="_blank">Capítulo 3 Flex</a></li>
+        <li role="listitem"><a href="Cap04.html" target="_blank">Capítulo 4 Grid</a></li>
+      </ul>
+      <hr />
+    </article>
+    <article id="referencias">
+      <h2>Referencias</h2>
+      <ul role="list">
+        <li tabindex="1" role="listitem">
+          <a
+          role="link"
+          aria-label="Hoja de estilos CSS en Wikipedia, lectura en español."
+          href="https://es.wikipedia.org/wiki/CSS"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          >
+          Hoja de estilos CSS en Wikipedia - Español
+          </a>
+        </li>
+        <li tabindex="2" role="listitem">
+          <a
+            role="link"
+            aria-label="W3 logo de HTML, lectura en ingles."
+            href="https://www.w3.org/html/logo/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            W3 Logo HTML - Ingles
+          </a>
+        </li>
+        <li tabindex="3" role="listitem">
+          <a
+            role="link"
+            aria-label="W3 hojaS de estilos CSS sitio oficial, lectura en ingles."
+            href="https://www.w3.org/standards/webdesign/htmlcss.html"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            W3C HTML - CSS, sitio oficial - ingles
+          </a>
+        </li>
+        <li tabindex="4" role="listitem">
+          <a
+            role="link"
+            aria-label="W3 hojaS de estilos CSS tutorial sitio oficial, lectura en ingles."
+            href="https://www.w3.org/TR/css-2023/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            W3C HTML - CSS, Tutorial - ingles
+          </a>
+        </li>
+        <li tabindex="5" role="listitem">
+          <a
+            role="link"
+            aria-label="W3 hojas de estilos CSS tutorial sitio oficial, lectura en ingles."
+            href="https://www.w3.org/TR/css-2023/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            W3C HTML - CSS, Tutorial - ingles
+          </a>
+        </li>
+        <li tabindex="6" role="listitem">
+          <a
+            role="link"
+            aria-label="CSS en MDN, Español."
+            href="https://developer.mozilla.org/es/docs/Web/CSS"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            CSS - MDN, Español
+          </a>
+        </li>
+        <li tabindex="7" role="listitem">
+          <a
+            role="link"
+            aria-label="CSS referencia rapida. Ingles"
+            href="https://cssreference.io/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            cssreference.io Referencia Rapida CSS, Ingles
+          </a>
+        </li>
+        <li tabindex="8" role="listitem">
+          <a
+            role="link"
+            aria-label="Can I use. Ingles"
+            href="https://caniuse.com/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Can I use, Ingles
+          </a>
+        </li>
+        <li tabindex="9" role="listitem">
+          <a
+            role="link"
+            aria-label="Code Guide. Ingles"
+            href="https://codeguide.co/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Code Guide by @mdo
+          </a>
+        </li>
+        <li tabindex="10" role="listitem">
+          <a
+            role="link"
+            aria-label="Pseudo-classes - CSS - MDN. Español"
+            href="https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            MDN - CSS - Pseudo-classes, Español
+          </a>
+        </li>
+        <li tabindex="11" role="listitem">
+          <a
+            role="link"
+            aria-label="Pseudo-elements - CSS - MDN. Español"
+            href="https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-elements"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            MDN - CSS - Pseudo-elements, Español
+          </a>
+        </li>
+        <li tabindex="12" role="listitem">
+          <a
+            role="link"
+            aria-label="Inheritance - web.dev, Español"
+            href="https://web.dev/learn/css/inheritance/#which-properties-are-inheritable"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Inheritance - web.dev, Español
+          </a>
+        </li>
+        <li tabindex="13" role="listitem">
+          <a
+            role="link"
+            aria-label="Reset CSS, Ingles"
+            href="https://meyerweb.com/eric/tools/css/reset/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Reset CSS, <strong>No recomendado</strong>, Ingles
+          </a>, ver Normalize CSS en el enlace siguiente.
+        </li>
+        <li tabindex="14" role="listitem">
+          <a
+            role="link"
+            aria-label="Normalizar CSS, Ingles"
+            href="https://necolas.github.io/normalize.css/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Normalize CSS, <strong>Recomendado</strong> reset y normaliza, Ingles
+          </a>
+        </li>
+        <li tabindex="15" role="listitem">
+          <a
+          role="link"
+          aria-label="Autoprefixer CSS, Ingles"
+          href="https://autoprefixer.github.io/"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          >
+            Autoprefixer CSS, Ingles
+          </a>
+        </li>
+        <li tabindex="16" role="listitem">
+          <a
+            role="link"
+            aria-label="MDN - Modelo de Caja, Español"
+            href="https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/The_box_model"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            MDN - Modelo de Caja, Español
+          </a>
+        </li>
+        <li tabindex="16" role="listitem">
+          <a
+            role="link"
+            aria-label="MDN - Declaracion de variables en CSS, Español"
+            href="https://developer.mozilla.org/es/docs/Web/CSS/Using_CSS_custom_properties"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            MDN - Declaración de variables en CSS, Español
+          </a>
+        </li>
+        <li tabindex="17" role="listitem">
+          <a
+            role="link"
+            aria-label="MDN - Tamaño de Caja, Paul Irish, Ingles"
+            href="https://www.paulirish.com/2012/box-sizing-border-box-ftw/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Tamaño de Caja, Paul Irish, Ingles
+          </a>
+        </li>
+        <li tabindex="18" role="listitem">
+          <a
+            role="link"
+            aria-label="960 Grid System, Ingles"
+            href="https://960.gs/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            960 Grid System, SOLO PARA HISTORIA, Ingles
+          </a>
+        </li>
+        <li tabindex="19" role="listitem">
+          <a
+            role="link"
+            aria-label="Colores en CSS - MDN, Español"
+            href="https://developer.mozilla.org/es/docs/Web/CSS/color_value"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Colores en CSS - MDN, Español
+          </a>
+        </li>
+        <li tabindex="20" role="listitem">
+          <a
+            role="link"
+            aria-label="Combinaciones de colores, Español"
+            href="https://www.canva.com/es_mx/aprende/100-combinaciones-colores-como-aplicarlas-disenos/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Combinaciones de colores, Español
+          </a>
+        </li>
+        <li tabindex="21" role="listitem">
+          <a
+            role="link"
+            aria-label="Combinaciones de colores muy bueno, Español"
+            href="https://www.renderforest.com/es/blog/website-color-schemes"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Combinaciones de colores muy bueno, Español
+          </a>
+        </li>
+        <li tabindex="22" role="listitem">
+          <a
+            role="link"
+            aria-label="Conociendo combinaciones de colores, Español"
+            href="https://www.palbin.com/es/blog/p1154-como-crear-una-combinacion-de-colores-para-paginas-web-profesionales.html"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Conociendo combinaciones de colores, Español
+          </a>
+        </li>
+        <li tabindex="23" role="listitem">
+          <a
+            role="link"
+            aria-label="Colores para una pagina web en 27 ejemplos, Español"
+            href="https://es.wix.com/blog/2019/11/paletas-de-colores-para-paginas-web/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Colores para una pagina web en 27 ejemplos, Español
+          </a>
+        </li>
+        <li tabindex="24" role="listitem">
+          <a
+            role="link"
+            aria-label="Códigos de colores HTML"
+            href="https://htmlcolorcodes.com/es/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Códigos de colores HTML, Español
+          </a>
+        </li>        
+        <li tabindex="25" role="listitem">
+          <a
+            role="link"
+            aria-label="Creacion de colores con Adobe"
+            href="https://color.adobe.com/es/create/color-wheel"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Adobe Color - Combinaciones de colores
+          </a>
+        </li>
+        <li tabindex="25" role="listitem">
+          <a
+            role="link"
+            aria-label="Creacion de paleta de hasta cinco colores"
+            href="https://coolors.co/a9cef4-36494e-000000-7ea0b7-597081"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Coolers - Creacion de paleta de hasta cinco colores
+          </a>
+        </li>
+        <li tabindex="25" role="listitem">
+          <a
+            role="link"
+            aria-label="Creacion de paleta de hasta cinco colores"
+            href="http://colormind.io/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Colormind - Creacion paleta de cinco colores
+          </a>, ofrece la posibilidad de subir una imagen para darte los valores de los cinco colores principales
+        </li>
+        
+        <li tabindex="25" role="listitem">
+          <a
+            role="link"
+            aria-label="The super fast color palettes generator, Ingles"
+            href="https://coolors.co/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            The super fast color palettes generator, Ingles
+          </a>
+        </li>
+        <li tabindex="26" role="listitem">
+          <a
+            role="link"
+            aria-label="Trending Color Palettes, Ingles"
+            href="https://coolors.co/palettes/trending"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Trending Color Palettes, Ingles
+          </a>
+        </li>
+        <li tabindex="27" role="listitem">
+          <a
+            role="link"
+            aria-label="PXtoEM.com: Conversiones entre unidades., Ingles"
+            href="http://pxtoem.com"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            PXtoEM.com: Conversiones entre unidades, Ingles
+          </a>
+        </li>
+        <li tabindex="28" role="listitem">
+          <a
+            role="link"
+            aria-label="Google fonts., Ingles"
+            href="https://fonts.google.com/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Google fonts, Ingles
+          </a>
+        </li>
+        <li tabindex="29" role="listitem">
+          <a
+            role="link"
+            aria-label="Google icons., Ingles"
+            href="https://fonts.google.com/icons"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Google icons, Ingles
+          </a>
+        </li>
+        <li tabindex="30" role="listitem">
+          <a
+            role="link"
+            aria-label="Bootstrap icons., Ingles"
+            href="https://icons.getbootstrap.com/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Bootstrap icons, Ingles
+          </a>
+        </li>
+        <li tabindex="31" role="listitem">
+          <a
+            role="link"
+            aria-label="FontAwesome , Ingles"
+            href="https://fontawesome.com/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            FontAwesome, Ingles
+          </a>
+        </li>
+        <li tabindex="32" role="listitem">
+          <a
+            role="link"
+            aria-label="CSN JS, Ingles"
+            href="https://cdnjs.com/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            CDN JS, Ingles
+          </a>
+        </li>
+        <li tabindex="33" role="listitem">
+          <a
+            role="link"
+            aria-label="Border radius MDN, Ingles"
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Border radius MDN, Ingles
+          </a>
+        </li>
+        <li tabindex="34" role="listitem">
+          <a
+            role="link"
+            aria-label="CSS Avanzado en youtube, yacklyon"
+            href="https://www.youtube.com/watch?v=JmSWdAl20bs&list=PLg9145ptuAihoxLk6_fPLz0zD4o1S92ev&index=2"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            CSS Avanzado en youtube, yacklyon
+          </a>
+        </li>
+      </ul>
+      <a href="#indice">👆</a>
+    </article>    
+    <hr />
+    
+    <article id="primer-punto">
+      <h2>Primer punto</h2>
+      <div>
+        <p><i>Cascading Style Sheets</i> - Hojas de estilos en cascada - CSS</p>
+        <p>Regla CSS consta de 2 partes <ol start="1" role="list">
+          <li>El selector (el mas basico es un elemento HTML, class, id, hermano, hijos)</li>
+          <li>Bloque de declaraciones, <strong>{atributo: valor;}</strong></li>
+        </ol> </p>
+        
+        <p>
+          Primer punto para generar una suavidad del desplazamiento de la pagina, el
+          css debe contener
+          <pre><code>
+            html {
+              scroll-behavior: smooth;
+            }
+          </code></pre>
+        </p>
+        <p>
+          Para invocar hojas de estilos se usa el comando html
+          <pre><code>
+            &lt;link rel="stylesheet" href="assets/estilos.css" /&gt;
+            &lt;link rel="stylesheet" href="assets/cap02.css" /&gt;
+          </code></pre>
+          Invocar a otra hoja desde una hoja de estilos css se ubica el código siguiente, pero es un comportamiento bloqueante y detiene hasta que se descargue toda la css importada
+          <pre><code>
+            @import url('cap02_2.css');
+          </code></pre>
+        </p>
+      </div>
+      <a href="#indice">👆</a>
+    </article>
+    <hr />    
+    <article id="selectores-basicos">
+      <h2>Selectores básicos: Etiquetas, Identificadores y Clases</h2>
+      <ul>
+        <li>
+          Etiquetas - son los elementos html
+        </li>
+        <li>
+          Identificadores - en html son los id, en css con #
+        </li>
+        <li>
+          Clases - en html son las class, en css es el .
+        </li>
+      </ul>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione qui perferendis laboriosam aliquam iste totam! Beatae laborum, porro ex, cumque, nulla reprehenderit soluta aperiam libero itaque exercitationem in error minus.
+      </p>
+      <p id = "parrafo-dos" class="text-20">
+        Dar estilos con id se considera un antipatron. <br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime incidunt possimus vel totam maiores, ab aperiam reiciendis architecto, et obcaecati ea! Facere accusantium in sint sunt tempora, modi assumenda optio.
+      </p>
+      <p class="text-32">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit eveniet unde delectus repudiandae debitis voluptatum mollitia aliquid dolore explicabo! Veritatis nisi, officia libero eveniet vel eos aut iure expedita et.
+      </p>
+      <a href="#indice">👆</a>
+    </article>
+    <hr />
+    <article id="selectores-avanzados">
+      <h2>Selectores Avanzados</h2>
+      <h3>Selectores de hijos</h3>
+      <h4>Selectores de hijos directos</h4>
+      <p>
+        Hijos directos se invocan con una &gt; entre el nombre de la clase y la etiqueta hijo : <br>
+        <strong>
+          .hijos-directos > li {
+            background-color: thistle;
+          }
+        </strong>
+      </p>
+      <ul class="hijos-directos">
+        <li><b>Primavera</b></li>
+        <li><b>Verano</b></li>
+        <li><b>Otoño</b></li>
+        <li><b>Invierno</b></li>
+      </ul>
+      <h4>Selectores de hijos descendientes</h4>
+      <p>
+        Hijos descendiente se invocan con un espacio entre el nombre de la clase y la etiqueta : <br>
+        <strong>
+          .hijos-descendientes b {
+            background-color: thistle;
+          }
+        </strong>
+      </p>
+      <ul class="hijos-descendientes">
+        <li><b>Primavera</b></li>
+        <li><b>Verano</b></li>
+        <li><b>Otoño</b></li>
+        <li><b>Invierno</b></li>
+      </ul>
+      <h3>Selectores de hermanos</h3>
+      <h4>Selector de hermanos (en General)</h4>
+      <p>
+        Selectores que estan en el mismo nivel del elemento de referencia pero todos a continuacion del elemento que tiene la class, se invocan con una ~ entre el nombre de la clase y la etiqueta: <br> <strong>.hermanos-general ~ li { background-color: thistle; }</strong> <br>, el elemento con la clase es Verano, seleccionara todos los hermanos excepto Verano.
+      </p>
+      <ul>
+        <li><b>Primavera</b></li>
+        <li class="hermanos-general"><b>Verano</b></li>
+        <li><b>Otoño</b></li>
+        <li><b>Invierno</b></li>
+      </ul>
+      <h4>Selector de hermanos (Adyacente)</h4>
+      <p>
+        Selectores que estan en el mismo nivel del elemento de referencia pero solo uno a continuacion del elemento que tiene la class, se invocan con un + entre el nombre de la clase y la etiqueta: <br> <strong>.hermanos-general + li { background-color: thistle; }</strong><br>, el elemento con la clase es Verano, seleccionara solo el hermano adyacente siguiente.
+      </p>
+      <ul>
+        <li><b>Primavera</b></li>
+        <li class="hermanos-adyacentes"><b>Verano</b></li>
+        <li><b>Otoño</b></li>
+        <li><b>Invierno</b></li>
+      </ul>
+      <h3>Selectores de Atributos</h3>
+      <p>
+        Selector para los elementos contenidos que cumplen condicion de un atributo, hasta por un valor atributo, parte del contenedor especificado por la clase <br><strong>.selectores-atributos a[href] { color: orangered; }</strong> <br> <strong>.selectores-atributos a[target = "_blank"] {   font-weight: bold; }</strong><br>
+        Se puede usar el caracter comodin * para coincidencias que contenga el texto en alguna parte del atributo <br>
+        <strong>.selectores-atributos a[href *= "indice"] { font-size: 24px; background-color: navajowhite; color: black; }</strong><br>
+        Comodin ^ (circunflejo) para coincidencias que comienzen con el texto referido <br>
+        <strong>.selectores-atributos a[href ^= "http:"] { font-size: 25px; background-color: navy; color: white; text-decoration: none; }</strong><br>
+        El comodin $ aplica si el texto en cuestion esta al final<br>
+        <strong>.selectores-atributos a[href $= ".com"] { font-size: 18px; background-color: navy; color: white; text-decoration: none; }</strong><br>
+        El comodin ~ aplica si el texto forma parte de una lista separada por espacios<br>
+        <strong>.selectores-atributos a[class ~= "cursos"] { text-decoration: none; }</strong><br>
+        El comodin | (pipe) aplica si el texto forma parte de una lista separada por espacios y que despues del texto venga un guion medio - ejemplo menu-item en las clases<br>
+        <strong>.selectores-atributos a[class |= "menu"] { font-style: italic; }</strong><br>
+        <pre><code>
+          &lt;nav class="selectores-atributos">
+            &lt;ul>
+              &lt;li&gt;&lt;a href="https://jonmircha.com" target="_blank"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a class="menu-item cursos especial otra-clase" href="https://jonmircha.com/cursos" target="_blank"&gt;Curso&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="http://jonmircha.com/blog" target="_blank"&gt;Blog&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="https://jonmircha.com/cv" target="_blank"&gt;CV&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a class="menu-item ahora otra-clase" href="http://jonmircha.com/ahora" target="_blank"&gt;ahora&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a class="menu-item notas otra-clase" href="https://jonmircha.com/notas" target="_blank">Notas&lt;/a&gt;&lt;/li&gt;
+              &lt;li>&lt;a href="#indice"&gt;👆 Indice de temario&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/nav&gt;
+        </code></pre>
+      </p>
+      <nav class="selectores-atributos">
+        <ul>
+          <li><a href="https://jonmircha.com" target="_blank">Inicio</a></li>
+          <li><a class="menu-item cursos especial otra-clase" href="https://jonmircha.com/cursos" target="_blank">Curso</a></li>
+          <li><a href="http://jonmircha.com/blog" target="_blank">Blog</a></li>
+          <li><a href="https://jonmircha.com/cv" target="_blank">CV</a></li>
+          <li><a class="menu-item ahora otra-clase" href="http://jonmircha.com/ahora" target="_blank">ahora</a></li>
+          <li><a class="menu-item notas otra-clase" href="https://jonmircha.com/notas" target="_blank">Notas</a></li>
+          <li><a href="#indice">👆 Indice de temario</a></li>
+        </ul>
+      </nav>
+      <h3>Selector Universal (*)</h3>
+      <p></p>      
+      <a href="#indice">👆</a>
+    </article>
+    <hr>
+    <article id="pseudoclases">
+      <h2>Pseudoclases</h2>
+      <p class="p-pseudoclases">
+        Dan estilo dependiendo del contexto, posición o estado del elemento <a href="https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes" role="link" aria-details="Mayor información sobre pseudo clases en el sitio de Mozilla" target="_blank" rel="noopener noreferrer nofollow">MDN - Pseudo-classes</a><br>
+        Las pseudoclases valid, invalid, focus, required y disabled son propias de formularios <br>
+        Las pseudoclases link, active, visited y hover son asociadas a enlaces, tomar en consideracion el orden.
+      </p>
+      <form class="form-pseudoclases">
+        <input type="text" name="nombre" placeholder="Escribe tu nombre" required><br>
+        <input type="email" name="correo" placeholder="Escribe tu correo" required><br>
+        <input type="submit">
+        <input type="submit" disabled>
+      </form>
+      <nav class="menu-pseudoclases">
+        <a href="#Seccion1">Seccion1</a><a href="#Seccion2">Seccion2</a><a href="#Seccion3">Seccion3</a><a href="#Seccion4">Seccion4</a>
+        <p class="p-pseudoclases">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta explicabo corporis obcaecati rerum minima qui magnam exercitationem enim tenetur, a suscipit perspiciatis alias quisquam quasi quos ab assumenda ad consequatur.</p>
+      </nav>
+      <ol class="listas-pseudoclases">
+        <li>Mes de Enero</li>
+        <li>Mes de Febrero</li>
+        <li>Mes de Marzo</li>
+        <li>Mes de Abril</li>
+        <li>Mes de Mayo</li>
+        <li>Mes de Junio</li>
+        <li>Mes de Julio</li>
+        <li>Mes de Agosto</li>
+        <li>Mes de Septiembre</li>
+        <li>Mes de Obtubre</li>
+        <li>Mes de Noviembre</li>
+        <li>Mes de Diciembre</li>
+      </ol>
+      <article class="articulo-pseudocodigo">
+        <header>Esto es un header</header>
+        <p>Este es el primer parrafo</p>
+        <div>Esto es un div</div>
+        <p>Este es el parrafo del div</p>
+        <section>Esto es una section</section>
+        <p>Este es el parrafo de la section</p>
+        <div>Esto es un div</div>
+        <p>Este es el parrafo del div</p>
+        <footer>Esto es un footer</footer>
+      </article>
+      <p>
+        <pre><code>
+          /* Pseudoclases de elementos de formularios */
+          .form-pseudoclases *:required { border-color: yellow; }
+          .form-pseudoclases *:valid { border-color: green; }
+          .form-pseudoclases *:invalid { border-color: red; }
+          .form-pseudoclases *:focus { background-color: skyblue; }
+          .form-pseudoclases *:disabled { background-color: pink; }
+
+          /* Pseudoclases de enlaces */
+          .menu-pseudoclases a:link { color: blue; }
+          .menu-pseudoclases a:active { color: gray; }
+          .menu-pseudoclases a:visited { color: olive; }
+          .menu-pseudoclases a:hover { background-color: orange; }
+
+          .p-pseudoclases:hover { font-size: 20px; }  
+
+          /* Pseudoclase target */
+          #indice:target { background-color: limegreen; }
+          #referencias:target { background-color: lightgreen; }
+          #selectores-avanzados:target { background-color: lightgreen; }
+          #selectores-basicos:target { background-color: lightgreen; }
+          
+          /* Estilos por posición */
+          .listas-pseudoclases li:first-child { color: green;}
+          .listas-pseudoclases li:last-child { color: pink; }
+          .listas-pseudoclases li:nth-child(2) { color: navy; }
+          .listas-pseudoclases li:nth-child(4n) { font-size: 20px; }
+          .listas-pseudoclases li:nth-child(3n + 1) { font-weight: bold; }
+          // Posiciones pares
+          .listas-pseudoclases li:nth-child(even) { background-color: yellow; }
+          // Posiciones impares
+          .listas-pseudoclases li:nth-child(odd) { background-color: orange; }
+
+          .articulo-pseudocodigo p:first-of-type { background-color: lightcoral; }
+          .articulo-pseudocodigo p:last-of-type { background-color: lightgreen; }
+          .articulo-pseudocodigo p:nth-last-of-type(even) { background-color: lightseagreen; }
+          .articulo-pseudocodigo *:not(p, .boton, .lista, #idselected) { background-color: beige; }
+        </code></pre>
+      </p>
+      <a href="#indice">👆</a>
+    </article>
+    <hr>
+    <article id="pseudo-elementos">
+      <h2>Pseudo-Elementos</h2>
+      <p>Aqui se presenta algo de 
+        <span tabindex="0" data-sm-tooltip="colección de palabras y puntuaciones">texto</span> con la herramienta 
+        <span tabindex="0" data-sm-tooltip="Pequeña ventana emergente (small popup) que aparecerá con el mouse sobre un texto">tooltips</span>. <br>
+        <pre><code>
+          &lt;span tabindex="0" data-sm-tooltip="colección de palabras y puntuaciones"&gt;texto&lt;/span&gt; con la herramienta 
+          &lt;span tabindex="0" data-sm-tooltip="Pequeña ventana emergente (small popup) que aparecerá con el mouse sobre un texto"&gt;tooltips&lt;/span&gt;.
+
+          span[data-sm-tooltip] {
+            position: relative;
+            text-decoration: underline;
+            color: #00f;
+            cursor: help;
+          }
+          span[data-sm-tooltip]:hover::after,
+          span[data-sm-tooltip]:focus::after {
+            content: attr(data-sm-tooltip);
+            position: absolute;
+            left: 0;
+            top: 24px;
+            left: auto;
+            top: auto;
+            min-width: 200px;
+            border: 1px #aaaaaa solid;
+            border-radius: 10px;
+            background-color: #ffffcc;
+            padding: 12px;
+            color: #000000;
+            font-size: 14px;
+            z-index: 1;
+          }
+        </code></pre>
+      </p>
+      <p>
+        Los pseudoelementos ::Before y ::After permiten agregar contenido antes y despues del selector especificado <br>
+        <span>Item de producto</span> <span class="clsProducto">CocaCola</span> <span class="clsPrecio">0.62</span>
+        <pre>
+          &lt;span&gt;Item de producto&lt;/span&gt; &lt;span class="clsProducto">CocaCola&lt;/span&gt; &lt;span class="clsPrecio"&gt;0.62&lt;/span&gt;
+
+          .clsProducto::before {
+            content: " ✔ ";
+          }
+          .clsProducto::after {
+            content: " ❤ ";
+          }
+          .clsPrecio::before {
+            content: "$ ";
+            font-weight: bold;
+          }
+          .clsPrecio::after {
+            content: " USD ";
+            font-weight: bold;
+          }
+        </pre>
+      </p>
+      <a href="#indice">👆</a>
+    </article>
+    <hr>
+    <article id="algoritmo-css">
+      <h2>El Algoritmo CSS</h2>
+      <p>Es la forma en que el navegador aplica los estilos al documento HTML. <span>Es vital entender estos conceptos para entender como se aplican y en ocasiones se sobreescriben reglas CSS: (1) La Cascada, (2) La Especificidad y (3) La Herencia. </span></p>
+      <section>
+        <h3>1. La Cascada</h3>      
+        <p>
+          Es el mecanismo que tiene el navegador web para ir aplicando los estilos tomando tres aspectos particulares: El origen del codigo (de donde viene) 1 User Agent (por defecto aplica el navegador) 2 Personalizaciones del usuario (SO y navegador Ej. Modo oscuro y el zoom) 3 Estilos del autor mediante las hojas de estilos. Luego se aplica la especificidad y finalmente el orden de aparición.
+        </p>
+      </section>
+      <section>
+        <h3>2. La Especificidad</h3>
+        <p>
+          El peso para css que tiene un selector cuando hay conflicto de estilos, se calcula de la siguiente forma: <br>
+          <ol>
+            <li><pre>Etiquetas y pseudoelementos      0.0.0.1</pre></li>
+            <li><pre>Clases atributos y pseudoclases  0.0.1.0</pre></li>
+            <li><pre>Identificadores                              0.1.0.0</pre></li>
+            <li><pre>Estilos en linea                             1.0.0.0</pre></li>
+            <li><pre>!important            (Rompe la especifidad)</pre> </li>
+          </ol> 
+          <pre>
+            blockquote {
+              background-color: burlywood;
+            }
+            #cita-marco {
+              background-color: lightgreen;
+            }
+            blockquote.cita-marco {
+              background-color: tomato;
+            }
+            #cita-marco {
+              background-color: moccasin !important;
+            }
+            .cita-marco {
+              background-color: cornflowerblue;
+            }
+          </pre>
+          Las reglas css del codigo previo, ayudan a entender la especificidad.
+        </p>
+        <blockquote id="cita-marco" class="cita-marco">
+          Se tolerante con los demás y estricto contigo mismo - <cite>Marco Aurelio</cite>
+        </blockquote>
+      </section>
+      <section>
+        <h3>3. La Herencia</h3>
+        <p>
+          La herencia es la capacidad de un selector de obtener (heredar) los valores de sus ancestros mas cercanos, para aplicarla se usa el valor <code><strong><u>inherit</u></strong></code>, si queremos evitarla se puede asignar otro valor o inicializar la propiedad en cuestion con el valor <strong><u><code>initial</code></u></strong>.<br> 
+          Ciertas propiedades no se heredan: Bordes, Fondo, padding, margin.<br>
+          Se heredan todas las propiedades relacionadas a la tipografía, border-collapse, border-spacing, caption-side, cursor, direction, empty-cells, letter-spacing, line-height, list-style-image, list-style-position. Referncia sobre herencia en 
+          <a
+          role="link"
+          aria-label="Inheritance - web.dev, Español"
+          href="https://web.dev/learn/css/inheritance/#which-properties-are-inheritable"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          >
+            Inheritance - web.dev, Español
+          </a>
+
+          <pre><code>
+            .cita-marco {
+              background-color: cornflowerblue;
+              border-left: lightcoral 2px double;
+              padding: 15px;
+              padding-left: 18px;
+              margin-left: 30px;
+            }
+            .cita-marco cite {
+              background-color: pink;
+              background-color: inherit;
+              font-size: 24px;
+              font-size: initial;
+              border-style: inherit;
+              border-color: inherit;
+              padding-left: inherit;
+              border-style: initial;
+            }
+          </code></pre>
+        </p>
+      </section>
+      <a href="#indice">👆</a>
+    </article>
+    <hr>
+    <article id="prefijos-navegadores">
+      <h2>Prefijos de los Navegadores</h2>
+      <p>
+        Prefijos para los Navegadores
+        <ul>
+          <li>Microsoft <strong><code><b>-ms-</b></code></strong></li>
+          <li>Mozilla Firefox <strong><code><b>-moz-</b></code></strong></li>
+          <li>Todos los demás navegadores <strong><code><b>-webkit</b></code>-</strong> </li>
+        </ul>
+      </p>
+      <a href="#indice">👆</a>
+    </article>
+    <hr>
+    <article id="modelo-caja">
+      <h2>Modelo de caja</h2>
+      <p>
+        Ver en las referencias el articulo sobre el modelo de caja. <br>
+        Este tema es tratado en un nuevo html llamadao modelo-caja.html <a href="modelo-caja.html" aria-details="Enlace al desarrollo del tema" role="link" >El modelo de caja</a><br>
+        Se revisa border, padding y margin: (Sentido manecillas del reloj desde top) con un valor aplica a los cuatro lados, con dos valores aplica el primer valor para top, bottom y el segundo valor para left, right. Con tres valores aplica (1) top, (2) left, right y (3) bottom. Con 4 valores aplica top, right, buttom, left.
+      </p>
+      <h3>Cajas de linea vs cajas de bloque</h3>
+      <p>
+        Comparación entre Cajas de linea y cajas de bloque <br>
+        <strong>Cajas de linea</strong>
+        <ul>
+          <li>Ocupan el espacio necesario para mostrar su contenido</li>
+          <li>No tienen dimensiones modificables (width, height)</li>
+          <li>Permiten otros elementos a su lado</li>
+          <li>Padding y margin solo empujan elementos adyacentes en horizontal, NUNCA EN VERTICAL, nunca se debe aplicar padding verticales a una caja de linea</li>
+        </ul>
+        <strong>Cajas de bloque</strong>
+        <ul>
+          <li>Ocupan todo el ancho disponible, lo que genera saltos de linea</li>
+          <li>Tienen dimensiones modificables (width, height)</li>
+          <li>No permiten otros elementos a su lado (Aunque especifique un ancho, siguen ocupando todo el espacio disponible a lo ancho generando saltos de linea</li>
+        </ul>
+      </p>
+      <h3>Propiedad display</h3>
+      <p class="p-display-property">
+        <strong><code>display: none</code></strong> El elemento se elimina por completo, como si no estuviera en el código HTML <br>
+        <strong><code>display: inline</code></strong> El elemento se convierte en <strong>de linea</strong>, se comporta como texto simple. height y width no tendrán efecto. <br>
+        <strong><code>display: block</code></strong> El elemento se convierte en <strong>de bloque</strong>, comienza en nueva linea y ocupa todo el ancho.<br>
+        <strong><code>display: inline-block</code></strong> El elemento se convierte en mixto comparte propiedades de elemento <strong>de linea y de bloque</strong>, comportandose como texto simple que se inserta en un bloque de texto y se puede aplicar width y height.<br>
+        <strong><code>display: list-item</code></strong> El elemento se comporta como un elemento de lista, <strong>de bloque</strong> con viñeta. EN LA PRACTICA NO SE APLICA<br>
+        <strong><code>display: table</code></strong> El elemento se comporta como una tabla, su contenido y elementos secundarios se comportan como celdas de la tabla, <strong>de bloque</strong>. EN LA PRACTICA NO SE APLICA<br>
+        <strong><code>display: table-cell  &lt;td&gt; &lt;th&gt; </code></strong> Se comporta como una celda de tabla td o th, su contenido y elementos secundarios se comportan como celdas de la tabla, <strong>de bloque</strong>. EN LA PRACTICA NO SE APLICA<br>
+        <strong><code>display: table-row  &lt;tr&gt; </code></strong> Se comporta como una fila de tabla tr, su contenido y elementos secundarios se comportan como celdas de la tabla, <strong>de bloque</strong>. EN LA PRACTICA NO SE APLICA<br>
+        <strong><code>display: flex</code></strong> Se convierte en un contenedor flex. Por si solo se comporta como elemento <strong>de bloque</strong>. Elementos secundarios se convertiran en elementos de flexbox si los tuviera.<br>
+        <strong><code>display: inline-flex</code></strong> Comparte propiedades tanto <strong>de linea</strong> como de elemento <strong>flex</strong>. Comportandose como texto simple que se inserta en un bloque de texto y sus elementos secundarios se convertiran en elementos flexbox.<br>
+        <strong><code>display: grid</code></strong> Se convierte en un contenedor grid (rejilla). Por si solo se comporta como elemento <strong>de bloque</strong>. Elementos secundarios se convertiran en elementos de cuadricula (grid items) si los tuviera.<br>
+        <strong><code>display: inline-grid</code></strong> Comparte propiedades <strong>de linea</strong> y de <strong>grid</strong>. Comportandose como texto simple que se inserta en un bloque de texto y sus elementos secundarios se convertiran en elementos de flexbox.<br>
+      </p>
+      <h3>Propiedad visibility</h3>
+      <p>
+        No confundir con display:none <br>
+        Visibility quita la visibilidad del elemento manteniendo el espacio que ocupa sin visualizar la caja. <br>
+        Dos posibles valores: vissible y hidden (opacidad total)
+        <pre><code>visibility: visible;</code>   y    <code>visibility.hidden;</code></pre>
+      </p>
+      <h3>Propiedad overflow</h3>
+      <p class="p-display-property">
+        Objetivo controlar que ocurre con el contenido que desborda su caja contenedora, exite overflow-x, overflow-y, overflow-wrap y overflow. <br>
+        Define cómo se muestra el contenido desbordado tanto en el eje horizontal como en el vertical. <br>
+        Los posibles valores que puede tomar overflow son: visible, hidden, scroll, auto. <br>
+        <strong><code>overflow: visible;</code></strong> El contenido desbordado es visible , mientras que el elemento en sí permanece en la altura especificada. <br>
+        <strong><code>overflow: hidden;</code></strong> El contenido desbordante esta oculto y no se puede acceder a el. <br>
+        <strong><code>overflow: scroll;</code></strong> El contenido desbordante es accesible gracias a una barra de desplazamiento vertical. <br>
+        <strong><code>overflow: auto;</code></strong> El navegador decide si mostrar una barra de desplazamiento vertical o no.
+        <pre><code>
+          .caja-overflow {
+            background-color: limegreen; padding: 10px; margin: 5px; width: 400px; height: 150px; overflow: visible;
+            /* 
+            text-overflow: ellipsis; white-space: nowrap;
+            */
+            overflow: hidden; overflow: scroll; overflow: auto;
+          }
+          .caja-overflow p { width: 500px; margin: 10px; padding: 10px; }
+        </code></pre>
+      </p>
+      <h3>Tamaño de caja</h3>
+      <p>
+        En el modelo de caja se tienen dos opciones para definir el tamaño de Caja mediante la propiedad box-sizing el cual por omision su valor es contentbox. <br>
+        Para el contenedor con la clase box-sizing al que se define un ancho de 500px. <br>
+        Con el valor content-box, padding de 20px y border-width de 5px. El ancho total seria 500 + 20 + 20 + 5 + 5 = 550px, no tomando en consideracion el valor de margin. <br>
+        Con el valor border-box, padding de 20px y border-width de 5px. El ancho total seria 500 y el ancho del content seria de 500 - 20 - 20 - 5 - 5 = 410px. Garantizando con esto que el tamaño total de la caja sea igual al witdh y al height 
+        <pre><code>
+          <strong>Reseteo recomendado por Paul Irish y aplicado por bootstrap</strong>
+          html{
+            box-sizing: border-box;
+          }
+          *,
+          *::before,
+          *::after {
+            box-sizing: inherit;
+          }
+
+          .precode-float {
+          background-color: burlywood; margin-top: 20px;
+          }
+          .precode-float > * {
+          width: 50%;
+          border: thin solid red;
+          box-sizing: border-box;
+          float: left;
+          }
+        </code></pre>
+        <br><br><br><br><br>
+        <article class="precode-float">          
+          <section>         
+            <pre><code>
+    Con el atributo box-sizing: <strong>content-box</strong>
+    .box-sizing-content {
+      background-color: deepskyblue;
+      box-sizing: border-box;
+      width: 500px;
+      height: 250px;
+      padding: 20px;
+      border: 5px solid lightsalmon;
+    }
+            </code></pre>
+          </section>
+          <section>         
+            <pre><code>
+  Con el atributo box-sizing: <strong>border-box</strong>
+  .box-sizing-content {
+    background-color: deepskyblue;
+    box-sizing: border-box;
+    width: 500px;
+    height: 250px;
+    padding: 20px;
+    border: 5px solid lightsalmon;
+  }
+            </code></pre>
+          </section>
+        </article>
+        <div class="clear-float"></div>
+        <article>
+          <span>
+            Para desactivar un float se usaba un elemento &lt;div&gt; sin cuerpo con una clase con invocacion a la propiedad CSS clear con los posibles valores none, left, right o both <code>&lt;div class="clear-float"&gt;&lt;/div&gt;</code>
+            <pre><code>
+              .clear-float {
+                clear: both;
+              }
+            </code></pre>
+          </span>
+        </article>
+      </p>
+      <h3>Colapso de margenes verticales</h3>
+      <p>
+        Cuando dos bloques tienen sucesión y a ambos se les aplica margenes top y bottom los margenes se colapsan y solo acepta uno de ellos, es conveniente asignar margenes o solo top o solo bottom. Igual cosa suceder para contenedores hijos con respecto al contenedor padre los top o los bottom se colapsan aplicando el de mayor valor de margin top o bottom según el caso<br>
+        <blockquote class="citas">
+          Existe una regla dentro del modelo de caja que dice que los margenes verticales de un elemento con otro se van a acoplar
+        </blockquote>
+      </p>
+      <h3>Adición de margenes horizontales</h3>
+      <p>
+        Los margenes horizontales si se aplican tanto left como right. No aplica el colapso en margenes horizontales
+      </p>
+      <h3>Centrado de cajas</h3>
+      <p>
+        Para esto al elemento de bloque en la clase que lo define se aplica las propiedades margin-left y margin-right con el valor auto para cada una de ellas. Si solo se aplica margin-left: auto entonces la caja se deplaza totalmente a la derecha no provocando el centrado, efecto similar a float-right. Si solo se aplica margin-rigth: auto entonces la caja se deplaza totalmente a la izquierda no provocando el centrado, efecto similar a float-left.
+      </p>
+      <a href="#indice">👆</a>
+    </article>
+    <hr>
+    <article id="posicionamiento-css">
+      <h2>Posicionamiento CSS</h2>      
+      <a href="posicionamiento.html" aria-details="Enlace al documento de practica" role="link" >Practicando con posicionamiento CSS</a><br>
+      <p>
+        La propiedad <code><strong>float</strong></code> y
+        <strong><code>position</code></strong> permiten modificar la posicion
+        natural de cualquier elemento del documento html.<br />
+        El navegador coloca cada elemento teniendo en cuenta el orden en el que
+        aparece en el documento y su tipo de visualizacion dependiendo de si es un
+        elemento de linea o de bloque.<br />
+        Con <code><strong>float</strong></code> y
+        <code><strong>position</strong></code> podemos modificar este
+        comportamiento.
+        <ul>
+          <li><code><strong>float</strong></code> Convierte un elemento en flotante desplazándolo hasta la zona más a la izquierda o más a la derecha de la posición en la que originalmente se encontraba. De existir varios float:left o float: right se apilan uno a continuacion de otro. Los margenes no se colapsan cuando son float</li>
+          <li><code><strong>clear</strong></code> Limpia la flotación (<code>left, right, both</code>)</li>
+        </ul>
+        Position, puede aplicarse tanto a elementos block como a inline<br>
+        Tipos de posicionamiento con cinco posibles valores:
+        <ul>
+          <li><strong><code>static</code></strong> (default), respeta el flujo natural del posionamiento html</li>
+          <li><strong><code>relative</code></strong></li>
+          <li><strong><code>absolute</code></strong></li>
+          <li><strong><code>fixed</code></strong></li>
+          <li><strong><code>sticky</code></strong></li>
+        </ul>
+        Para mover los elementos posicionados se activan las propiedades (<strong>cinco propiedades</strong>):
+        <ul>
+          <li>top (vertical - eje Y)</li>
+          <li>bottom (vertical - eje Y)</li>
+          <li>left (horizontal - eje X)</li>
+          <li>right (horizontal - eje X)</li>
+          <li>z-index (profundidad - eje Z)</li>
+        </ul>
+        Las propiedades top y left van a tener preferencia por sobre bottom y right <br>
+        Estos <strong>cinco propiedades</strong> no funcionan con el valor de static.
+      </p>
+      <h3>Posicionamiento <code>static</code></h3>
+      <p>Es el valor por defecto, significa que el elemento respeta el flujo HTML, por lo que no se puede mover ni posicionar.</p>
+      <h3>Posicionamiento <code>relative</code></h3>
+      <p>
+        Hace que el elemento conserve sus dimenciones y posición original en el flujo del documento. Si se mueve toma como referencia su posicion original. Un elemento se puede mover pero su espacio natural queda como referencia vacio. <br>
+        top hace que baje la caja tantos pixeles desde su posicion original <br>
+        left deplaza la caja tantos pixeles desde su posicion original hacia la derecha <br>
+        bottom deplaza la caja tantos pixeles hacia arriba desde su posicion original, es anulado por top en caso de existir top<br>
+        right deplaza la caja tantos pixeles desde su posicion original hacia la izquierda, es anulado por left en caso de existir left <br>
+        Propiedades top, left, bottom o right pueden tener números negativos provocando el evento inverso. <br>
+        Puede contener elementos con position: absolute en cuyo caso el item contenido se puede desplazar respecto al padre. <br>
+        Para elementos inline o convertidos a display:inline pierde sus dimensiones.
+      </p>
+      <h3>Posicionamiento <code>absolute</code></h3>
+      <p>
+        Con este valor de posicionamiento el elemento pierde sus dimenciones y posición original en el flujo del documento HTML. Para elementos inline lo convierte en displayL block. Si se mueve puede tomar como referencia uno de dos casos para los elementos:
+        <ol>
+          <li>El primer ancestro con <strong>posicionamiento relativo o cualquier posicionado excepto posicionamiento static</strong> - caso en que este dentro de una caja con posicionamiento relativo, absolute, fixed o sticky</li>
+          <li>Si no se encuentra un ancestro ancestro, se mueve respecto del <strong>documento HTML (Body)</strong></li>
+        </ol>
+      </p>
+      <h3>Posicionamiento Fijo <code>fixed</code></h3>
+      <p>
+        Los elementos fixed pierden sus dimensiones y posición original en el flujo del documento HTML. Si se mueve toma como referencia el elemento HTML y queda fijo en la posición, cuando el SCROLL se mueva, el elemento no lo hará, quedando FIJO. <br> Cuando su top, bottom, left y right se ubican en 0 genera un efecto de estiramiento util para menus ocultos y ventanas modal. Para elementos inline los transforma en elemento de bloque si tuviera width y height.
+      </p>
+      <h3>Posicionamiento Pegajosa <code>sticky</code></h3>
+      <p>
+        Es una combinación de posicionamiento relative y fixed, para este valor de posicionamiento las propiedades de top, left, bottom y right, no mueven el elemento, sirven como un punto de referencia, mientras no lleguen a ese valor, se comporta como relativo, cuando llega se convierte en fixed. <br>
+        Para que este comportamiento funcione el elemento sticky debe ser hijo directo del body o su elemento contenedor debe tener dimensiones definidas y solo será sticky dentro de las dimensiones de su contenedor padre.
+      </p>
+      <h3>Propiedad z-index</h3>
+      <p>
+        Es un propiedad que permite controlar la profundidad de los elementos posicionados distintos de static, su valor por defecto es auto, acepta valores positivos, negativos y el cero. <br>
+        A mayor valor el elemento estará más al frente, a menor valor más al fonto. <br>
+        Un elemento padre nunca podrá estar sobre sus elementos hijos, sin embargo los elementos hijos si pueden dándoles un valor negativo y que el padre no tenga z-index aplicado. <br>
+        Dos elementos con posicionamiento y con el mismo z-index o posicionados sin z-index, se pone encima el que se renderiza después.
+      </p>
+      <h3>Contexto de apilamiento</h3>
+      <div>
+        <p>
+          Un contexto de apilamiento se forma cuando:
+          <ul>
+            <li>html es un contexto de apilamiento</li>
+            <li>Posiciono un elemento con position relative, absolute, fixed o sticky y se aplica un z-index, entonces se crea un contexto de apilamiento.</li>
+            <li>Cuando se usa propiedad opacity con valor distinto de 1.</li>
+          </ul>
+        </p>
+      </div>
+      <div class="apila-container">
+        <div class="aplila-item apila-item-1">Item 1</div>
+        <div class="aplila-item apila-item-2">
+          <div class="apila-title">Soy un título</div>
+          <div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quo quisquam ea molestiae labore explicabo porro quae ab? Eos libero doloremque blanditiis tenetur animi fugiat ullam aliquam vel, consectetur soluta! </div>
+        </div>
+        <div class="aplila-item apila-item-3">Item 3</div>
+        <div class="aplila-item apila-item-4">Item 4</div>
+      </div>
+      <a href="#indice">👆</a>
+    </article>
+    <hr>
+    <article id="position-example">
+      <h2>Cabecera fixed VS Cabecera sticky</h2>
+      <a href="position-example.html" aria-details="Ejercicios de posicionamiento CSS" role="link" >Practicando con posicionamiento CSS</a><br>
+      <p>
+        Con posicionamiento fixed, para aplicabilidad de la cabecera se asigna un padding al body por el equivalente a la altura de la caja header establecida para la cabecera.<br>
+        En cambio con posicionamiento sticky el contenedor header debe ser el primer elemento u ocupar la posicion inicial requerida si existe imagen inicial, para un top de 0.
+        <pre><code>
+          body {
+            margin: 0;
+            /* Para evitar que header este sobrepuesto sobre contenido, padding-top igual al height de la clase .header solo en caso de position: fixed, en caso sticky no debe definirse padding-top */
+            padding-top: 50px;
+          }
+
+          .header {
+            background-color: mistyrose;
+            width: 100%;
+            height: 50px;
+          }
+
+          .fixed-top {
+            position: fixed;
+            top: 0;
+          }
+
+          .sticky-top {
+            position: sticky;
+            top: 0;
+          }          
+        </code></pre>
+      </p>
+      <h3>Efecto sticky tipo slide</h3>
+      <p>
+        Dentro de una section.slides se generan 3 article.slide, cada article contiene un h2.slide-title y n parrafos. Con el css siguiente se genera el efecto de un titulo fijo mientras este visible el article respectivo y el siguiente article empuja al titulo cuando inicia.
+        <pre><code>
+        .slide {
+          background-color: paleturquoise;
+          width: 100%;
+          height: 100vh;
+        }
+        .slide:nth-child(odd) {
+          background-color: palevioletred;
+        }
+        .slide-title {
+          background-color: palegreen;
+          padding: 16px;
+          text-align: center;
+          margin-top: 0;
+          margin-bottom: 0;
+          position: sticky;
+          top: 50px;
+        }          
+        </code></pre>
+      </p>
+      <h3>Efecto de ventana Modal / Menú movil</h3>
+      <p>
+        Primero se crean un article.modal-window con el id=modal-1 que contiene un h3.modal-title y un div.modal-content que contiene tres parrafos.
+        Tambien participa un link a.modal-link con href #modal-1.
+        Dentro del article se ubica un enlace hacia el id con href #cerrar-modal para que al pulsarlo genere el cambio del target y cierre el modal abierto con el enlace a.modal-link.
+        <pre><code>
+          .modal-window {
+            background-color: black;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            opacity: 0.5;
+            display: none;
+          }
+          .modal-window:target {
+            display: block;
+          }
+        </code></pre>
+      </p>
+      <a href="#indice">👆</a>
+    </article>
+    <hr>
+    <article id="colors">
+      <h2>Colores en CSS</h2>
+      <p>
+        En el buscador de google si se busca "rgb to hex" aparece un convertidor de colores.<br>
+        <strong>Modo nombre</strong> por la referencia de un nombre de color en la lista de nombres se encuentra agrupados de acuerdo al tono base que se puede consultar en el sitio
+          <a
+            role="link"
+            aria-label="Nombres de los colores, Español"
+            href="https://htmlcolorcodes.com/es/nombres-de-los-colores/"
+            target="_blank"
+            title="Nombres de los colores, Español"
+            rel="noopener noreferrer nofollow"
+          >
+            Nombres de los colores, Español
+          </a> 
+        en el cual permite obtener cualquiera de los 140 nombres de colores que aceptan los navegadores en tres columnas se obtiene el nombre, codigo hex y codigo rgb. <br>
+        Para el <strong>modo hexadecimal</strong> el color se asigna con el signo # y el trio de codigos para Red, Green y Blue, ej. #4F3BA4, que tendría un valor de 4F para rojo, 3B para verde y A4 para azul. si adicional se desea agregar opacidad entonces se tienen dos codigos adicionales como por ej.: #4F3BA4<strong><u>55</u></strong> con esto se aplica una opacidad del 55%, con opacidad 0 implica sin color, con opacidad 100 implica color completo, oscila entre [0,100). <br>
+        En el <strong>modo RGB</strong> el codigo se asigna mediante las funciones <strong><code>rgb(val_red, val_green, val_blue)</code></strong> donde los val oscilan entre 0 y 255, para el caso de agregar opacidad entonces funcion <strong><code>rgba(val_red, val_green, val_blue, val_opa)</code></strong>, donde val_opa oscila entre [0, 1], donde 0 implica sin color y 1 color completo (sin opacidad), ej. <strong><code>rgba(218,165,32,.42)</code></strong> que aplica el color Goldenrod = #DAA52042 con opacidad del 42%. <br>
+        <strong>HSL (HueSaturationLightness)</strong> (Tono, Saturación, Luminosidad) <br>
+        El hue se representa en grados: No requiere que se ubique el simbolo ° al asignar el valor
+        <ul>
+          <li>0° => red</li>
+          <li>60° => yellow</li>
+          <li>120° => green</li>
+          <li>180° => cyan</li>
+          <li>240° => blue</li>
+          <li>300° => magenta</li>
+        </ul>
+        <img src="assets/img/HSLA_hue_wheel_with_turn_2.jpg" alt="Circulo cromático HSLA" width="50%"> <br>
+        En el <strong>modo HSL</strong> existen dos funciones <strong><code>hsl(val_hue, val_sat, val_lum)</code></strong> y la funcion <strong><code>hsla(val_hue, val_sat, val_lum, val_opa)</code></strong> como en el caso de rgba el val_opa va de [0, 1] y los porcentajes son decimales ej. .42 para el 42% de opacidad, siendo 0 transparente o ausencia de color y 1 color completo (sin opacidad). <br>
+        Saturation - Intensidad del color, donde 100% es el color puro y 0% escala de grises. Se asigna el valor seguido del simbolo % incluso para definir el 0%. <br>
+        Ligthness - Luminocidad del color, si se quiere que tienda hacia luz u oscuridad. Donde 0% -> oscuridad(negro), 50% -> color puro, 100% => luz(blanco). Se define con el simbolo % incluso para el 0%. Ej. hsl(0, 100%, 50%), refleja el color rojo<br><br>
+        Valores transparent y currentColor - <br>
+        <strong>transparent</strong> es usado para eliminar el color previamente asignado ej. <strong><code>background-color: transparent;</code></strong> o puede asignarse <strong><code>rgba(0, 0, 0, 0)</code></strong> que seria equivalente. <br>
+        <strong>currentColor</strong> Hereda el valor por defecto o asignado de la propiedad color (casi siempre negro, color del texto) del ancestro que tenga definida esta propiedad, busca del ancestro más cercano al más alejado. <br>
+        Propiedad <strong>opacity</strong> Afecta a todas las propiedades de color de la clase donde se define, background-color, color y border-color. También se puede aplicar a una imagen con el mismo efecto.
+      </p>
+      <a href="#indice">👆</a>
+    </article>
+    <hr>
+    <article id="unidades-medida">
+      <h2>Unidades de medida en CSS</h2>
+      <p>
+         <ol>
+          <li>
+            Absolutas (Su valor no cambia, son unidades del mundo real. No son convenientes de ser usadas (debido al responsive design) exepto para impresiones con presición (mm).
+            <ul>
+              <li>pc, cm, mm, in, Q</li>
+              <li>pt (1/72 in)</li>
+              <li>px (1/96 in)</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>
+                Relativa (Su valor es relativo a un contexto)<br>
+                em, rem, ex, ch - al tamaño de la fuente.
+                <ul>
+                  <li>
+                    em - basada en la anchura de la <code>m</code> de la fuente del elemento. Se debe terne cuidado con el cambio desde contenedores ancestros y tamaños de fuentes propias. 
+                  </li>
+                  <li>
+                    rem (root em) - basada en la anchura de la <code>m</code> de la fuente del elemento raiz (root) (html).
+                  </li>
+                  <li>
+                    ex - basada en la altura de la <code>x</code> de la fuente del elemento. Poco frecuente su uso. Similitud con los em
+                  </li>
+                  <li>
+                    ch - basada en la altura del <code>0</code> de la fuente del elemento. Usado en editores de revistas noticias y formularios. Su uso en los input para una cantidad especifica de caracteres.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                % - al tamaño del contenedor
+              </li>
+              <li>
+                vw, vh, vmin, vmax - al tamaño del viewport, recordar que el body tiene margen por defecto y debe ser establecidos a 0 y el barras scroll del navegador también forman parte del viewport, el ancho se recomienta en porcentaje y el alto en vh
+                <ul>
+                  <li>vw - Ancho del viewport, va de 1 a 100</li>
+                  <li>vh - Alto del viewport, va de 1 a 100</li>
+                  <li>vmin - Entre vw y vh toma el que tenga menor valor</li>
+                  <li>vmax - Entre vw y vh toma el que tenga mayor valor</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <a
+          role="link"
+          aria-label="PXtoEM.com: Conversiones entre unidades, Ingles"
+          href="http://pxtoem.com"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          PXtoEM.com: Conversiones entre unidades, Ingles
+        </a>
+      </p>
+      <a href="#indice">👆</a>
+    </article>
+    <hr>
+    <article id="variables-funciones">
+      <h2>Variables y Funciones en CSS</h2>
+      <h3>Custom Properties (Variables CSS) y Función <code>var()</code></h3>
+      <p>
+        Las variables tienen un alcance o ambito en el que se la define (Selector) y toda la cadena de elementos subsecuentes. Los nombres de variables deben iniciar con dos guiones ej. <br> <strong><pre><code>    --bg-primary-color: rgba(125,125,125,.62);</code></pre></strong>
+        Para usar una variables se usa la funcion var(), ej. background-color: <strong><pre><code>    var(--bg-primary-color)   var(--bg-primary-color, orange)</code></pre></strong>
+        La funcion var con dos parámetros, el primero es la variable y el segundo es el valor que se aplicaría en caso de no existir la variable previamente con valor asignado, esto en los casos que se encuentre establecida en otro ambito o no se haya declarado la variable previamente. <br>
+        Para definir un ambito global se la define en la pseudoclase que tiene mayor especificidad que la etiqueta <strong>html</strong>. <strong><pre><code>   :root { ... }</code></pre></strong>.
+      </p>
+      <h3>Función <code>url()</code></h3>
+      <p>
+        Ayuda a especificar la ruta que se desea cargar, similar al src usando en selector img o href del selector de enlace a.
+      </p>
+      <h3>Función <code>calc()</code></h3>
+      <p>
+        Utilizada para realizar calculos aritméticos. Se debe <span class="resaltador">obligatoriamente dejar espacio</span> entre operadores y operandos. Se pueden realizar operaciones mezclando unidades como en los casos resaltados
+        <pre><code>
+          .ch-10 {
+            --padding-size: 2ch;
+            --num-ch: 10ch;
+            background-color: var(--default-bg-color);
+            padding: var(--padding-size);
+            witdh:calc( var(--num-ch) + var(--padding-size) * 2 );
+          }
+          .el {
+            <span class="resaltador">margin: 10px calc(2vw + 5px);</span>
+            border-radius: 15px calc(15px / 3) 4px 2px;
+            <span class="resaltador">transition: transform calc(1s - 120ms);</span>
+            background: #1E88E5 linear-gradient(
+                to bottom,
+                #1E88E5,
+                <span class="resaltador">#1E88E5 calc(50% - 10px)</span>,
+                <span class="resaltador">#3949AB calc(50% + 10px)</span>,
+                #3949AB
+            );
+            <span class="resaltador">transform: rotate(calc(10deg * 5))</span>;
+            <span class="resaltador">transform: rotate(calc(1turn + 45deg))</span>;
+            animation-delay: calc(1s + 15ms);
+          }
+        </code></pre>
+      </p>
+      <h3>Función <code>min()</code> & <code>max()</code></h3>
+      <p>
+        Son funciones que de una lista de valores separados por comas toma el valor mínimo o el valor máximo según el nombre de la funcion invocada min o max, puede generar un efecto de cambio dinámico.
+        <pre><code>
+          .min-max { 
+            width: min( 300px, 20vw, 20rem); 
+            height: max( 200px, 25vh); 
+          }
+        </code></pre>
+      </p>
+      <h3>Función <code>clamp()</code></h3>
+      <p>
+        Es una función que va a recibir tres valores: 1 El tamaño mínimo, 2 El tamaño ideal, 3 El tamaño máximo. <br>
+        Permite hacer cálculos dentro del paso de los parámetros sin necesidad de usar calc() <br>
+        Donde se puede aplicar: En responsive design.
+        <pre><code>
+          h1 {
+            font-size: clamp( 2rem, 1rem + 3vw, 3rem);
+          }
+        </code></pre>
+      </p>
+      <a href="#indice">👆</a>
+    </article>
+    <hr>    
+    <article id="estilos-tipografia">
+      <h2>Estilos de Fuentes y Texto</h2>
+      <p>
+        La propiedad font es un shothand que permite establecer: 
+        <pre><code>     font: font-style font-variant font-weight font-size / line-height y font-family; </code></pre>en una sola propiedad. Entre font-size y line-height debe existir una diagonal, sino no funciona
+        <pre><code>     font: italic normal bold 1em / 2em san-serif;</code></pre>
+        <span style="font: italic normal bold 1.2em/2em san-serif;">Ejemplo de aplicar un estilo font: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore quod corrupti, quos quam tempora, quaerat exercitationem repellendus sapiente dolorem id amet. </span>
+      </p>
+      <h3>Estilos de Fuentes Tipográficas</h3>
+      <h4>font-family</h4>
+      <p>
+        Conjunto de tipografías o familias tipograficas que se pueden aplicar, por omisión el navegador carga el conjunto <strong>Georgia,"Times New Roman",Times,serif</strong>, preferencias comunes son el conjunto <strong>sans-serif</strong>
+      </p>
+      <h4>font-size</h4>
+      <p>
+        Propiedad que ayuda a definir el tamaño de la fuente en cualquiera de las unidades de medidas absolutas o relativas. <a href="#unidades-medida">Enlace al temario de unidades de medidas</a> el valor por omision establecido por el navegador generalmente es de 16px
+      </p>
+      <h4>font-weight</h4>
+      <p>
+        Indicar el grosor, peso de la tipografía
+        <ul>
+          <li>100 Thin</li>
+          <li>200 Extra light</li>
+          <li>300 Light</li>
+          <li>400 Normal <span class="resaltador">Default</span></li>
+          <li>500 Medium</li>
+          <li>600 Semi Bold</li>
+          <li>700 Bold</li>
+          <li>800 Extra Bold</li>
+          <li>900 Ultra Bold</li>
+        </ul>
+      </p>
+      <h4>font-style</h4>
+      <p>
+        Define el tipo de estilo
+        <ul>
+          <li>italic</li>
+          <li>normal <span class="resaltador">Default</span></li>
+          <li>oblique</li>
+          <li>inherit</li>
+          <li>initial</li>
+          <li>unset</li>
+        </ul>
+      </p>
+      <h4>font-variant</h4>
+      <p>
+        Establece variaciones de la fuente como ej.
+        <ul>
+          <li>normal</li>
+          <li>small-caps <span style="font-variant: small-caps;">Ej. de small-caps</span></li>
+        </ul>
+      </p>
+      <h4>line-height</h4>
+      <p>
+        Definir el interliniado o altura de linea dentro de un parrafo o bloque
+        <ul>
+          <li>normal</li>
+          <li style="line-height: 1.6;">1.6 si se omite la unidad será la em <span class="resaltador">Recomendado</span></li>
+          <li style="line-height: 1.8em;">1.8em </li>
+          <li style="line-height: 30px;">30px </li>
+        </ul>
+      </p>
+      <h4>font</h4>
+      <p></p>
+      <h3>Fuentes externas (@font-face & font-display)</h3>
+      <p>
+        Se requiere tener los archivos fisicos de la tipografia en formato woff o woff2 que significa Web Open Font Format formato abierto de tipografía para la web, no los ttf (archivo de fuente segura Type True Type)<br>
+        Para definirla se usa el @font-face { ... } dentro de define el nombre para la familia de fuentes nueva mediante la propiedad font-family, propiedad src para establecer mediante la funcion url donde esta ubicado el archivo con formato woff o woff2 y la funcion format() para establecer el tipo de archivo woff o woff2 si se tiene mas de una fuente origen de la fuente se genera separado por coma otra url y el respectivo format.
+        <pre><code>
+          @font-face {
+            font-family: "Chalet";
+            src: url("../assets/Chalet.woff") format("woff"), 
+              url("../assets/Chaletcito.woff2") format("woff2");
+            src: url("../assets/Chalet.woff") format("woff");
+          }
+        </code></pre>
+        Para invocar a la nueva fuente asegurarse que adicionalmente se invoque a una familia segura. Ejemplo con la clase .chalet
+        <pre><code>
+          .chalet {
+            font-family: "Chalet",sans-serif;
+          }
+        </code></pre>
+        <span class="chalet">Ejemplo resultante de usar el tipo de fuente creado Chalet, aplicando la clase .chalet</span> <span class="pecita">Ejemplo resultante de usar el tipo de fuente creado PecitaWoff, aplicando la clase .pecita</span> <br>
+        <strong>font-display</strong> es una propiedad de css que indica como se quiere cargar una fuente personalizada cuyos posibles valores son:<br>
+        <ul>
+          <li><strong>auto -</strong>- permite que el navegador utilice el método predeterminado que suele ser block.</li>
+          <li><strong>block -</strong>- oculta brevemente el texto hasta que la fuente haya sido descargada por completo.</li>
+          <li><strong>swap -</strong>- indica al navegador que utilice la fuente alternativa para mostrar el texto hasta que la fuente personalizada se haya cargado por completo. <span class="resaltador">VALOR RECOMENDADO</span></li>
+          <li><strong>fallback -</strong>- es una mezcla de auto y swap</li>
+          <li><strong>optional -</strong>- ocultará el texto, luego lo cargará con la fuente alternativa y finalmente aplicará la fuente personalizada.</li>
+        </ul>
+        La propiedad font-display tambien debe ir en el bloque de @font-face la declaración de la nueva fuente externa.
+        <pre><code>
+          @font-face {
+            font-family: "PecitaWoff";
+            src: url(../assets/Pecita.woff) format("woff");
+            font-display: swap;
+          }
+        </code></pre>
+      </p>
+      <h3>Google Fonts</h3>
+      <p class="raleway">
+        El enlace de, probando números 1, 2, 3
+        <a
+          role="link"
+          aria-label="Google fonts., Ingles"
+          href="https://fonts.google.com/"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          Google fonts
+        </a> contiene un sin número de fuentes para usar en la web. Se recomienda no seleccionar todas, solo las que se usaran máximo 3 tipos de fuentes.
+        Ejemplo para el tipo de fuente Raleway al seleccionar Regular 400 y Regular 400 italic, el Bold 700 y el Bold Italic 700 se tendrías 4 tipos de fuentes. Se tona de la opcion que indica Link y se copia el contenido, algo similar a lo siguiente y se pega en el head del html antes de tu hoja de estilos (archivos.css):
+      </p>      
+        <pre><code>
+    &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+    &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;0,900;
+    1,700&display=swap" rel="stylesheet"&gt;          
+        </code></pre>
+      <p class="raleway">
+        En la misma página de google fonts se presenta CSS rules to specify families copiar el código para establecer la familia de fuentes y la fuente de familia segura. Ejemplo clase .raleway
+        <pre><code>
+          .raleway {
+            font-family: "Raleway", sans-serif;
+            font-size: 2rem;
+          }          
+        </code></pre>        
+      </p>
+      <p class="raleway">
+        Sitio recomendado de conversion de ttf a woff <a href="https://anyconv.com/es/convertidor-de-ttf-a-woff/" target="_blank" rel="noopener noreferrer nofollow">Conversion de ttf a woff</a> 
+      </p>
+      <h3>Estilos de Texto</h3>
+      <h4>text-align</h4>
+      <p>Como se desea alinear el texto los posibles valores son: left, right, justify, center</p>
+      <h4>text-decoration</h4>
+      <p>Posibles valores none, underline este es el que aplica generalmente a los enlaces linea abajo del texto, overline - linea sobre el elemento</p>
+      <h4>text-indent</h4>
+      <p>Aplica una indentacion o parecido a un tabulado al inicio del parrafo.</p>
+      <h4>text-overflow</h4>
+      <h5>Para una linea simple</h5>
+      <p>
+        Determina como el contenido que se desborda y que no es mostrado, va a hacérsele notar a los usuarios. Puede ser cortado, mostrar una elipsis ('...', U+2026 Horizontal Ellipsis), o mostrar una cadena de texto personalizada. Para que el overflow funcione debe existir las propiedades <code><strong>overflow: hidden y white-space: nowrap</strong></code>           
+        Se construye un contenedor de bloque (section.contenedor-overflow), dentro un contenedor de texto div.simpleline-ellipsis o p.simpleline-ellipsis, de ser el caso de un parrafo no debe existr &lt;br&gt;. El bloque.contenedor-overflow y el contenedor de texto div.simpleline-ellipsis contienen la propiedad overflow: hidden, mientras que en el contenedor de texto.simpleline-ellipsis se definen las propiedades white-space: nowrap y text-overflow: ellipsis.
+      </p>
+      <pre><code>
+      .contenedor-overflow {
+        background-color: blanchedalmond;
+        border: thin solid black;
+        padding: 1rem;
+        width: 60vw;        
+        font-size: 1.5rem;
+        <span class="resaltador">overflow: hidden;</span>
+      }
+      .simpleline-ellipsis {
+        <span class="resaltador">overflow: hidden;</span>
+        <span class="resaltador">white-space: nowrap;</span>  /* dejar que el texto se ajuste conservando los espacios */
+        text-overflow: ellipsis;
+      }
+      </code></pre>
+      <section class="contenedor-overflow">
+        <p class="simpleline-ellipsis">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus odit consectetur maiores facere blanditiis culpa neque illo alias iste, pariatur, provident aliquid, sapiente explicabo repellendus! Aut ea quam porro sequi!
+        </p>
+      </section>
+      <h5>Para multilineas con recorte en una linea determinada</h5>
+      <p>
+        Se construye un contenedor de bloque (section.contenedor-overflow, descrito en el item previo), dentro otro contenedor de texto (div.multiline-ellipsis), dentro del texto no debería existir &lt;br&gt;. El bloque.contenedor-overflow y el contenedor de texto div.simpleline-ellipsis contienen la propiedad overflow: hidden, mientras que en el contenedor de texto.simpleline-ellipsis se definen las propiedades display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; white-space: wrap;
+      </p>
+      <pre><code>
+      .multiline-ellipsis {
+        <span class="resaltador">overflow: hidden;</span>
+        <span class="resaltador">white-space: wrap;</span> /* dejar que el texto se ajuste 
+        conservando los espacios wrap o puede tomar el valor normal */
+        <span class="resaltador">white-space: normal;</span>
+        <span class="resaltador">text-overflow: ellipsis;</span>
+        display: -webkit-box;
+        -webkit-box-orient: vertical;        
+        -webkit-line-clamp: 2; /* comienza a mostrar puntos suspensivos cuando se alcanza la 
+        segunda línea, no siendo necesario el text-overflow: ellipsis*/
+      }
+      </code></pre>
+      <section class="contenedor-overflow">
+        <div class="multiline-ellipsis">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ad quia minus tempore a adipisci nesciunt quae amet illo dolore non nostrum est, voluptatibus quas, ullam veniam itaque consequuntur maiores.         
+        </div>
+      </section>
+      <h4>text-transform</h4>
+      <p>
+        Los posibles valores de la propiedad son:
+        <ul>
+          <li>capitalize, Cada palabra con la primera letra en mayáscula y minúsculas</li>
+          <li>lowercase, todas las letras en minúsculas </li>
+          <li>uppercase, todas las letras en mayúsculas </li>
+          <li>none </li>
+        </ul>
+      </p>
+      <h4>letter-spacing</h4>
+      <p style="letter-spacing: 0.3rem;">Espaciado entre cada caracter por ej. <code style="letter-spacing: normal;">letter-spacing: 0.3rem</code></p>
+      <h4>white-space</h4>
+      <p>
+        Nos dice que se hace con los espacios en blanco, valores:
+        <ul>
+          <li><strong>pre </strong>- el navegador respeta los espacios en blanco, por defecto el selector pre lo tiene establecido <code>white-space: pre;</code></li>, provoca desbordamiento.
+          <li>normal - solo considera un espacio aunque el texto contenga mas de uno</li>
+          <li>nowrap - todo lo pondrá en una sola linea eliminando los saltos de linea y provocando desbordamiento de contenedor</li>
+          <li><strong>pre-wrap </strong>- respeta espacios en blanco pero respeta el contenedor no provoca desbordamiento</li>
+        </ul>
+      </p>
+      <h4>word-break</h4>
+      <p>
+        La forma como se rompe palabras al ir finalizando lineas, valor por defecto normal.
+        break-all corta la linea con la palabra hasta donde alcance, dejando incompleta la lectura en la misma linea.
+        keep-all efecto similar al de normal.
+      </p>
+      <h4>word-spacing</h4>
+      <p>Similar a letter-spacing que trabaja sobre caracteres, mientras que, word-spacing trabaja sobre palabras</p>
+      <h4>writing-mode</h4>
+      <p>
+        Modos de escritura/lectura, forma de escritura cambian de oriente a occidente. Valor por defecto es el horizontal-tb. Modo vertical de derecha a izquierda vertical-rl. Modo vertical de izquierda a derecha vertical-lr.
+      </p>
+      <p></p>
+      <h3>Tipográficos de Iconos Vectoriales</h3>
+      <h4>Material Icon - Google</h4>
+      <p>
+        En sitio web https://fonts.google.com/icons en las referencias de esta pagian buscar Google icons. Buscar dentro del sitio de Google icons el documento <strong>Developer guide</strong>, dentro ubicar Fuente estatica con Google Fonts y copiar en link
+        &lt;link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /&gt;
+        &lt;link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" /&gt;
+        e insertar el icono por el nombre:
+        <br>
+        &lt;span class="icon-thick"&gt; home&lt;/span&gt; inserta icono con linea gruesa
+        <br>
+        &lt;span class="icon-thin icon-2-5"&gt; home&lt;/span&gt; inserta icono linea fina.
+        <br>
+        Se deben insertar las clases en la hoja de estilos
+        <pre><code>
+        /* Para linea fina: */
+        .icon-thin {
+          font-family: "Material Symbols Outlined";
+          font-weight: normal;
+          font-style: normal;
+          font-size: 1.5rem; /* Preferred icon size */
+          display: inline-block;
+          line-height: 1;
+          text-transform: none;
+          letter-spacing: normal;
+          word-wrap: normal;
+          white-space: nowrap;
+          direction: ltr;
+        }
+        /* Para linea gruesa: */
+        .icon-thick {
+          font-family: "Material Icons";
+          font-weight: normal;
+          font-style: normal;
+          font-size: 1.5rem; /* Preferred icon size */
+          display: inline-block;
+          line-height: 1;
+          text-transform: none;
+          letter-spacing: normal;
+          word-wrap: normal;
+          white-space: nowrap;
+          direction: ltr;
+        }
+        .icon-2 {
+          font-size: 2rem;
+        }
+        .icon-2-5 {
+          font-size: 2.5rem;
+        }
+
+        </code></pre>
+
+         <br>
+        <span class="icon-thin icon-2">search</span> 
+        <span class="icon-thick icon-2-5">search</span> 
+        <span class="icon-thin">home</span> 
+        <span class="icon-thick icon-2">home</span> 
+        <span class="icon-thin">settings</span> 
+        <span class="icon-thick">settings</span> 
+        <span class="icon-thin icon-2">favorite</span> 
+        <span class="icon-thick icon-2-5">favorite</span> 
+        <span class="icon-thin">face</span> 
+        <span class="icon-thick">face</span> <br>
+        <span class="icon-thin">&#xE8B6;</span> 
+      </p>
+      <h4>Bootstrap icons</h4>
+      <p>
+        El sitio de bootstrap tambien provee una area de iconos en su ruta https://icons.getbootstrap.com/, seleccionar install y se pude encontrar el CDN (Content Delivery Network - Red de distribución de contenidos), al momento de esta lectura se encuentra el <code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"&gt;</code>, y para invocar al icono deseado se copia el código del respectivo icono como por ejemplo <br>
+        &lt;i class="bi bi-twitter icon-2-5"&gt;&lt;/i&gt; <i class="bi bi-twitter icon-2-5"></i> <br>
+        &lt;i class="bi bi-twitch"&gt;&lt;/i&gt; <i class="bi bi-twitch"></i> <br>
+        &lt;i class="bi bi-whatsapp"&gt;&lt;/i&gt; <i class="bi bi-whatsapp"></i> <br>
+        &lt;i class="bi bi-facebook"&gt;&lt;/i&gt; <i class="bi bi-facebook"></i> <br>
+        &lt;i class="bi bi-messenger"&gt;&lt;/i&gt; <i class="bi bi-messenger"></i> <br>
+        &lt;i class="bi bi-youtube icon-2"&gt;&lt;/i&gt; <i class="bi bi-youtube icon-2"></i> <br>
+        &lt;i class="bi bi-instagram icon-2"&gt;&lt;/i&gt; <i class="bi bi-instagram icon-2"></i> <br>
+        &lt;i class="bi bi-arrow-through-heart-fill"&gt;&lt;/i&gt; <i class="bi bi-arrow-through-heart-fill"></i>
+        &lt;i class="bi bi-alarm icon-1-5"&gt;&lt;/i&gt; <i class="bi bi-alarm icon-1-5"></i> <br>
+        &lt;i class="bi bi-alarm-fill icon-1-5"&gt;&lt;/i&gt; <i class="bi bi-alarm-fill icon-1-5"></i> <br>
+      </p>
+      <h4>fontawesome</h4>
+      <p>
+        Provee iconos en version de pago y free, enlace https://fontawesome.com/ o para no proveer el email personal se puede dirigir hacia https://cdnjs.com/ y buscar font-awesome copiar el link css <code>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/&gt;</code>, mantener los parámetros integrity crossorigin y referrerpolicy, y desde la página de fontawesonme sin registrar el email se pueden usar los iconos ej.: <br>
+        &lt;i class="far fa-angry icon-1-5"&gt;&lt;/i&gt; <i class="far fa-angry icon-1-5"></i> <br>
+        &lt;i class="fab fa-facebook icon-1-5"&gt;&lt;/i&gt; <i class="fab fa-facebook icon-1-5"></i> <br>
+        &lt;i class="fab fa-youtube icon-1-5"&gt;&lt;/i&gt; <i class="fab fa-youtube icon-1-5"></i> <br>
+        &lt;i class="fab fa-whatsapp icon-1-5"&gt;&lt;/i&gt; <i class="fab fa-whatsapp icon-1-5"></i> <br>
+        &lt;i class="fab fa-instagram icon-1-5"&gt;&lt;/i&gt; <i class="fab fa-instagram icon-1-5"></i> <br>
+        &lt;i class="fab fa-twitter icon-1-5"&gt;&lt;/i&gt; <i class="fab fa-twitter icon-1-5"></i> <br>
+        &lt;i class="fas fa-thumbs-up icon-1-5"&gt;&lt;/i&gt; <i class="fas fa-thumbs-up icon-1-5"></i> <br>
+        &lt;i class="fas fa-angry icon-1-5"&gt;&lt;/i&gt; <i class="fas fa-angry icon-1-5"></i> <br>
+      </p>
+      <a href="#indice">👆</a>
+    </article>
+    <hr>
+    <article id="border-outlines">
+      <h2>Border y Outlines</h2>
+      <h3>Propiedad border-radius</h3>
+      <div class="box border-radius">
+        <p>
+          <strong>Bordes redondeados</strong> - Existe el shorthand border-radius y los shorthands border-top-left-radius, border-top-rigth-radius, border-bottom-rigth-radius y border-bottom-left-radius. El shorthand border-radius empezaría en border-top-left-radius y seguiría en el sentido reloj. Si se aplican dos valores entones sería las diagonales top-left y bottom-rigth para el primer valor y top-rigth junto con bottom-left para el segundo valor. En el caso de recibir tres valores, entonces, el primer valor es para la top-left, el segundo valor es para la diagonal (top-right, bottom-left) y el tercer valor es para bottom-right. Si el contenedor es un cuadrado y se redondea a los cuatro lados con el 50% se obtiene un circulo perfecto.
+          <pre><code>
+        .border-radius {
+          background-color: lightslategray;
+          width: 50%;
+          height: 40vh;
+          margin-left: auto;
+          margin-right: auto;
+          padding: 1rem;
+          border: thick solid red;
+          /* border-radius: 2rem; */
+          border-radius: 1rem 4rem 2rem;
+          border-top-left-radius: unset;
+        }        
+          </code></pre>
+        </p>
+        <div class="border-radius-circulo"></div>
+      </div>
+      <p>
+      <pre><code>
+      .border-radius-circulo {
+        background-color: black;
+        width: 5rem;
+        height: 5rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1rem;
+        border-radius: 50%;
+      }
+      </code></pre>
+      </p>
+      <div class="box border-eliptico">
+        <p>
+          <strong>Border elípticos</strong> - Se realiza mediante el establecer 2 valores por cada uno de los parámetros border-top-left-radius, border-top-rigth-radius, border-bottom-right-radius y border-bottom-left-radius, los juegos de valores separar por el caracter /. Antes del / iran todos los que correspondan a los radios y luegos del / todos los que corresponden a la formacion elíptica, siendo el primer valor para x y el segundo para y. Es decir que si en x y y son iguales entonces es un borde redondeado el que se aplico.
+        </p>
+        <pre><code>
+        .border-eliptico {
+          background-color: lightslategray;
+          width: 50%;
+          height: 40vh;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 1rem;
+          padding: 1rem;
+          border-radius: 4rem 4rem 2rem / 2rem 1rem 2rem;
+        }          
+        </code></pre>        
+      </div>
+      <h3>Propiedad outline</h3>
+      <div class="box outlines">
+        <p>
+          Se define como un borde externo, existe la propiedad shorthand border-outline. Existiendo outline-offset, outline-width, outline-style y outline-color. Similar a border. No forma parte del modelo de caja.
+          El offset significa distancia de alejamiento de la caja, pudiendo ser positivo o negativo, despues o antes del borde. Viene aplicado por default en los input y pueden ser modificados.
+        </p>
+        <pre><code>
+        .outlines {
+          border: thick solid red;
+          outline-offset: 1rem;
+          outline-offset: -0.81rem;
+          outline-width: 3px;
+          outline-style: groove;
+          outline-color: #0054dc;
+        }          
+        </code></pre>
+      </div>
+      <a href="#indice">👆</a>
+    </article>
+    <hr>
+    <article id="background-style">
+      <h2>Estilos del Fondo</h2>
+      <div class="background">
+        <h3>Propiedad background-color</h3>
+        <p>
+          Definir el color de fondo del elemento
+        </p>
+        <h3>Propiedad background-image</h3>
+        <p>
+          Definir la imagen de fondo del elemento. se implementa usando la funcion url()
+        </p>
+        <h3>Propiedad background-size</h3>
+        <p>
+          Establecer el tamaño de la imagen de fondo del elemento, primer valor es el x, segundo valor es el y. <br>
+          * Cover .- Escala la imagen al mayor tamaño posible sin estirarla. Si las proporciones de la imagen difieren de las del elemento, es recortada vertical u horizontalmente para que no quede un espacio vacío. Cambia el tamaño de fondo para asegurarse de que permanezca completamente visible. Truncando el resto de su contenido. Cubre toda el elemento pero no asgura que se vea toda la imagen <br>
+          * Contain .- Escala la imagen al mayor tamaño posible sin recortarla ni estirarla. Cambia el tamaño de la imagen de fondo para asegurarse de que el elemento esté completamente cubierto. Si se establece un solo valor entonces lo asume como el áncho y el alto lo toma automáticamente en relación al width, es decir, no se deforma y puede repetirse. 
+        </p>
+        <h3>Propiedad background-repeat</h3>
+        <p>
+          Definir como se repite la imagen de fondo en el elemento. Por default el valor es repeat. Posibles valores repeat-x, repeat-y, no-repeat, space (deja un espacio entre una y otra repeticion), round. Es un shorthand de las propiedades background-position-x y background-position-y.
+        </p>
+        <h3>Propiedad background-position</h3>
+        <p>
+          Definir la posición de la imagen de fondo, primer valor eje x, segundo valor eje y. Si no se especifica el segundo valor este será center. Aparte de valores numéricos se puede indicar posicionamiento con las palabras: center, top, bottom, left y/o right. <code>background-position: calc(78vw - 300px) top;</code>
+        </p>
+        <h3>Propiedad background-clip</h3>
+        <p>
+          Definir cuanto debe externderse el fondo dentro del elemento. border-box (por default - inicia la imagen desde  el fin del borde hacia el contenido), padding-box (inicia la imagen desde el inicio del borde o desde el inicio del padding hacia el contenido), content-box (la imagen inicia desde el contenido).
+          Algunas veces puede verse un background-color “leak” salirse de un borde cuando border-radius esta presente (here’s a perfect example). Para prevenir esto puede usarser la propiedad CSS background-clip como en la clase .element:
+        </p>
+        <pre><code>          
+          background-clip: content-box;
+          background-clip: border-box;
+          background-clip: padding-box;
+
+          .element {
+            border-radius: 10px;
+
+            /* Prevent background color leak outs */
+            -webkit-background-clip: padding-box; 
+            -moz-background-clip:    padding; 
+            background-clip:         padding-box;
+          }          
+        </code></pre>
+        <h3>Propiedad background-origin</h3>
+        <p>
+          Definir el origen de la imagen de fondo. Tiene los mismos valores que background-clip. padding-box (por default - inicia la imagen desde el inicio del borde o desde el inicio del padding hacia el contenido), border-box (inicia la imagen desde el fin del borde hacia el contenido), content-box (la imagen inicia desde el contenido)
+        </p>
+        <pre><code>
+        background-origin: padding-box;
+        background-origin: content-box;
+        background-origin: border-box;
+        </code></pre>    
+        <h3>Diferencias entre clip y origin</h3>
+        <p></p>
+        <h3>Propiedad background-attachment</h3>
+        <p>
+          Definir como se comportará la imagen de fondo al desplazarse por la página.
+          Valor por defecto es scroll. Con el valor fixed la imagen se posicione en el viewport y conforme nos movemos la imegen queda fija generardo efecto del espacio en la htmal como una ventana con vista a imagen de fondo.
+        </p>
+        <h3>Propiedad background</h3>
+        <p>
+          Es el shorthand de las ocho propiedades anteriores, en lo posible evitar usar la propiedad background como tal y usar cada una de las anteriores. Se define en el orden background-image background-position background-size background-repeat background-origin background-clip background-attachment y background-color. 
+        </p>
+        <h3>Fondos Multiples</h3>
+        <div>
+          <div>
+            Con la propiedad background-image se pueden agregar tantas url para definir varias imagenes separadas por comas <code> background-image: url("img01.jpg"), url("img02.jpg"), url("img03.jpg"); </code> quedando visible la primera img01.jpg y de ultima queda más al fondo. Asi también la propiedades definibles en la propiedad shorthand background como <code>background-repeat: repeat, no-repeat, repeat-x;</code> en caso que se desee que un mismo valor afecte a varias imagenes solo se define un valor ej.: <code>  background-size: contain; </code>, otro ej.: <code>  background-size: 10% contain; </code> 
+            Enlace de práctica de composición de imagenes de fondo, opacidad y texto sobrepuesto <a href="imagen-texto-opacity.html" aria-label="Práctica de composición de imagenes de fondo" role="link">imagen-text-opacity</a> para Backgraund.
+          </div>
+          <div class="img-multiples"></div>
+        </div>
+        <div class="bg-art"></div>
+        <pre>
+          <code>
+          /* Basta representar un div vacio con la clase .bg-art para representar composición de imagenes de la previa*/
+          .bg-art {
+            width: 1000px;
+            height: 700px;
+            background: url("../assets/img/arbol.png") no-repeat center bottom,
+              url("../assets/img/aves.png") no-repeat center bottom fixed,
+              url("../assets/img/cielo.png") no-repeat center top;
+            background-size: contain;
+            background-attachment: fixed;
+          }
+          </code>
+        </pre>
+      </div>      
+      <a href="#indice">👆</a>
+    </article>
+    <hr>
+    <article id="image-style">
+      <h2>Estilos de Imágenes</h2>
+      <h3>Imagenes responsivas</h3>
+      <div>
+        Una de sus caracteristicas mas importantes es hacerlas responsivas.
+        Para ello se recomienda establecer en el selector inicial es decir a todas las imagenes un max-width y un height como en el codigo siguiente, este el el truco para hacerlas responsivas.<br>
+        <strong><pre><code>
+          &lt;img src="assets/img/puesta-sol.jpg" alt="Maravillosa puesta del sol"&gt;
+          img { 
+            max-width: 100%; 
+            height: auto; 
+          }
+        </code></pre></strong>
+        <img src="assets/img/puesta-sol.jpg" alt="Maravillosa puesta del sol">
+      </div>
+      <h3>Imagenes con tamaños especificos</h3>
+      <div>
+        En el siguiente caso partiendo de un article.tarjeta con una img y un h4, si a la clase tarjeta se le establece una <code><strong>width: 400px;</strong></code> y un <code><strong>border: medium solid black;</strong></code> 
+      </div>
+      <article class="tarjeta" id="img-size-especifico">
+        <img src="assets/img/puesta-sol.jpg" alt="kEnAi y la puesta del sol">
+        <h3>Puesta del sol  </h3>
+        <p>
+          Diseñando una card o tarjeta 
+          👉 <a href="imagenes-tamanio-especifico.html"> vista de imagenes con tamaños específicos </a>
+        </p>
+      </article>
+      <div>
+        <p>
+          <strong>object-fit:</strong> para una img o un video el como se redimensiona para ajustarse al contenedor (Similar a background-size). <br>
+          <code> object-fit: fill | contain | cover | none | scale-down </code><br>
+          <strong><i>fill (default)</i></strong> objeto se estira y cubre caja, no mantiene aspecto.
+          <strong><i>contain</i></strong> objeto mantiene relacion de aspecto, ajustandose al tamaño de caja de acuerdo a alto o a ancho. 
+          <strong><i>cover</i></strong> objeto se recorta para ajustar a caja, mantiene aspecto.
+          <strong><i>none</i></strong> objeto no se redimensiona, mantiene aspecto y recorta contenido de acuerdo a caja.
+          <strong><i>scale-down</i></strong> Contenido se dimensiona como si <code>none</code> o <code>contain</code> estuvieran especificados tomando el menor de ellos posible, lo que resultaría en un tamaño de objeto concreto más pequeño. si se aplica posteriormente none o contain tiene prioridad, debiendose eliminar scale-down.
+        </p>
+        <p>
+          <strong>object-position:</strong> determina el alineamiento del objeto dentro de caja (similar a background-position) con coordenadas x, y puede ser un valor (px o %) o una palabra x(left center right) y(top center bottom. Por default es 50% 50% en x y y.<br>
+          <pre><code>
+    object-position: &lt;position&gt;
+    &lt;position&gt; = 
+      [ left | center | right ] || [ top | center | bottom ]  |
+      [ left | center | right | &lt;length-percentage&gt; ] [ top | center | bottom | &lt;length-percentage&gt; ]?  |
+      [ [ left | right ] &lt;length-percentage&gt; ] && [ [ top | bottom ] &lt;length-percentage&gt; ]
+          </code></pre>
+        </p>
+
+      </div>
+      <a href="#indice">👆</a>
+    </article>
+    <hr>
+    <article id="list-style">
+      <h2>Estilos de Listas</h2>
+      <div>
+        <strong>list-style-type: </strong>disc (default) | square | circle | lower-roman | upper-roman | decimal | decimal-leading-zero | lower-greek | none | lower-latin | upper-latin | armenian | gregorian <br>
+        <strong>list-style-image: </strong> url('/images/list-style-image.png') | none . Puede provocar desbordamiento, anticuado<br>
+        <strong>list-style-position: </strong> Donde se coloca el marcador de la lista en relación a la caja principal, outside (default): inside | outside | inherit <br>
+        <strong>list-style: </strong> shorthand que define :: type, image y position.
+        <pre><code>
+    .lists {
+      list-style-type: georgian;
+      list-style-type: armenian;
+      list-style-type: decimal-leading-zero;
+      /* list-style-position: inside;
+      list-style-position: outside; */
+      list-style-type: lower-greek;
+    }
+    .lists li {
+      list-style-type: none;
+    }
+    .lists li::before {
+      content: "";
+      display: inline-block;
+      width: 3rem;
+      height: 1.4rem;
+      background-image: url("/assets/img/favicon.png");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }          
+        </code></pre>
+        <ul class="lists">
+          <li>item 1</li>
+          <li>item 2</li>
+          <li>item 3</li>
+          <li>item 4</li>
+        </ul>
+      </div>
+      <a href="#indice">👆</a>
+    </article>
+    <hr>
+    <article id="text-column">
+      <h2>Texto en columnas</h2>
+      <div>
+        Ubicar listas como columnas, multi-column-layout. Se basa en cuatro propiedades <strong>column-count</strong> cuantas columnas se usaran, <strong>column-gap</strong> espacio de separación mínimo entre una y otra columna, <strong>column-rule</strong> funciona como border o como outline (grosor tipo color) se nota cambios entre list-style-position inside y outside con esta propiedad, <strong>column-width</strong> Ancho minimo para cada columna, puede ser auto. <br> En caso de un article que contiene 6 parrafos se podría ubicar en tres columnas de manera similar.
+        <pre><code>
+    .text-column-4 {
+      column-count: 4;
+      column-gap: 2rem;
+      column-rule: thick solid #2a3132;
+      column-width: 100px;
+      list-style-type: lower-greek;
+      list-style-position: inside;
+    }          
+        </code></pre>
+        <ul class="text-column-4">
+          <li>Items 5</li>
+          <li>Items 6</li>
+          <li>Items 7</li>
+          <li>Items 8</li>
+          <li>Items 9</li>
+          <li>Items 10</li>
+          <li>Items 11</li>
+          <li>Items 12</li>
+          <li>Items 13</li>
+          <li>Items 14</li>
+          <li>Items 15</li>
+          <li>Items 16</li>
+        </ul>
+      </div>
+      <a href="#indice">👆</a>
+    </article>
+    <hr>
+    <article id="table-style">
+      <h2>Estilos de Tablas</h2>
+      <div>
+        <strong>border-collapse</strong> Eliminar los espacios entre bordes similar a las tablas que genera word con el valor collapse. Por default es separate | collapse 
+        <strong>border-spacing</strong> separacion entre celdas, funciona cuando border-collapse: separate, con valor de 0 se comporta como border-collapse: collapse 
+        <strong>empty-cells</strong> funciona cuando border-collapse: separate y oculta los bordes de la celda vacia.
+        <pre><code>
+    .tabla {
+      border-collapse: separate;
+      border-spacing: 1rem;
+      empty-cells: hide;
+    }
+    .tabla th,
+    .tabla td {
+      border: thin solid #333333;
+    }          
+        </code></pre>
+      </div>
+      <div>
+        <table class="tabla">
+          <tr>
+            <th>Titulo 1</th>
+            <th>Titulo 2</th>
+            <th>Titulo 3</th>
+          </tr>
+          <tr>
+            <td>dato 65</td>
+            <td>dato 66</td>
+            <td>dato 67</td>
+          </tr>
+          <tr>
+            <td>dato 65</td>
+            <td></td>
+            <td>dato 67</td>
+          </tr>
+        </table>
+      </div>
+      <a href="#indice">👆</a>
+    </article>
+    <hr>
+    <article id="form-style">
+      <h2>Estilos de Formularios</h2>
+      <div>
+        Tomar en consideración:
+        <pre><code>
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+        </code></pre>
+      </div>
+      <form class="contact-form" action="" method="post">
+        <input type="text" name="nombre" placeholder="Escribe tu nombre" required pattern="^[A-Za-zÑñÁÉÍÓÚáéíóúÜü\s]+$" title="Nombre sólo acepta letras y espacios en blanco">
+        <input type="email" name="correo" placeholder="Escribe tu correo" required pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$" title="Formato de correo invalido">
+        <textarea name="comentarios" placeholder="Escribe tus comentarios" cols="30" rows="10" required></textarea>
+        <input type="submit">
+      </form>
+      <a href="#indice">👆</a>
+    </article>
+    <hr>
+    <article id="form-contact">
+      <h2>Formulario de contacto con CSS</h2>
+      <div>
+        <pre><code>
+    .contact-form {
+      border: thin solid #000;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 2rem;
+      width: 80%;
+      background-color: var(--form-bg-color);
+      border: thin solid var(--form-border-color);
+    }
+    .contact-form > * {
+      display: block;
+      width: 100%;
+      margin-bottom: 2rem;
+      font-family: sans-serif;
+      font-size: 1rem;
+      padding: 0.5rem;
+      border-radius: 0.35rem;
+      color: var(--form-text-color);
+      /* DEFINE COLOR AL CURSOR EN CADA ELEMENTO DEL FORM */
+      caret-color: var(--form-placeholder-color);
+    }
+    .contact-form input[type="submit"] {
+      margin-bottom: 0;
+      width: 30%;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: var(--form-placeholder-color);
+      font-weight: bold;
+      font-size: 1.25rem;
+      color: #fff;
+    }
+    .contact-form input[type="submit"]:hover {
+      cursor: pointer;
+      opacity: 0.75;
+    }
+    .contact-form textarea {
+      resize: none;
+    }
+    .contact-form > *::placeholder {
+      color: var(--form-placeholder-color);
+    }
+    .contact-form > *[required]:invalid {
+      border: thick solid var(--form-error-color);
+    }
+    .contact-form > *[required]:valid {
+      border: thick solid var(--form-success-color);
+    }          
+        </code></pre>
+      </div>
+      <a href="#indice">👆</a>
+    </article>
+    <hr>
+    <a href="#indice">👆</a>
+    <br><br><br><br><br>
+  </body>
+  </html>
+  

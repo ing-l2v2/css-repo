@@ -1,0 +1,98 @@
+body {
+  text-align: center;
+}
+#agrupar {
+  width: 90vw;
+  margin: 1rem auto;
+  text-align: left;
+}
+#cabecera {
+  background: #fffbb9;
+  border: 1px solid #999;
+  padding: 1.2rem;
+}
+#menu {
+  background: #ccc;
+  padding: 0.3rem 1rem;
+}
+#menu li {
+  display: inline-block;
+  list-style: none;
+  padding: 0.3rem;
+  font: bold 0.8rem verdana, sans-serif;
+}
+#seccion {
+  float: left;
+  width: 73.5%;
+  margin: 1.2rem;
+}
+#seccion article {
+  background: #fffbcc;
+  border: 1px solid #999;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+}
+#seccion article footer {
+  text-align: right;
+}
+#seccion time {
+  color: #999999;
+}
+#seccion figcaption {
+  font: italic 14px verdana, sans-serif;
+}
+#columna {
+  float: left;
+  width: 23.5%;
+  margin: 1.2rem 0;
+  padding: 1.2rem;
+  background: #ccc;
+}
+#pie {
+  clear: both;
+  text-align: center;
+  padding: 1.2rem;
+  border-top: 2px solid #999;
+}
+
+#reproductor {
+  width: 90%;
+  margin: 20px auto;
+  padding: 15px;
+  background: #999999;
+  border: 1px solid #666;
+  border-radius: 15px;
+}
+#reproductor > nav {
+  margin: 5px 0px;
+}
+#botones {
+  float: left;
+  width: 110px;
+  height: 20px;
+}
+#barra {
+  position: relative;
+  float: left;
+  width: 670px;
+  height: 16px;
+  padding: 1px;
+  border: 1px solid #cccccc;
+  background: #eeeeee;
+}
+#reproducir {
+  padding: 0 7px;
+  width: 100px;
+}
+#progreso {
+  position: absolute;
+  width: 0px;
+  height: 16px;
+  color: yellow;
+  font-size: 0.6rem;
+  text-align: right;
+  background: rgba(0, 66, 150, 0.4);
+}
+.float-clear {
+  clear: both;
+}

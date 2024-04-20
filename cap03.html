@@ -1,0 +1,2993 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Entre 55 y 65 caracteres -->
+    <title>Efectos visuales y movimientos con CSS</title>
+    <!-- Máximo 165 caracteres -->
+    <meta
+      name="description"
+      content="Nivel 4 de 5 para CSS, aplicando efectos visuales y movimientos"
+    />
+    <meta name="keywords" content="CSS3, ing-l2v2, l2v2-ing, efectos, visuales, movimiento"/>
+    <!-- Parámetros para CEO -->
+    <link rel="canonical" href="https://tudomino.com/la-url-canonical" />
+    <link rel="icon" href="assets/img/animal-bird-domestic-svgrepo-com.svg" />
+    <link
+      rel="apple-touch-icon"
+      href="assets/img/animal-bird-domestic-svgrepo-com.svg"
+    />
+    <meta name="theme-color" content="#F60" />
+    <meta
+      property="og:title"
+      content="Efectos visuales y movimientos con CSS"
+    />
+    <meta
+      property="og:description"
+      content="Nivel 4 de 5 para CSS, aplicando efectos visuales y movimientos"
+    />
+    <meta
+      property="og:image"
+      content="http://tudominio.com/img/nombre-imagen.png"
+    />
+    <meta property="og:url" content="http://tudominio.com/index.html" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@leonelvilla" />
+    <!-- Fin de parámetros para CEO -->
+    <link rel="stylesheet" href="assets/css/cap03.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Efectos visuales y movimientos con CSS</h1> 
+      <a href="#indice" class="indice">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        👆 Indice temático
+      </a>
+    </header>
+    <article id="indice">
+      <h2>Indice Temático Capítulo 3</h2>
+      <ul role="list" aria-details="Indice de temas">
+        <li role="listitem"><a href="cap02.html" target="_blank">Capítulo 2</a></li>
+        <li role="listitem"><a href="Cap03_flex.html" target="_blank">Capítulo 3 Flex</a></li>
+        <li role="listitem"><a href="Cap04.html" target="_blank">Capítulo 4 Grid Css</a></li>
+        <li role="listitem">
+          <a href="cap03.html#c03-00">Referencias</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-01">Estilos iniciales para el documento</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-02">Sombra a las cajas - box-shadow</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-03">Sombra a los textos - text-shadow</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-04">Sombras multiples</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-05">Filtro de sombras (drop-shadow)</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-06">Degradados lineales - (linear-gradient)</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-07">Degradados radiales - (radial-gradient)</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-08">Degradados cónicos - (conic-gradient)</a>
+        </li>
+
+        <li role="listitem">
+          <a href="cap03.html#c03-09">Patrones con degradados</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-10">Gráficas con degradados</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-11">Filtros (filter)</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-12">Filtros múltiples</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-13">Filtros a fondos (backdrop-filter)</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-14">Modo Dark/Light con filtros</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-15">Modos de Mezcla (mix-blend-mode)</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-16">Modos de Mezcla a fondos (background-blend-mode)</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-17">Máscaras (clip-path) </a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-18">Formas (shape-outside)</a>
+        </li>
+
+        <li role="listitem">
+          <a href="cap03.html#c03-19">Sitio One Page Scroll (scroll-margin & scroll-behaivor)</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-20">Ajuste del Scroll Efecto Slides Verticales (scroll-snap-type & scroll-snap-align)</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-21">Ajuste del Scroll Efecto Carrusel Horizontal (scroll-snap-type & scroll-snap-align)</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-22">Texto con Degradado</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-23">Movimiento en CSS</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-24">Transiciones</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-26">Transiciones Múltiples</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-29">Transformaciones en 2D</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-30">Transformación Matrix 2D</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-32">Activando la Perspectiva 3D</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-33">Transformaciones en 3D</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-34">Transformación Matrix 3D</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-36">
+            Origen de Transformación (transform-origin)
+          </a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-37">Flip Cards con transiciones y transformaciones</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-38">Animaciones</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-39">Propiedades de Animación en CSS</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-40">Linea de tiempo y fotogramas claves en CSS</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-41">Animaciones Múltiples</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-42">Efecto fadein & fadeout</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-43">Efecto shake</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-44">Efecto pulse</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-45">❤️ Eres el CSS de mi HTML ❤️</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-46">Spinner / Loader animado</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-47">Botones Animados (maquetación y micro interacciones) y Gradientes Animados</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-50">Menú de Pestañas Tabs (maquetación y animación)</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-52">Menú Off Canvas (marcado HTML) y Botón de Hamburguesa Animado</a>
+        </li>        
+        <li role="listitem">
+          <a href="cap03.html#c03-54">Menú Off Canvas (maquetación y animación)</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-55">Ventana Modal</a>
+        </li>
+        <li role="listitem">
+          <a href="cap03.html#c03-56">Intro Películas Star Wars</a>
+        </li>
+        <!-- (li[role="listitem"]>a[href="cap03.html#c03-$$@2"])*5 -->
+      </ul>
+    </article>
+
+    <div class="Contenido">
+      <article id="c03-00">
+        <h2>Referencias</h2>
+        <ul role="list">
+          <!-- 
+          (li[tabindex="$@2" role="listitem"]>a[href="#" target="blank" role="link" rel="noopener noreferrer nofollow" aria-label="DesCorta"]{CSS Gradient Generator})*12 
+          -->
+          <li tabindex="2" role="listitem">
+            <a
+              href="https://cssgradient.io/"
+              target="blank"
+              role="link"
+              rel="noopener noreferrer nofollow"
+              aria-label="Herramienta útil para generar gradientes CSS"
+            >
+              CSS Gradient Generator
+            </a>
+          </li>
+          <li tabindex="3" role="listitem">
+            <a
+              href="https://www.colorzilla.com/gradient-editor/"
+              target="blank"
+              role="link"
+              rel="noopener noreferrer nofollow"
+              aria-label="Herramienta útil para generar gradientes CSS"
+            >
+              Colorzilla Gradient Generator
+            </a>
+          </li>
+          <li tabindex="3" role="listitem">
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path"
+              target="blank"
+              role="link"
+              rel="noopener noreferrer nofollow"
+              aria-label="Concepto de clip path CSS"
+            >
+              Concepto de clip path CSS
+            </a>
+          </li>
+          <li tabindex="4" role="listitem">
+            <a
+              href="https://bennettfeely.com/clippy/"
+              target="blank"
+              role="link"
+              rel="noopener noreferrer nofollow"
+              aria-label="Herramienta generadora de formas complejas clip-path"
+            >
+              ClipPath Generator US
+            </a>
+          </li>
+          <li tabindex="5" role="listitem">
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties"
+              target="blank"
+              role="link"
+              rel="noopener noreferrer nofollow"
+              aria-label="Como generar propiedades animables"
+            >
+              Propiedades Animables US
+            </a>
+          </li>
+          <li tabindex="6" role="listitem">
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix"
+              target="blank"
+              role="link"
+              rel="noopener noreferrer nofollow"
+              aria-label="Matriz de transformación 2D homogenea"
+            >
+              Matrix
+            </a>
+          </li>
+          <li tabindex="7" role="listitem">
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate3d"
+              target="blank"
+              role="link"
+              rel="noopener noreferrer nofollow"
+              aria-label="Reposicionar un elemento en el espacio 3D"
+            >
+              Translate3d
+            </a>
+          </li>
+          <li tabindex="8" role="listitem">
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale3d"
+              target="blank"
+              role="link"
+              rel="noopener noreferrer nofollow"
+              aria-label="Definir una transformación que cambia el tamaño de un elemento en el espacio 3D"
+            >
+              Scale3d
+            </a>
+          </li>
+          <li tabindex="9" role="listitem">
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d"
+              target="blank"
+              role="link"
+              rel="noopener noreferrer nofollow"
+              aria-label="Definir una transformación que gira un elemento alrededor de un eje fijo en el espacio 3D"
+            >
+              Rotate3d
+            </a>
+          </li>
+          <li tabindex="10" role="listitem">
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d"
+              target="blank"
+              role="link"
+              rel="noopener noreferrer nofollow"
+              aria-label="Definir una transformación 3D como una matriz homogénea de 4x4. Su resultado es un tipo de datos. matrix3d()"
+            >
+              Matrix3d
+            </a>
+          </li>
+          <li tabindex="11" role="listitem">
+            <a
+              href="https://cubic-bezier.com/"
+              target="blank"
+              role="link"
+              rel="noopener noreferrer nofollow"
+              aria-label="Herramienta para generar cubos de bezier"
+            >
+              Cubic-bezier
+            </a>
+          </li>
+          <li tabindex="12" role="listitem">
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Glossary/Bezier_curve"
+              target="blank"
+              role="link"
+              rel="noopener noreferrer nofollow"
+              aria-label="DesCorta"
+            >
+              Bézier curve
+            </a>
+          </li>
+          <li tabindex="13" role="listitem">
+            <a
+              href="https://starwars.fandom.com/wiki/Opening_crawl"
+              target="blank"
+              role="link"
+              rel="noopener noreferrer nofollow"
+              aria-label="Sitio de la referencia"
+            >
+              Pelis StarWars
+            </a>
+          </li>
+        </ul>        
+      </article>
+      <hr />
+
+      <article id="c03-01">
+        <h2>Estilos iniciales para el documento</h2>
+        <h3>Aplicando contadores a los títulos h2, h3, h4, etc.</h3>
+        <div>
+          <p>
+            Clase .Contenido define un contador con nombre "temarios" para cada
+            h2 y un "subtemarios" para cada h3. .Contenido realiza un
+            counter.reset al contador "temarios", así como h2:before realiza un
+            reset al contador "subtemarios" y h3:before resetea el contador
+            "subtema-h4". En h2::before realiza un incremento del contador
+            "temarios", mientras en h3::before se incrementa "subtemarios"
+          </p>
+        </div>
+        <div class="box-flex">
+          <div class="box-text">
+            <pre><code>
+    .Contenido {
+      counter-reset: temarios;
+      padding: 0 1rem;
+    }
+    .Contenido h2 {
+      counter-reset: subtemahTres;
+      counter-increment: temarios;
+    }
+    .Contenido h3 {
+      counter-reset: subtemahCuatro;
+      counter-increment: subtemahTres;
+    }
+            </code></pre>
+          </div>
+          <div class="box-text">
+            <pre><code>
+    .Contenido h4 {
+      counter-increment: subtemahCuatro;
+    }
+    .Contenido h2::before {
+      content: counter(temarios) ".- ";
+    }
+    .Contenido h3::before {
+      content: counter(temarios) "." counter(subtemahTres) ".- ";
+    }
+    .Contenido h4::before {
+      content: counter(temarios) "." counter(subtemahTres) "."
+        counter(subtemahCuatro) ".- ";
+    } 
+            </code></pre>
+          </div>
+        </div>
+        <div>
+          <p>
+            Se puede tener tres tipos de sombras: a la caja, al texto y el
+            filtro drop-shadow
+          </p>
+        </div>
+      </article>
+      <hr />
+
+      <article id="c03-02">
+        <h2>Sombras a las cajas - (box-shadow)</h2>
+        <div>
+          <p>
+            box-shadow: se determina con distancia en x, distancia en y, el
+            desenfoque radial conocido como blur-radius (no negativo), la
+            expansión del desenfoque spread-blur (+|- + expande más, - reduce
+            tamaño, 0 sombra mismo tamaño que el elemento), el color (opcional o
+            lo calcula dependiendo del contenido) y adicionalmente si la sombra
+            es interna o externa inset/outset, solo admite inset, outset es por
+            default (no se escribe). Si no se especifica el color toma el color
+            de texto del contenido de la caja. Color de texto por default es
+            negro #000
+          </p>
+          <p>
+            Dos, tres, o cuatro valores &lt;length&gt;. Si solo dos valores son
+            definidos, son interpretados como valores &lt;offset-x&gt;
+            &lt;offset-y&gt;. Si un tercer valor es dado, es interpretado como
+            un &lt;blur-radius&gt;. Si un cuarto valor es dado, es interpretado
+            como un &lt;spread-radius&gt;. Opcionalmente, la palabra clave
+            inset. Opcionalmente, el valor &lt;color&gt;.
+          </p>
+          <pre><code>
+            box-shadow: x y blur-radius spread-blur color inset/outset
+          </code></pre>
+        </div>
+        <div class="box shadow"></div>
+        <div>
+          <pre><code>
+    .box {
+        border: thin solid transparent;
+        width: 200px;
+        height: 50px;
+        margin-bottom: 0.3rem; /* Mantener distancia con siguiente elemento */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .shadow {
+      /* box-shadow: x y blur-radius spread-blur color inside/outside */
+      box-shadow: 0.2rem 0.2rem 0.8rem 0.1rem #0002;
+      font-size: 2rem;
+      text-align: center;
+      text-shadow: -0.1rem -0.1rem 0.2rem #0007;
+    }            
+          </code></pre>
+        </div>
+      </article>
+      <hr />
+
+      <article id="c03-03">
+        <h2>Sombra a los textos - (text-shadow)</h2>
+        <div>
+          <p>
+            text-shadow: se determina con distancia en x, distancia en y, el
+            desenfoque radial conocido como blur-radius (si es cero es como
+            escribir el texto, no negativo), el color (opcional o lo calcula
+            dependiendo del contenido). Si no se especifica el color toma el
+            color de texto del contenido de la caja. Color de texto por default
+            es negro #000
+          </p>
+          <pre><code>
+            text-shadow: x y blur-radius color
+          </code></pre>
+        </div>
+        <div class="box shadow">Sombra</div>        
+      </article>
+      <hr />
+
+      <article id="c03-04">
+        <h2>Sombras multiples</h2>
+        <div>
+          <p>
+            Se pueden agregar varias sombras simultaneas para lo cual se
+            requiere separarlas por coma entre cada una. Incluso combinar inset
+            y outset en cada una de ellas.
+          </p>
+          <pre><code>
+    .shadow-multiple {
+      box-shadow: 0.4rem 0.3rem 0.7rem -0.15rem #0006,
+        -0.4rem -0.8rem 0.3rem 0.14rem #f004;
+    }
+          </code></pre>
+        </div>
+        <div class="box shadow-multiple"></div>
+      </article>
+      <hr />
+
+      <article id="c03-05">
+        <h2>Filtro de sombras - (drop-shadow)</h2>
+        <div>
+          <p>
+            La propiedad filter permite invocar algunas funciones entre ellas
+            drop-shadow(). La propiedad CSS filter dota de efectos gráficos como
+            el desenfoque o cambio de color en la representación antes de que se
+            muestre el elemento. Los filtros se utilizan comúnmente para ajustar
+            la representación de imágenes, fondos o bordes. También se pueden combinar varias funciones aplicando como filtro:
+          </p>
+          <p><pre><code>
+    filter: url("filters.svg#filter-id");
+    filter: blur(5px);  /* Desenfoque Gaussiano, no acepta porcentajes */
+    filter: brightness(0.4);  /* +|- brillante 0% negro, 100% sin cambios default 1 = 100%*/
+    filter: contrast(200%);   /* +|- contraste, 0% imagen gris, 100% sin cambios, default 1=100%, &gt;100% mayor contraste*/
+    filter: drop-shadow(16px 16px 20px blue); /* Efecto sombra revisar box-shadow y text-shadow. aplica a imagenes con transparencia alfa (png) */
+    filter: grayscale(50%); /* 0% (sin cambios) hasta 100% (escala de grises)*/
+    filter: hue-rotate(90deg); /* 0deg (sin cambios) hasta 360deg (aplicando rotacion de tonos)*/
+    filter: invert(75%);  /* 0% (sin cambios) hasta 100% (invierte colores de imagen de acuerdo a proporción) */
+    filter: opacity(25%); /* 0% (completamente transparente) hasta 100% (sin cambios), igual a propiedad opacity*/
+    filter: saturate(30%);  /* 0% (completamente sin saturación) hasta 100% (sin cambios), &gt;100% permitido y genera sobre saturación*/
+    filter: sepia(60%); /* 0% (sin cambios) hasta 100% (completamente sepia)*/
+    /* Apply multiple filters */
+    filter: contrast(175%) brightness(3%);
+    
+    .drop-shadow {
+      box-shadow: 0.4rem 0.3rem 0.7rem -0.15rem #0006,
+        -0.4rem -0.8rem 0.3rem 0.14rem #eee;
+      
+      filter: drop-shadow(0.2rem 0.5rem 0.2rem red) sepia(0%) contrast(200%);
+    }          
+          </code></pre></p>
+        </div>
+        <div class="box-img drop-shadow">
+          <img src="assets/img/arbol.png" alt="Imagen con transparencia alfa">
+        </div>
+      </article>
+      <hr />
+      <article id="c03-06">
+        <div>
+          <p>Se tienen tres tipos de degradados: Lineales, Radiales y Cónicos</p>
+        </div>
+        <h2>Degradados lineales - (linear-gradient)</h2>
+        <div>
+          <p>En las <a href="cap03.html#c03-00">Referencias</a> se presentan herramientas tales como Gradient Generator y ColorZilla Gradient.</p>
+          <p>linear-gradient es una funcion que se la define como propiedad background pero especificamente background-image, se especifica grados de inclinación del gradiente desde 0deg hasta 360deg (cuando sea 0 se usa igual las unidades deg) por default es 180deg, también sirven las palabras claves "to right", "to top", "to bottom", "to left" y las combinaciones "to top left", "to top rigth", "to bottom left", "to bottom rigth" con relacion al último color, los colores se los define separados por comas junto opcionalmente con la proporción de color en porcentaje si por cada color se asignan 2 proporciones esto indica donde empieza y donde termina</p>
+          <pre><code>
+    .lineal {
+      background-image: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(52, 41, 160, 0.8) 28%, rgba(84, 132, 79, 1) 56%, rgba(50, 165, 151, 1) 77%, rgba(0, 212, 255, 1) 100%);
+      background-image: linear-gradient(red, orange, blue);
+      background-image: linear-gradient(180deg, red, orange, blue);
+      background-image: linear-gradient(90deg, green, white, green);
+      background-image: linear-gradient(90deg, green 0% 33%, white 34% 66%, green 67% );
+      background-image: linear-gradient(90deg, green 20%, white 50%, green 100%);
+    }
+          </code></pre>
+        </div>
+        <div class="box-gradient lineal"></div>
+      </article>
+      <article id="c03-07">
+        <h2>Degradados radiales - (radial-gradient)</h2>
+        <div>
+          <p>radial-gradient es una funcion que se la define como propiedad background pero especificamente background-image</p>
+          <p>Los colores se distribuyen de adentro hacia afuera, primero a último color. Circulo circle solo necesita su radio (por default), ellipse necesita radio en x y </p>
+        </div>
+        <pre><code>
+    .radial {
+      background-image: radial-gradient(cyan, magenta, yellow);
+      background-image: radial-gradient(circle 4rem, cyan, magenta, yellow);
+      background-image: radial-gradient(circle 60px, cyan 30%, magenta 60%, yellow 90%);
+      background-image: radial-gradient(circle 60px at top, cyan 30%, magenta 60%, yellow 90%);
+      background-image: radial-gradient(circle 60px at top left, cyan, magenta,yellow);
+      background-image: radial-gradient(circle 60px at center, cyan, magenta, yellow);
+      background-image: radial-gradient(ellipse 60px 30px, cyan, magenta, yellow);
+      background-image: radial-gradient(circle 60px, red 50%, white 50%);
+    }          
+        </code></pre>
+        <div class="box-gradient radial"></div>
+      </article>
+      <hr />
+      <article id="c03-08">
+        <h2>Degradados cónicos - (conic-gradient)</h2>
+        <div>
+          <p>conic-gradient es una funcion que se la define como propiedad background pero especificamente background-image</p>
+        </div>
+        <pre><code>
+    .conica {
+      background-image: conic-gradient(red, green, blue);
+      background-image: conic-gradient(red 0% 50%, green 60%, blue 80%);
+      background-image: conic-gradient(red 0deg 90deg, green 120deg 240deg, blue 270deg);
+      background-image: conic-gradient(from 45deg, red 0deg 90deg, green 120deg 240deg, blue 270deg);
+      background-image: conic-gradient(from 90deg, red 0deg 120deg, white 120deg 240deg, blue 240deg);
+    }          
+        </code></pre>
+        <div class="box-gradient conica"></div>
+      </article>
+      <hr />
+
+      <article id="c03-09">
+        <h2>Patrones con degradados</h2>
+        <div>
+          <p>Permite repetir degradados</p>
+        </div>
+        <h3>Repetir degradados lineales repeating-linear-gradient</h3>
+        <pre><code>
+    .repeating-linear-gradient {
+      background-image: repeating-linear-gradient(60deg, red 0 5px, green 5px 10px, blue 10px 15px);
+      background-image: repeating-linear-gradient(60deg, red 0 5px, green 15px 20px, blue 30px 35px);
+    }
+    .repeating-radial-gradient {
+      background-image: repeating-radial-gradient(
+        circle 30px,
+        red 0 5px,
+        magenta 5px 10px,
+        yellow 10px 15px
+      );
+    }
+    .repeating-conic-gradient {
+      background-image: repeating-conic-gradient(
+        red 0% 5%,
+        white 5% 10%,
+        black 10% 15%
+      );
+    }
+        </code></pre>
+        <div class="box-gradient repeating-linear-gradient"></div>
+        <h3>Repetir degradados radiales <code>repeating-radial-gradient()</code></h3>
+        <div class="box-gradient repeating-radial-gradient"></div>
+        <h3>Repetir degradados cónicos</h3>
+        <div class="box-gradient repeating-conic-gradient"></div>
+      </article>
+      <hr>
+      <article id="c03-10">
+        <h2>Gráficas con degradados</h2>
+        <div><p align="center">
+          1.- &nbsp;&nbsp;&nbsp; div.box-chart.chart-gradient.box-flex.box-flex-attr > p{Chart} <br>
+          2.- &nbsp;&nbsp;&nbsp; div.box-chart.donut-gradient.box-flex.box-flex-attr > p{Chart}
+        </p></div>
+        <div class="box-flex">
+          <div class="box-text">
+            <pre><code>
+.box-flex {
+  display: flex;
+}
+/* Aplica al texto descriptivo de css */
+.box-text {
+  width: auto;  
+  margin-bottom: 0.3rem; /* Mantener distancia con siguiente elemento */
+  margin-left: auto;
+  margin-right: auto;
+}
+.box-chart {
+  border: thin solid #0007;
+  width: 250px;
+  height: 250px;
+  margin-bottom: 0.3rem; /*Mantener distancia con siguiente elemento*/
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.box-chart p {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 2.4rem;
+  font-weight: bolder;
+  color: yellow;
+  /* Contorno al texto */
+  text-shadow: 2px 2px 2px black, -2px -2px 2px black;
+}
+.box-flex-attr {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.chart-gradient {
+  border-radius: 50%;
+  background-image: conic-gradient(cyan 0% 50%, magenta 50% 80%, yellow 80%);
+}
+.donut-gradient {
+  background-image: radial-gradient(white 35%, black 36%, transparent 37%),
+    conic-gradient(cyan 0% 50%, magenta 50% 80%, yellow 80%);
+  border-radius: 50%;
+}              
+            </code></pre>
+          </div>
+          <div class="box-chart chart-gradient box-flex box-flex-attr">
+            <p>Chart</p>
+          </div>
+          <div class="box-chart donut-gradient box-flex box-flex-attr">
+            <p>Donut</p>
+          </div>
+        </div>
+        
+      </article>
+      <hr>
+      <article id="c03-11">
+        <h2>Filtros (filter)</h2>
+        <div>
+          <p>
+            Los filtros se aplican sobre imagenes, sobre texto son poco apreciables.
+          </p>
+          <p>
+            <strong>blur(15px)</strong> valor de desenfoque, no negativo, no en porcentaje, si en px o rem.<br><strong>brightness()</strong> entre 0 (oscuro total) y 1 (brillo total), mayor a 1 sobre exposición a la luz como efecto de quemar la imagen.<br><strong>contrast()</strong> entre 0 (recuadro gris) hasta 1 (sin contraste), mayores a 1 se sobreexpone a oscuridad como efecto de quemar la imagen<br><strong>saturate()</strong> saturación 0(Totalmente escala casi grises) hasta 1 (sin saturacion, colores propios de la imagen), > 1 muchos rojos como imagen quemada.<br><strong>grayscale()</strong> entre 0 (no aplicar) hasta 1 (escala grises)<br><strong>sepia()</strong> entre 0 (no aplicar) hasta 1 (total sepia - amarillo)<br><strong>hue-rotate(150deg)</strong> Tono matiz de color de acuerdo a <a href="assets/img/HSLA_hue_wheel_with_turn_2.jpg" title="HSLA_hue_wheel_with_turn_2" alt="HSLA_hue_wheel_with_turn_2" target="_blank">HSLA_hue_wheel_with_turn</a> la escala de colores HSLA.<br><strong>invert()</strong> invierte colores de imagen 0% (sin cambios) 100%(total inversión de colores) o con valores de 0 a 1, como un lo tienes o no 0|1.<br><strong>opacity()</strong> Opacidad 0(total opacidad) hasta 1(total visible). <br><strong>drop-shadow</strong> Similar a box-shadow requiere offset-x, offset-y, opcionales son blur-radius no negativo desde 0 (nitido) hasta 1. spread-radius positivo la sombra se expande, negativos se contrae y color 
+          </p>
+          <p align="center">
+            div.box-flex>(div.box-text>pre>code)+(div>article.box-card>img.filter) <br>
+            <strong>div>article.box-card>img.filter</strong>
+          </p>
+        </div>
+        <div class="box-flex">
+          <div class="box-text">
+            <pre><code>
+.box-card {
+  border: thin solid #0007;
+  width: 600px;
+  height: 400px;
+  margin-bottom: 0.3rem; /* Mantener distancia con siguiente elemento */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5rem;
+}
+.box-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 50%;
+
+}
+.filter {
+  filter: blur(0.15rem); /* Desenfoque */
+  filter: brightness(1.25); /* Intensidad luz, entre 1 y 0 o valores > 1*/
+  filter: contrast(
+    0.6
+  ); /* Contraste, entre 1 y 0 o valores > 1 contraste amarillo*/
+  filter: saturate(
+    0.2
+  ); /* Saturacion 0(sin saturación), 1, >1 saturacion a rojo*/
+  filter: grayscale(0.25); /* Escala grises 0 no aplica hasta 1 grises */
+  filter: hue-rotate(150deg); /* Tono de matiz de 0deg hasta 360deg */
+  filter: invert(16%); /* Invertir tono de matices */
+  filter: opacity(0.25);
+  filter: drop-shadow(0.3rem -0.6rem 4mm crimson);  
+}
+            </code></pre>
+          </div>
+          <div>
+            <article class="box-card">
+              <img class="filter" src="assets/img/puesta-sol.jpg" alt="Puesta de sol">
+            </article>
+          </div>
+        </div>
+        
+      </article>
+      <hr>
+      <article id="c03-12">
+        <h2>Filtros múltiples</h2>
+        <div>
+          <p>
+            Se aplica cada filtro de tantos que requerimos uno a continuación de otro separados por un espacio en blanco
+          </p>
+          <p>div.box-flex > ( div.box-text>div>pre>code ) + <strong>( div>article.box-card>img.filters-multiple )</strong></p>
+        </div>
+        <div class="box-flex">
+          <div class="box-text">
+            <div>
+              <pre><code>
+  .filters-multiple {
+    filter: blur(0.15rem) hue-rotate(270deg) opacity(0.75)
+      drop-shadow(00.35rem 0.6rem 4mm steelblue);
+  }
+              </code></pre>
+            </div>
+          </div>
+          <div>
+            <article class="box-card">
+              <img class="filters-multiple" src="assets/img/puesta-sol.jpg" alt="Puesta de sol">
+            </article>
+          </div>
+        </div>
+        
+      </article>
+      <hr>
+      <article id="c03-13">
+        <h2>Filtros a fondos (backdrop-filter)</h2>
+        <h3>Filtros Unitarios a fondos</h3>
+        <div>
+          <p>
+            El backdrop-filter se lo puede aplicar al color de fondo asignado al h4, son las mismas funciones de filter, el backdrop-filter funciona igual que los filtros pero sobre los colores de fondo
+          </p>
+          <p align="center">div.box-flex> (div>pre>code) + <strong>( article.box-card.relative > img + ( div.backdrop-filter > h4 ) )</strong></p>
+        </div>
+        <div class="box-flex">
+          <div>
+            <pre><code>
+  .relative {
+    position: relative;
+  }
+  .backdrop-filter,
+  .backdrop-filter-multiple {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .backdrop-filter h4 {
+    background-color: rgba(255, 102, 255, 50%);
+    padding: 2rem;
+    border-radius: 1rem;
+    font-size: 3rem;
+    color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: grayscale(1);
+    backdrop-filter: sepia(1);
+    backdrop-filter: hue-rotate(180deg);
+    backdrop-filter: blur(0.5rem);
+  }
+            </code></pre>
+          </div>
+          <article class="box-card relative">
+            <img src="assets/img/puesta-sol.jpg" alt="Puesta de sol">
+            <div class="backdrop-filter">
+              <h4>Puesta de sol</h4>
+            </div>
+          </article>
+        </div>
+        <h3>Filtros multiples a fondos</h3>
+        <div>          
+          <p>
+            Para aplicar filtros multiples a fondos se usa backdrop-filter y se asigna tantos filtros separados por espacios <br>
+          </p>
+          <p align="center"><strong>article.box-card.relative > img + ( div.backdrop-filter-multiple > h4 )</strong></p>
+        </div>
+        <div class="box-flex">
+          <div class="box-text">
+            <pre><code>
+  .relative {
+    position: relative;
+  }
+  .backdrop-filter,
+  .backdrop-filter-multiple {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .backdrop-filter-multiple h4 {
+    padding: 2rem;
+    border-radius: 1rem;
+    font-size: 3rem;
+    color: #fff;
+    background-color: rgba(255, 102, 255, 0.5);
+    backdrop-filter: blur(1rem) hue-rotate(180deg) opacity(0.75) invert(1);
+  }
+            </code></pre>
+          </div>
+          <article class="box-card relative">
+            <img src="assets/img/puesta-sol.jpg" alt="Puesta de sol">
+            <div class="backdrop-filter-multiple">
+              <h4>Puesta de sol</h4>
+            </div>            
+          </article>
+        </div>
+        
+      </article>
+      <hr>
+      <article id="c03-14" class="dark-mode">
+        <h2>Modo Dark/Light con filtros</h2>
+        <div>
+          <p>
+            Técnica para aplicar alternancia entre modo claro y modo oscuro, Generalmente se lo aplica asignando una clase al elemento html o al elemento body. En este ejemplo al articulo se vincula la clase dark-mode. <br>
+            En la clase dark-mode se refuerza la idea del color de fondo blanco y el color de texto negro. <br>
+            Para esto puede tenerse un dark-mode y light-mode y mediante js alternar entre una y otra.
+          </p>
+          <p align="center">
+            <strong>
+            article#c03-14.dark-mode>h2+div>(p+p+pre>code)
+            </strong>
+          </p>
+          <pre>
+            <cod>
+.dark-mode {
+  background-color: #fff;
+  color: #000;
+  filter: invert(1);
+  padding: 1rem;
+}
+            </cod>
+          </pre>
+        </div>        
+        
+      </article>
+      <hr>
+      <article id="c03-15">
+        <h2>Modos de Mezcla (mix-blend-mode)</h2>
+        <div>
+          <p>
+            Efecto de tener dos o más capas y generar el efecto de fusión. En el div.box-card.relative.blend-modes, notese que el div contendor tiene la clase blend-modes para aplicar a la img, se tienen dos img, la segunda con .box-card-absolute <br>Los valores posibles de mix-blend-mode son: <br>
+            <strong>normal</strong> por default, no aplica mezcla alguna, <strong>multiply</strong> multiplica fondo y contenido, reemplaza el fondo, resultante siempre es tan oscuro como el fondo, 
+            <strong>screen</strong> multiplica fondo y contenido complementa resultado, genera contenido mas brillante que color de fondo, <strong>overlay</strong> superposicion, multiplica o filtra el contenido según el color de fondo. Este es el inverso del modo de mezcla de luz dura hard-light, 
+            <strong>hard-light</strong> dependiendo del color de contenido este atributo lo filtrará o multiplicará, 
+            <strong>darken</strong> el fondo es reemplazado por el contenido en las zonas más oscuras, sino, se deja el fondo, 
+            <strong>lighten</strong> el fondo se reemplaza con el contenido donde el contenido es más claro, 
+            <strong>color-dodge</strong> ilumina color de fondo para reflejar el color del contenido, 
+            <strong>color-burn</strong> oscurece el fondo para reflejar el color natural del contenido, 
+            <strong>soft-light</strong> dependiendo del color del contenido, este lo oscurecerá o aclarará.
+            <strong>difference</strong> resta el más oscuro de los dos colores del color más claro,
+            <strong>exclusion</strong> similar a diferencia pero menor contraste,
+            <strong>hue</strong> crea color con tonalidad del contenido combinado con saturación y luminosidad del fondo,
+            <strong>saturation</strong> crea color con saturación del contenido combinada con matiz y luminosidad del fondo,
+            <strong>color</strong> crea color con matiz y saturación del contenido y luminosidad del fondo,
+            <strong>luminosity</strong> crea color con luminosidad del contenido y matiz y saturación del fondo. Inverso de color.
+          </p>
+          <p><strong>isolation</strong> La propiedad de aislamiento (isolation) se usa para evitar que los elementos se mezclen con sus fondos</p>
+          <p align="center"><strong>div<a href="cap03.html#c03-11">.box-card</a>.relative.blend-modes>img>img.box-card-absolute</strong></p>
+        </div>
+        <div class="box-flex">
+          <div class="box-text">
+            <pre><code>
+.box-card-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.blend-modes img {
+  mix-blend-mode: normal; /*Default value*/
+  mix-blend-mode: multiply;
+  mix-blend-mode: screen;
+  mix-blend-mode: overlay;
+  mix-blend-mode: hard-light;
+  mix-blend-mode: darken;
+  mix-blend-mode: lighten;
+  mix-blend-mode: color-dodge;
+  mix-blend-mode: color-burn;
+  mix-blend-mode: soft-light;
+  mix-blend-mode: difference;
+  mix-blend-mode: exclusion;
+  mix-blend-mode: hue;
+  mix-blend-mode: saturation;
+  mix-blend-mode: color;
+  mix-blend-mode: luminosity;
+}              
+            </code></pre>
+          </div>
+          <div class="box-card relative blend-modes">
+            <img src="assets/img/puesta-sol.jpg" alt="Puesta del sol">
+            <img class="box-card-absolute" src="assets/img/BuenosDias.jpg" alt="Buenos días">
+          </div>
+        </div>
+        <h3>Atributos de mix-blend-mode</h3>
+        <p>RGB Tono cian=verde+azul, Ej. #099, tono magenta=rojo+azul, Ej. #909, tono yellow=rojo+verde, Ej. #990, blanco=rojo+verde+azul. Para la sintesis sustractiva basada en CMYK el rojo = magenta + amarillo, azul = cian+magenta, verde=cian+amarillo, negro = cian+amarillo+rojo.</p>
+        <p align="center"><strong>div.box-flex.box-flex-wrap > div.box-card-little.relative.blend-modes-normal > img > p{Normal}</strong></p>
+        <div class="box-flex box-flex-wrap">
+          <div class="box-card-little blend-modes-normal relative">
+            <img src="" alt="Paris"></img>
+            <p>Normal</p>
+          </div>
+          <div class="box-card-little blend-modes-multiply relative">            
+            <img src="" alt="Paris"></img>
+            <p>Multiply</p>
+          </div>
+          <div class="box-card-little blend-modes-screen relative">
+            <img src="" alt="Paris"></img>
+            <p>Screen</p>
+          </div>
+          <div class="box-card-little blend-modes-overlay relative">
+            <img src="assets/img/BuenosDias.jpg" alt="Paris"></img>
+            <p>Overlay</p>
+          </div>
+          <div class="box-card-little blend-modes-hard-light relative">
+            <img src="assets/img/BuenosDias.jpg" alt="Paris"></img>
+            <p>Hard-light</p>
+          </div>
+          <div class="box-card-little blend-modes-darken relative">
+            <img src="assets/img/BuenosDias.jpg" alt="Paris"></img>
+            <p>Darken</p>
+          </div>
+          <div class="box-card-little blend-modes-lighten relative">
+            <img src="assets/img/paris.jpg" alt="Paris"></img>
+            <p>Lighten</p>
+          </div>
+          <div class="box-card-little blend-modes-color-dodge relative">
+            <img src="assets/img/paris.jpg" alt="Paris"></img>
+            <p>Color-dodge</p>
+          </div>
+          <div class="box-card-little blend-modes-color-burn relative">
+            <img src="assets/img/paris.jpg" alt="Paris"></img>
+            <p>Color-burn</p>
+          </div>
+          <div class="box-card-little blend-modes-soft-light relative">
+            <img src="assets/img/paris.jpg" alt="Paris"></img>
+            <p>Soft-light</p>
+          </div>
+          <div class="box-card-little blend-modes-difference relative">
+            <img src="assets/img/paris.jpg" alt="Paris"></img>
+            <p>Difference</p>
+          </div>
+          <div class="box-card-little blend-modes-exclusion relative">
+            <img src="assets/img/paris.jpg" alt="Paris"></img>
+            <p>Exclusion</p>
+          </div>
+          <div class="box-card-little blend-modes-hue relative">
+            <img src="assets/img/paris.jpg" alt="Paris"></img>
+            <p>Hue</p>
+          </div>
+          <div class="box-card-little blend-modes-saturation relative">
+            <img src="assets/img/paris.jpg" alt="Paris"></img>
+            <p>Saturation</p>
+          </div>
+          <div class="box-card-little blend-modes-color relative">
+            <img src="assets/img/paris.jpg" alt="Paris"></img>
+            <p>Color</p>
+          </div>
+          <div class="box-card-little blend-modes-luminosity relative">
+            <img src="assets/img/paris.jpg" alt="Paris"></img>
+            <p>Luminosity</p>
+          </div>
+          <div class="box-card-little relative">
+            <p>Fondo</p>
+          </div>
+        </div>
+        <h3>Efecto de texto recortado responsivo</h3>
+        <div class="box-flex">
+          <div>
+            <p><strong>div<a href="cap03.html#c03-11">.box-card</a> .relative > box-card-img-recortado > box-card-text-recortado{PARIS}</strong></p>
+            <pre><code>
+.box-card-img-recortado {
+  background-image: url("./img/paris.jpg");
+  background-size: cover;
+  position: relative;
+  height: 400px;
+}
+.box-card-text-recortado {
+  background-color: white;
+  color: black;
+  font-size: 5vw;
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 10px;
+  width: 50%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+}
+            </code></pre>
+          </div>
+          <div class="box-card relative">
+            <div class="box-card-img-recortado">
+              <div class="box-card-text-recortado">PARIS</div>
+            </div>
+          </div>
+        </div>
+        
+      </article>
+      <hr>
+      <article id="c03-16">
+        <h2>Modos de Mezcla a fondos (background-blend-mode)</h2>
+        <div>
+          <p>Se manda a llamar varios fondos en el css por la clase bg-blend-modes, con lo que la primera es la que se encuentra mas arriba. En la clase bg-blend-modes se aplica background-blend-mode el cual puede tomar cualquiera de los valores descritos en el tema previo <a href="cap03.html#c03-15">Modos de mezcla</a> (mix-blend-mode) </p>
+        </div>
+        <div class="box-flex">
+          <div class="box-card-text">
+            <p align="center"><strong>article.box-card.bg-blend-modes</strong></p>
+            <pre><code>
+  .bg-blend-modes {
+    background-image: url("./img/puesta-sol.jpg"), url("img/BuenosDias.jpg");
+    background-size: cover, cover;
+    background-blend-mode: difference;
+    background-blend-mode: darken;
+  }              
+            </code></pre>
+          </div>
+          <article class="box-card bg-blend-modes"></article>
+        </div>
+        
+      </article>
+      <hr>
+      <article id="c03-17">
+        <h2>Máscaras (clip-path)</h2>
+        <div>
+          <p>
+            Util para crear una mascara en forma de circulo, elipse, rectangular como modelo de caja o mediante poligonos usando cuatro posibles funciones con sus parametros separados por espacio. Usando la propiedad clip-path: 
+            <strong>circle()</strong> sin parametros es como aplicar border-radius: 50%, acepta un tamaño de radio y adicional una posicion ej. circle(100px at top), at top left, at bottom left, at top right, at bottom right. 
+            <strong>ellipse()</strong> primer radio para x y el segundo para y, tambien aplica at posicion. 
+            <strong>inset()</strong> sin parametros imagen completa, con params aplica regla de padding 1 (4 lados), 2 (top/bottom, left/right), 3(top, left/rigth, bottom), 4 (top, right, bottom, left) se puede agregar round Nrem para redondear las esquinas con misma nomenclatura de padding para 1, 2, 3 o 4 parámetros
+            <strong>polygon()</strong> Parámetros obligatorios, cada punto vertice se separa por coma y cada par de puntos de los vertices van separados por espacios
+          </p>
+        </div>
+        <div class="box-flex">
+          <div class="box-card-text">
+            <pre><code>
+  .clip-path {
+    clip-path: circle();
+    clip-path: circle(100px at left);
+    clip-path: circle(100px at 18% 55%);
+    clip-path: ellipse();
+    clip-path: ellipse(180px 75px at top);
+    clip-path: ellipse(200px 85px at 36% 55%);
+    clip-path: inset(1rem round 1rem 2rem 5rem 7rem);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%,
+      79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  }              
+            </code></pre>
+          </div>
+          <article class="box-card clip-path">
+            <img src="assets/img/puesta-sol.jpg" alt="">
+          </article>
+        </div>
+        
+      </article>
+      <hr>
+      <article id="c03-18">
+        <h2>Formas (shape-outside)</h2>
+        <div>
+          <p>
+            Alinear el texto como si fueran figuras geométricas. Usan funciones iguales a clip-path
+          </p>
+          <p align="center"><strong>div.box-flex > (div.box-card-text > pre>code) + (article.shapes > h3+p+p+img.float-left.shape-1+p+p+img.float-rigth.shape-2+p+p+img.float-left.shape-3)</strong></p>
+        </div>
+        <div class="box-flex">
+          <div class="box-card-text">
+            <pre><code>
+  .shapes {
+    border: thick solid #000;
+    padding: 1rem;
+    margin: 0 auto 3rem;
+    max-width: 600px;
+  }
+  .shapes img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: 0 50%;
+  }
+  .float-left {
+    float: left;
+  }
+  .float-right {
+    float: right;
+  }
+  .shape-1 {
+    margin: 3rem 2rem 3rem 0;
+    shape-outside: circle();
+  }
+  .shape-2 {
+    margin: 3rem 0 3rem 2rem;
+    shape-outside: ellipse();
+  }
+  .shape-3 {
+    margin: 3rem 2rem 0 0;
+    clip-path: polygon(0% 10%, 6% 6%, 15% 1%, 23% 5%, 28% 14%, 
+      36% 24%, 41% 31%, 42% 39%, 43% 46%, 47% 55%, 52% 62%, 
+      59% 70%, 69% 79%, 81% 87%, 99% 99%, 0% 100%);
+    shape-outside: polygon(0% 10%, 6% 6%, 15% 1%, 23% 5%, 28% 14%,
+      36% 24%, 41% 31%, 42% 39%, 43% 46%, 47% 55%, 52% 62%,
+      59% 70%, 69% 79%, 81% 87%, 99% 99%, 0% 100%);
+  }              
+            </code></pre>
+          </div>
+          <article class="shapes">
+            <h3>Generando shapes mediante un article</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat itaque eius molestias cupiditate adipisci voluptate iusto quos assumenda recusandae libero id, delectus officiis quae ducimus non suscipit ipsa quasi? Expedita.</p>
+            <img src="assets/img/puesta-sol.jpg" alt="Puesta de sol" class="float-left shape-1">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus reiciendis sed repellat accusamus. Ipsa tenetur illo placeat quis incidunt. Ipsa delectus accusamus eum vitae quibusdam, molestiae expedita enim pariatur ratione!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis tempore, illo dolor, nostrum cum reprehenderit nihil cumque ratione ad soluta voluptates molestiae ab architecto quisquam adipisci dolorem eligendi fugiat quidem.</p>
+            <img src="assets/img/puesta-sol.jpg" alt="Puesta de sol" class="float-right shape-2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique et, aperiam porro neque esse ducimus autem soluta velit eligendi! A eaque molestiae quis, porro eum saepe harum deserunt maiores ab.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa consequatur beatae sunt recusandae similique. Magnam nisi tenetur expedita! Ex illo voluptates, minus quis obcaecati id iusto non perferendis aliquid neque.</p>
+            <img src="assets/img/puesta-sol.jpg" alt="Puesta de sol" class="float-left shape-3">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex magni exercitationem a facere quam ipsam nisi ducimus. Doloremque, modi! Perferendis, quo. Non soluta adipisci aut, atque facilis maiores! Quod, dolorem?</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, amet distinctio at eveniet vitae inventore architecto minus magnam quaerat, voluptatum incidunt nesciunt nulla excepturi sint fuga, natus rerum odit veniam!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, amet distinctio at eveniet vitae inventore architecto minus magnam quaerat, voluptatum incidunt nesciunt nulla!</p>          
+          </article>
+        </div>
+        
+      </article>
+      <hr>
+      
+      <article id="c03-19">
+        <h2>Sitio One Page Scroll (scroll-margin & scroll-behaivor)</h2>
+        <div>
+          <p>
+            Efectos que tienen relacion con el desplazamiento de la pagina scroll.<br>1. Suavizar el desplazamiento del scroll de la pantalla (Desplazamientos) usar la propiedad scroll-behavior: smooth; en la etiqueta html del css <br>2. Cuando se tiene un header con una position: sticky y top: 0 se usa scroll-margin útil cuando se necesita dar espacio a un elemento desde el borde del contenedor cuando se coloca en su lugar, pero permite situaciones en las que cada elemento puede necesitar un espacio ligeramente diferente.
+          </p>
+          <p align="center"><strong>div.box-flex > (div.box-text>pre>code) + (div.box-text>pre>code)</strong></p>
+        </div>
+        <div class="box-flex">
+          <div class="box-text">
+            <pre><code>
+  :root {
+    --bg-hard-1: #36213e;
+    --bg-hard-2: #554971;
+    --bg-half-3: #63768d;
+    --bg-light-4: #b8f3ff;
+    --bg-light-5: #8ac6d0;
+  }
+  html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: 17px;
+    background-color: var(--bg-light-4);
+    color: var(--bg-hard-1);
+  }
+  #indice {
+    scroll-margin-top: 10ex;
+  }
+  .indice {
+    position: relative;
+    padding: 0.28rem 1rem;
+    border: thin solid var(--bg-hard-2);
+    background-color: var(--bg-hard-1);
+    color: var(--bg-light-4);
+    margin: 0.5rem;
+    opacity: 0.65;
+    display: block;
+    width: 15%;
+    text-align: center;
+    margin-left: auto;
+    text-decoration: none;
+    letter-spacing: 0.06rem;
+    /* box-shadow: 0 2px 5px rgba(255, 255, 255, 0.5); */
+    transition: background-color 0.8s ease-in-out 150ms,
+      border-width 0.8s ease-in-out 150ms, opacity 0.8s ease-in-out 150ms,
+      border-radius 0.8s ease-in-out 150ms;
+    overflow: hidden;
+  }
+  .indice:hover {
+    background-color: var(--bg-half-3);
+    opacity: 0.9;
+    border-radius: 0.2rem;
+  }
+  .indice:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    right: 6px;
+    bottom: 2px;
+    width: 50%;
+    background: rgba(255, 255, 255, 0.05);
+  }  
+  .indice span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, var(--bg-hard-2), var(--bg-light-5));
+    animation: animaBoton1 2s linear infinite;
+    animation-delay: 1s;
+  }
+  @keyframes animaBoton1 {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+            </code></pre>
+          </div>
+          <div class="box-text">
+            <pre><code>
+  .indice span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--bg-hard-2), var(--bg-light-5));
+    animation: animaBoton2 2s linear infinite;
+  }
+  @keyframes animaBoton2 {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+  .indice span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to left, var(--bg-hard-2), var(--bg-light-5));
+    animation: animaBoton3 2s linear infinite;
+    animation-delay: 1s;
+  }
+  @keyframes animaBoton3 {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  .indice span:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to top, var(--bg-hard-2), var(--bg-light-5));
+    animation: animaBoton4 2s linear infinite;
+  }
+  @keyframes animaBoton4 {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  .header {
+    background-color: var(--bg-hard-1);
+    color: var(--bg-light-4);
+    padding: 0.25rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .header h1 {
+    text-align: center;
+  }
+  [id^="c03-"]:target {
+    background-color: var(--bg-light-5);
+  }
+  [id^="c03-"] {
+    scroll-margin-top: 9.5ex;
+    padding: 2rem 1.2rem 2rem;
+    margin-top: -1rem;
+  }
+            </code></pre>
+          </div>
+        </div>        
+      </article>
+      <hr>
+      <article id="c03-20">
+        <h2>Ajuste del Scroll Efecto Slides Verticales (scroll-snap-type & scroll-snap-align) <small>Slides</small></h2>
+        <div>
+          <p>
+            Todos los elementos que formen parte de un slide debe estar contenidos en un contenedor de bloque con una clase para los slides que contendra slide, con una estructura. <br>El contenedor de slides debe tener una altura del tamaño de viewport height: 100vh y la propiedad de overflow-y: scroll (los slides se mueven en vertical) o overflow-x: scroll (slides se mueven en horizontal).<br>El slide-container debe heredar el height de .slide, margin top/left de 0, margin left/rigth auto y se lo convierte en un contenedor flex con direccion de contenido en columnas, jutificacion de contenido flex centrado y alineacion de items flex centrado. <br>El slide hereda de .slides el height<br> Se debe agregar al contenedor cuya clase es slides la propiedad scroll-snap-type el cual recibe dos valores, el primer valor indicara que eje se quiere controlar, x o inline para desplazamiento horizontal, y o block para desplazamiento vertical, both para ambas direcciones; el segundo parametro indica si es mandatorio (un ligero toque del scroll del mouse y cambia de diapositiva) o por proximidad hacia la diapositiva mas cercana. scroll-snap-type por default es none.<br>La clase .slide debe contener la propiedad scroll-snap-align: center
+          </p>
+          <p>
+            scroll-snap-type: [x | y | inline | block | both] [ mandatory | proximity ] <br>
+            scroll-snap-align: start | end | center | none (default)
+          </p>
+          <p align="center"><strong>
+            main.slides > section.slide*5 > article.slide-container > h2{Slide $}
+          </strong></p>
+        </div>
+        <div><pre><code>
+          .slides { 
+            width: 100%;
+            height: 100vh;
+            overflow-y: scroll;
+
+            scroll-snip-type: block | y;
+          }
+          .slide {
+            width: 100%;
+            height: inherit;
+            background-color: #1E2345;
+
+            scroll-snap-align: center;
+          }
+          .slide:nth-child(event){
+            background-color: #108EB4;
+          }
+          .slide-container {
+            width: 100%;
+            height: inherit;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+        </code></pre></div>
+        <div></div>
+      </article>
+      <hr>
+      <article id="c03-21">
+        <h2>Ajuste del Scroll Efecto Carrusel Horizontal (scroll-snap-type & scroll-snap-align)</h2>
+        <div>
+          <p>
+            La section.carrusel es el envoltorio previo del carrusel-contenedor el cual enmascara el contenedor por tanto tendra un overflor-x: hidden <br>
+            Para la clase .carrusel-contenedor 1. establecer Altura definida y ancho definida, 2. propiedad overflow en el eje a controlar overflow-x: scroll y 3. la declaracion de la propiedad scroll-snap-type: [inline | x] | [mandatory | proximity] y las hijas osea .carrusel-slides con la propiedad scroll-snap-align: [star | end | center | none ]<br>
+            A diferencia del caso previo donde se tiene un main.slides y dentro las section.slide que son las presentaciones verticales, acá se requiere dos envoltorios previos.
+            El div.carrusel-contenedor se distribuye con 100% del ancho del section.carrusel y el overflow se asigna scroll para x y hidden para y con <small>overflow: scroll hidden;</small> <br> Cuando a un bloque se le asigna un display flex los elementos hijos toman el tamaño del padre width y height
+          </p>
+          <p align="center"><strong>
+            section.carrusel > div.carrusel-contenedor > article.carrusel-slides*5 > div.carrusel-slide-contenido > h3{Slide $}
+          </strong></p>
+        </div>
+        <div class="box-flex">
+          <div class="box-text">
+            <pre><code>
+  .carrusel {
+    display: flex;
+    border: thick solid #d9e8f0;
+    width: 50%;
+    height: 50vh;
+    overflow-x: hidden;
+  }
+  .carrusel-contenedor {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 100%);
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: inline proximity;
+    scroll-snap-type: inline madatory;
+  }
+  .carrusel-slides {
+    font-size: 3vw;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #108eb4;
+    scroll-snap-align: center;
+  }
+  .carrusel-slides:nth-child(even) {
+    background-color: #1e2345;
+  }
+            </code></pre>
+          </div>
+          <section class="carrusel">
+            <div class="carrusel-contenedor">
+              <article class="carrusel-slides">
+                <div class="carrusel-slide-contenido">
+                  <h3>Slide 1</h3>
+                </div>
+              </article>
+              <article class="carrusel-slides">
+                <div class="carrusel-slide-contenido">
+                  <h3>Slide 2</h3>
+                </div>
+              </article>
+              <article class="carrusel-slides">
+                <div class="carrusel-slide-contenido">
+                  <h3>Slide 3</h3>
+                </div>
+              </article>
+              <article class="carrusel-slides">
+                <div class="carrusel-slide-contenido">
+                  <h3>Slide 4</h3>
+                </div>
+              </article>
+              <article class="carrusel-slides">
+                <div class="carrusel-slide-contenido">
+                  <h3>Slide 5</h3>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+
+        <h3>Auto Imagen - Slideshow usando HTML y CSS</h3>
+        <div>
+          <p align="center"><small><strong>
+            section.box-card > div.slider-frame > div.slide-imagenes > div.slide-img-contenido*3 > img[src="assets/img/puesta-sol.jpg" alt="Puesta de sol"]
+          </strong></small></p>
+        </div>
+        <div class="box-flex">
+          <div class="box-text">
+            <pre><code>
+    .slider-frame {
+      overflow: hidden;
+      width: 600px;
+      height: 400px;
+    }
+    /* - - - - Slider Animacion - - - - */
+    @keyframes slide-animacion {
+      0% { left: calc(0 * 600px); }
+      10% { left: calc(0 * 600px); }
+      20% { left: calc(1 * 600px); }
+      30% { left: calc(1 * 600px); }
+      40% { left: calc(2 * 600px); }
+      50% { left: calc(2 * 600px); }
+      60% { left: calc(1 * 600px); }
+      70% { left: calc(1 * 600px); }
+      80% { left: calc(0 * 600px); }
+      90% { left: calc(0 * 600px); }
+      100% { left: calc(0 * 600px); }
+    }
+    .slide-imagenes {
+      width: 1800px; /* Ancho cada imagen por n imagenes */
+      height: 400px; /* Alto de cada vista de imagen */
+      margin: 0 0 0 -1200px;
+      position: relative;
+      animation-name: slide-animacion;
+      animation-duration: 33s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-direction: normal;
+      animation-play-state: running;
+    }
+    .slide-img-contenido {
+      width: 600px;
+      height: 400px;
+      position: relative;
+      float: left; /* Ojo */
+    }
+
+            </code></pre>
+          </div>
+          <section class="box-card">
+            <div class="slider-frame">
+              <div class="slide-imagenes">
+                <div class="slide-img-contenido"><img src="assets/img/puesta-sol.jpg" alt="Puesta de sol"></div>
+                <div class="slide-img-contenido"><img src="assets/img/BuenosDias.jpg" alt="Buenos dias"></div>
+                <div class="slide-img-contenido"><img src="assets/img/paris.jpg" alt="Paris"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <h3>Slider con HTML, CSS y JS</h3>
+        <div>
+          <p align="center"><small><strong>
+            section.box-card > div.js-slider > div.js-slides > {<!-- radio buttons start-->} + input[type="radio" name="radio-btn" id="js-radio-$""]*3 + {<!-- radio buttons end-->} + {<!-- slide image start-->} + div.js-slide.js-slide-first > img[src="assets/img/puesta-sol.jpg" alt="Puesta de sol"] ^ div.js-slide*2 > img[src="assets/img/BuenosDias.jpg" alt="Buenos dias"] ^ {<!-- slide image end -->} + {<!-- automatic navigation start -->} + div.js-auto-navegacion > div.js-auto-btn-$*3 ^ {<!-- automatic navigation end -->} ^ {<!-- manual navigation start -->} + div.js-manual-navegacion > label.js-manual-btn[for="js-radio-$"]*3 ^ {<!-- manual navigation end -->} ^ {<!-- slider end -->}
+          </strong></small></p>
+        </div>
+        <div class="box-flex">
+          <div class="box-text">
+            <pre><code>
+  .js-slider {
+    width: var(--w-js-slides);
+    height: var(--h-js-slides);
+    border-radius: 10px;
+    /* oculta slides derechos */
+    overflow: hidden;
+  }
+  .js-slides {
+    width: calc(var(--n-js-slides) * 100%); /* 3x100% slides derecha */
+    height: var(--h-js-slides);
+    display: flex;
+  }
+  .js-slides input {
+    display: none; /* Necesaria oculta input*/
+  }
+  .js-slide {
+    width: calc(100% / var(--n-js-slides)); /* Por ser 3 slides */
+    transition: 2s;
+  }
+  .js-slide img {
+    width: var(--w-js-slides);
+    height: var(--h-js-slides);
+  }
+  /* css for manual slide navigation */
+  .js-manual-navegacion {
+    position: absolute;
+    width: var(--w-js-slides);
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+  }
+  .js-manual-btn {
+    border: 2px solid var(--bg-light-4);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  .js-manual-btn:not(:last-child) {
+    margin-right: 40px;
+  }
+  .js-manual-btn:hover {
+    background: var(--bg-light-4);
+  }
+  #js-radio-1:checked ~ .js-slide-first {
+    margin-left: calc(-0 * 100% / var(--n-js-slides));
+  }
+  #js-radio-2:checked ~ .js-slide-first {
+    margin-left: calc(-1 * 100% / var(--n-js-slides));
+  }
+  #js-radio-3:checked ~ .js-slide-first {
+    margin-left: calc(-2 * 100% / var(--n-js-slides));
+  }
+  /* css para la navegación automática entre slides */
+  .js-auto-navegacion {
+    position: absolute;
+    display: flex;
+    width: var(--w-js-slides);
+    justify-content: center;
+    margin-top: 360px;
+  }
+  .js-auto-navegacion div {
+    border: 2px solid var(--bg-light-4);
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+  }
+  .js-auto-navegacion div:not(:last-child) {
+    margin-right: 40px;
+  }
+  #js-radio-1:checked ~ js-auto-navegacion .js-auto-btn-1 {
+    background: var(--bg-light-4);
+  }
+  #js-radio-2:checked ~ js-auto-navegacion .js-auto-btn-2 {
+    background: var(--bg-light-4);
+  }
+  #js-radio-3:checked ~ js-auto-navegacion .js-auto-btn-3 {
+    background: var(--bg-light-4);
+  }
+            </code></pre>
+          </div>
+          <div class="box-flex-wrap">
+            <section class="box-card">
+              <div class="js-slider">
+                <div class="js-slides">
+                  <!-- radio buttons start-->
+                  <input type="radio" name="radio-btn" id="js-radio-1">
+                  <input type="radio" name="radio-btn" id="js-radio-2">
+                  <input type="radio" name="radio-btn" id="js-radio-3">
+                  <!-- radio buttons end-->
+                  <!-- slide image start-->
+                  <div class="js-slide js-slide-first"><img src="assets/img/puesta-sol.jpg" alt="Puesta de sol"></div>
+                  <div class="js-slide"><img src="assets/img/BuenosDias.jpg" alt="Buenos dias"></div>
+                  <div class="js-slide"><img src="assets/img/paris.jpg" alt="Paris"></div>
+                  <!-- slide image end -->
+                  <!-- automatic navigation start -->
+                  <div class="js-auto-navegacion">
+                    <div class="js-auto-btn-1"></div>
+                    <div class="js-auto-btn-2"></div>
+                    <div class="js-auto-btn-3"></div>
+                  </div>
+                  <!-- automatic navigation end -->
+                </div>
+                <!-- manual navigation start -->
+                <div class="js-manual-navegacion">
+                  <label for="js-radio-1" class="js-manual-btn"></label>
+                  <label for="js-radio-2" class="js-manual-btn"></label>
+                  <label for="js-radio-3" class="js-manual-btn"></label>
+                </div>
+                <!-- manual navigation end -->
+              </div>
+              <!-- js-slider end -->
+            </section>
+            <div class="box-text">
+              <h4>cap03.js</h4>
+              <pre><code>
+  let contador = 1;
+  const n_js_slide = 3;
+  const miliseg_slide = 5000;
+  setInterval(function () {
+    document.getElementById("js-radio-" + contador).checked = true;
+    contador++;
+    if (contador > n_js_slide) {
+      contador = 1;
+    }
+  }, miliseg_slide);                
+              </code></pre>
+            </div>
+          </div>
+        </div>
+      </article>
+      <hr>
+      <article id="c03-22">
+        <h2>Texto con Degradado</h2>
+        <div><p>
+          Las propiedades que hacen que el texto herede el degradado del fondo, aún no estan bien soportadas por lo que se tiene que hacer uso de los prefijos del navegador <small><strong>-ms-</strong></small>, <small><strong>-moz</strong></small> y <small><strong>-webkit-</strong></small>. Partir creando una clase .texto-gradiente, en el cual primero crear un degradado ya sea lineal, radial o cónico, luego para que el texto tome el efecto gradiente se debe aplicar las propiedades <small><strong>backgraund-clip</strong></small> el cual define desde donde empieza el fondo (desde el borde, el padding o el contenido) pero existe un nuevo valor no soportado aún en los navegadores y que se llama text, entonces, el fondo se adaptaría al texto escrito dentro de la caja contenedora. La otra propiedad necesaria para el efecto gradiente es <small><strong>text-fill-color</strong></small> igualandola a transparent para hacer que ignore la propiedad color.
+        </p></div>
+        <div class="box-flex">
+          <div class="box-text">
+            <pre><code>
+    .div-texto-gradiente {
+      background-color: #333;
+      background-image: linear-gradient(225deg, magenta, yellow);
+    }
+    .texto-gradiente {
+      background-image: linear-gradient(45deg, magenta, yellow);
+      -ms-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -ms-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
+      -webkit-text-fill-color: transparent;
+      /* text-fill-color: transparent; */
+    }
+            </code></pre>
+          </div>
+          <div class="box-card">
+            <div class="div-texto-gradiente"><p class="texto-gradiente">
+              Las propiedades que hacen que el texto herede el degradado del fondo, aún no estan bien soportadas por lo que se tiene que hacer uso de los prefijos del navegador -moz-, -ms- y -webkit-. Partir creando una clase .texto-gradiente, en el cual primero crear un degradado ya sea lineal, radial o cónico, luego para que el texto tome el efecto gradiente se debe aplicar las propiedades backgraund-clip el cual define desde donde empieza el fondo (desde el borde, el padding o el contenido) pero existe un nuevo valor no soportado aún en los navegadores y que se llama text, entonces, el fondo se adaptaría al texto escrito dentro de la caja contenedora. La otra propiedad necesaria para el efecto gradiente es text-fill-color igualandolo a transparent para hacer que ignore la propiedad color.
+            </p></div>
+          </div>
+        </div>
+      </article>
+      <hr>
+      <article id="c03-23">
+        <h2>Movimiento en CSS</h2>
+        <div><p>
+          El movimiento se trata de como hacer transiciones, transformaciones y animaciones
+        </p></div>
+        <div></div>        
+      </article>
+      <hr>
+      <article id="c03-24">
+        <h2>Transiciones</h2>
+        <div>
+          <p>
+            <small><strong>transition-property: </strong></small> que propiedad es a la que se quiere aplicar una transición. <br> <small><strong>transition-duration: </strong></small>cuanto tiempo va a durar la transicion, expresado en segundos o milisegundos<br><small><strong>transition-timing-function: </strong></small> Se tienen varias funciones que van aplicar con que efecto se tratara, por ej. lineal, con aceleración (ease), con aceleración al principio (ease-in), con aceleración al final (ease-out), ease-in-out, la especial steps y el default none. <br><small><strong>transition-delay </strong></small> tiempo de espera antes de comenzar la transicion. <br> <small><strong>transition</strong></small> es un shorthand que necesita property duration timing-function delay todos los parametros separados por espacio.
+          </p>
+          <p>
+            Se tiene un background-color: cyan al hover y otro de border-color por cascada se reemplaza. <br>
+            Con una propiedad all cuando existen muchas propiedades puede ralentizar el navegador pero no mucho. Es mala práctica aplicar muchas transiciones a un mismo elemento. El caso all incluso afecta al iniciar la página, es la causo de conflicto el renderizado inicial <br>
+            No todas las propiedades son animables en el sitio de referencia Propiedades Animables US puede obtener información.
+          </p>
+          <p align="center"><small><strong>section.transition > div.box</strong></small></p>
+        </div>
+        <div class="box-flex">
+          <div class="box-text"><pre><code>
+    .transition .box {
+      background-color: magenta;
+      transition-property: background-color;
+      transition-duration: 1.5s;
+      transition-timing-function: ease;
+      transition-delay: 0.8s;
+      transition: border-color 2s linear 1s;
+      transition: all 2s ease-in-out 250ms;
+    }
+    .transition .box:hover {
+      background-color: cyan;
+      border-style: solid;
+      border-width: thick;
+      border-color: red;
+      border-radius: 2rem;
+    }            
+          </code></pre></div>
+          <section class="transition">
+            <div class="box"></div>          
+          </section>
+        </div>
+      </article>
+      <hr>
+      <article id="c03-26">
+        <h2>Transiciones Múltiples</h2>
+        <div>
+          <p>
+            Son susceptibles de animarse todas las propiedades mediante transiciones o mediante animaciones: sombras, degradados, filtros, blend-modes (mezclas), mascaras y formas. Al ubicar el mouse sobre la imagen (hover) se genera una transición.
+          </p>
+          <p align="center"><small><strong>section.transition > div.box-card > img</strong></small></p>
+        </div>
+        <div class="box-flex">
+          <div class="box-text"><pre><code>
+    .transition .box-card {
+      transition: opacity 2s ease-out, border-width 3s steps(5),
+        border-color 3s steps(3), filter 2s ease-in 1s, box-shadow 1.5s linear 2s;
+    }
+    .transition .box-card:hover {
+      opacity: 0.75;
+      border-width: thick;
+      border-color: orchid;
+      filter: blur(0.15rem);
+      box-shadow: 1rem 1rem 2rem 0.5rem #000;
+    }
+    .transition .box-card img {
+      transition: object-position 2s ease-in-out 3s;
+    }
+    .transition .box-card img:hover {
+      object-position: 100% 50%;
+    }            
+          </code></pre></div>
+          <section class="transition">          
+            <div class="box-card"><img src="assets/img/puesta-sol.jpg" alt=""></div>
+          </section>        
+        </div>
+      </article>
+      <hr>
+      <article id="c03-29">
+        <h2>Transformaciones en 2D</h2>
+        <div>
+          <p>
+            Hay cuatro transformaciones en dos dimensiones: Traslación en <small><strong>X translateX( x pix rem % etc )</strong></small> y/o en <small><strong>Y translateY( pix rem % etc. )</strong></small> con su shorthand <small><strong>translate( [+|-]x, [+|-] y )</strong></small> se tiene también translateZ() pero con 3D <br>
+            La escala en <small><strong>X scaleX( [+|-][0-N | 0-N%] )</strong></small> y/o en <small><strong>Y scaleY( [+|-][0-N | 0%-N%] )</strong></small> se tiene tambien scaleZ() pero con 3D su shorthand <small><strong>scale( [+|-][en x 0-N], [+|-][en y 0-N] )</strong></small> o proporcionalmente con negativos se invierte la imagen <br>
+            La rotación positiva o negativa con <small><strong>rotateX( [+|-] 0deg-360deg )</strong></small> <small><strong>rotateY( [+|-] 0deg-360deg )</strong></small> necesita perspectiva y 3D, para 2D es como si la imagen se redujera. En 2d solo se puede aplicar <small><strong>rotateZ( [+|-] 0deg-360deg )</strong></small>, el shorthand en 2d <small><strong>rotate( [+|-] 0deg-360deg )</strong></small> es equivalente al rotateZ  <br>
+            skew (deformar o sesgar) mediante las lineas perpendiculares o paralelas del objeto, no existe en 3D, <small><strong>skewX( [+|-] 0deg - 360deg )</strong></small> con negativos hacia la derecha, <small><strong>skewY( [+|-] 0deg - 360deg)</strong></small> con negativos hacia abajo y su shorthand <small><strong>skew( en x 0deg-360deg, en y 0deg-360deg)</strong></small>. <br>transform valor por default es none <br>Para cada una de las transformaciones existe una función para la propiedad transform: translateX( pix rem etc) que se aplica en un estado hover <br>
+            Para aplicar varios transforms entonces se aplica las funciones requeridas separadas por espacios en blanco, similar a los filtros.
+          </p>
+          <p align="center">
+            <small><strong>div.box-card.transform-2d > img</strong></small>
+          </p>
+        </div>
+        <div class="box-flex">
+          <div class="box-text">
+            <pre><code>
+    .transform-2d {
+      border: thin solid #000;
+    }
+    .transform-2d img {
+      transition: transform 2s ease-in-out;
+    }
+    .transform-2d img:hover {
+      transform: translateX(2rem) translateY(4rem) translate(-2rem, -4rem)
+      scale(-0.5, 0.5) rotateZ(-15deg) skew(25deg, 15deg);
+    }
+            </code></pre>
+          </div>
+          <section class="box-card transform-2d">
+            <img src="assets/img/puesta-sol.jpg" alt="Puesta de sol">
+          </section>
+        </div>
+      </article>
+      <hr>
+      <article id="c03-30">
+        <h2>Transformación Matrix 2D</h2>
+        <div>
+          <p>Otra funcion de transform es matrix que tiene cierta complejidad, para mayor información ver en la referencia Matrix</p>
+          <p align="center"><small><strong>matrix( scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY() )</strong></small></p>
+          <p align="center">
+            <small><strong>div.box-card.transform-2d-matix > img</strong></small>
+          </p>
+        </div>
+        <div class="box-flex">
+          <div class="box-text">
+            <pre><code>
+    .transform-2d-matrix {
+      border: thin solid #000;
+    }
+    .transform-2d-matrix img {
+      transition: transform 2s ease-in-out;
+    }
+    .transform-2d-matrix img:hover {
+      transform: matrix(1.2, 0.2, -1, 0.9, 0, 20);
+      transform: matrix(0.4, 0, 0.5, 1.2, 60, 10);
+      transform: matrix(0.1, 1, -0.3, 1, 0, 0);
+      transform: matrix(0, 1, 1, 0, 0, 0);
+    }              
+            </code></pre>
+          </div>
+          <section class="box-card transform-2d-matrix">
+            <img src="assets/img/puesta-sol.jpg" alt="Puesta de sol">
+          </section>
+        </div>
+      </article>
+      <hr>
+      <article id="c03-32">
+        <h2>Activando la Perspectiva 3D</h2>
+        <div>
+          <p>
+            Es una ilusión visual la perspectiva 3D dado que la web es un espacio bidimensional.
+            La perspectiva se la debe aplicar al elemento padre que contiene la imagen, osea a la section.transfor-3d mediante la propiedad <small><strong>perspective: 10rem</strong></small>, la otra forma seria antes de aplicar la funcion de transformación en el hover aplicar la funcion de <small><strong>perspective(10rem) funcion-de-transformacion() transform2() ... transformN()</strong></small>.
+            <pre><code>
+    .transform-3d {
+      perspective: 10rem;
+    }
+    o
+    .transform-3d img:hover {
+      transform: perspective(10rem) translateZ(-4rem);
+    }
+
+            </code></pre>
+          </p>
+        </div>        
+      </article>
+      <hr>
+      <article id="c03-33">
+        <h2>Transformaciones en 3D</h2>        
+        <div>
+          <p>
+            funcion translate3d(x,y,z) trabaja en lugar de translate(x,y) <br>
+            funcion scale3d(x, y, z) trabaja en lugar de scale(x, y) <br>
+            funcion rotate3d(nodoX, nodoY, nodoZ, NdegInclinacion) en lugar de rotate(Ndeg) o rotateZ(Ndeg)
+          </p>
+          <p>
+            Para aplicar varios transforms entonces se aplica las funciones requeridas separadas por espacios en blanco, similar a los filtros.
+          </p>
+          <p align="center">
+            <small><strong>section.box-card.transform-3d > img</strong></small>
+          </p>
+        </div>
+        <div class="box-flex">
+          <div class="box-text">
+            <pre><code>
+    .transform-3d {
+      perspective: 10rem;
+    }
+    .transform-3d img {
+      transition: transform 2s ease-in-out;
+    }
+    .transform-3d img:hover {
+      transform: translateZ(-4rem);
+      transform: translate3d(2rem, 50%, -3rem) scale3d(1.3, 1.3, 1.3) rotateX(-5deg)
+        rotateY(5deg);
+      transform: translate3d(2rem, 50%, -3rem) scale3d(1.3, 1.3, 1.3)
+        rotate3d(1, 1, 1, 45deg);
+      transform: translate3d(2rem, 50%, -3rem) scale3d(1.3, 1.3, 1.3)
+        rotate3d(1, -0.5, 0, 5deg);
+    }              
+            </code></pre>
+          </div>
+          <section class="box-card transform-3d"><img src="assets/img/puesta-sol.jpg" alt="Puesta de sol"></section>
+        </div>
+      </article>
+      <hr>
+      <article id="c03-34">
+        <h2>Transformación Matrix 3D</h2>
+        <div>
+          <p>Otra funcion de transform es matrix3d que tiene cierta complejidad, para mayor información ver en la referencia Matrix3d, la cual recibe 16 parámetros que hace referencia a una matriz de 4x4</p>
+          <p align="center"><small><strong>transform: matrix3d(1, 0, 0, 0, 0, 1, 6, 0, 0, 0, 1, 0, 50, 100, 0, 1.1);</strong></small></p>
+          <p align="center">          
+          </div>
+          <div class="box-flex">
+            <div class="box-text">
+              <pre><code>
+    .transform-3d-matrix {
+      perspective: 10rem;
+    }
+    .transform-3d-matrix img {
+      transition: transform 2s ease-in-out;
+    }
+    .transform-3d-matrix img:hover {
+      transform: matrix3d(1, 0, 0, 0, 0, 1, 6, 0, 0, 0, 1, 0, 50, 100, 0, 1.1);
+    }                
+              </code></pre>
+            </div>
+            <section class="box-card transform-3d-matrix"><img src="assets/img/puesta-sol.jpg" alt="Puesta de sol"></section>
+          </div>
+        </article>
+        <hr>
+        <article id="c03-36">
+          <h2>Origen de Transformación (transform-origin)</h2>
+          <div>
+            <p>
+              Hay una propiedad dentro de las transformaciones que define el punto de origen desde el que va a partir esa transformación, ya sea un sesgo una rotación una escala una traslación. Inicialmente es el centro. <small><strong>transform-origin: x y z;</strong></small> puede recibir tres valores, por default <small><strong>transform-origin: 50% 50% 0;</strong></small>.
+            </p>
+          </div>
+          <div class="box-flex">
+            <div class="box-text">
+              <pre><code>
+    .transform-origin img {
+      transition: transform 2s ease-in-out;
+      transform-origin: 50% 50% 0;
+      transform-origin: 0 0;
+      transform-origin: 0;
+      transform-origin: left top;
+      transform-origin: left bottom;
+      transform-origin: right bottom;
+      transform-origin: right top;
+      transform-origin: center top;
+      transform-origin: center bottom;
+      transform-origin: left center;
+      transform-origin: 2rem 75%;
+      transform-origin: -5% 2rem;
+    }
+    .transform-origin img:hover {
+      transform: rotate(360deg) translate(2rem, 3rem) scale(0.8, 0.6)
+        skew(0deg, -10deg);
+    }
+              </code></pre>
+            </div>
+            <section class="box-card transform-origin"><img src="assets/img/puesta-sol.jpg" alt="Puesta de sol"></section>
+          </div>
+        </article>
+      <hr>
+      <article id="c03-37">
+        <h2>Flip Cards con transiciones y transformaciones</h2>        
+        <div>
+          <p>Propiedad backface-visibility establece como se visualizaran las caras, su valor por default es visible y su alterno que es hidden pero no tiene efecto en transformaciones 2D, entonces se requiere de la perspectiva 3D y se requiere una propiedad adicional <small><strong>transform-style</strong></small> (por default es <small><strong>flat</strong></small> sobre el mismo plano trabajan los elementos hijos) que establece si los hijos de un elemento que tiene perspectiva 3D como se comportan en el espacio 3D con su propia perspectiva entonces se usa <small><strong>preserve-3d</strong></small></p>
+          <p align="center"><small><strong>article.flip-card-1 > ( div.flip-face.flip-front > img[src="assets/img/puesta-sol.jpg" alt="Puesta de Sol"] ) + ( div.flip-face.flip-back > img[src="assets/img/BuenosDias.jpg" alt="Buenos dias"] )</strong></small></p>
+        </div>
+        <div class="box-flex">
+          <div class="box-text">
+            <pre><code>
+    .flip-card-1,
+    .flip-card-2 {
+      border: thick solid #000;
+      margin: auto;
+      margin-bottom: 5rem;
+      width: 600px;
+      height: 400px;
+
+      position: relative;
+      cursor: pointer;
+      transition: transform 1s ease-in-out;
+      perspective: 10rem;
+      transform-style: preserve-3d;
+    }
+    .flip-card-2 {
+      transform-origin: center right;
+    }
+    .flip-card-1:hover {
+      transform: rotateX(180deg);
+      transform: rotateY(180deg);
+    }
+    .flip-card-2:hover {
+      transform: translateX(-100%) rotateY(180deg);
+    }
+    .flip-card-1 img,
+    .flip-card-2 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 0 50%;
+    }
+    .flip-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+    }
+    .flip-front {
+      transform: rotateX(0deg);
+      transform: rotateY(0deg);
+    }
+    .flip-back {
+      transform: rotateX(180deg);
+      transform: rotateY(180deg);
+    }              
+            </code></pre>
+          </div>
+          <div class="box-flex box-flex-wrap">
+            <article class="flip-card-1">
+              <div class="flip-face flip-front">
+                <img src="assets/img/puesta-sol.jpg" alt="Puesta de Sol">
+              </div>
+              <div class="flip-face flip-back">
+                <img src="assets/img/BuenosDias.jpg" alt="Buenos dias">
+              </div>
+            </article> 
+            <article class="flip-card-2">
+              <div class="flip-face flip-front">
+                <img src="assets/img/puesta-sol.jpg" alt="Puesta de Sol">
+              </div>
+              <div class="flip-face flip-back">
+                <img src="assets/img/BuenosDias.jpg" alt="Buenos dias">
+              </div>
+            </article>
+          </div>
+        </div>
+      </article>
+      <hr>
+      <article id="c03-38">
+        <h2>Animaciones</h2>
+        <div>
+          <p>
+            Similar a la propiedad transition con parametros adicionales como iteration-count (cantidad de iteraciones), direction (dirección de la animación), fill-mode y el play-state  (con dos unicos estados running y paused) es conveniente desde el lado de js no desde css. Las dos obligatorias son name y duration
+          </p>
+          <p>
+            name de animacion invoca a una linea de tiempo que se la define con el <small><strong>@keyframes linea_de_tiempo</strong></small> donde debe existir al menos un fotograma de inicio y uno de fin. El fotograma inicial se lo etiqueta con <small><strong>from { etiquetas css }</strong></small> tambien conocido como 0% mientras que el fotograma final <small><strong>to { etiquetas css }</strong></small> se lo conoce como 100%
+          </p>
+          <p align="center"><small><strong>animation: name duration timing-function delay iteration-count direction fill-mode play-state;</strong></small></p>
+        </div>
+        <div class="box-flex">
+          <div class="box-text">
+            <pre><code>
+    @keyframes lineaTiempo01 {
+      from {
+        opacity: 0.25;
+        transform: translateX(0) rotate(0deg);
+      }
+      50% {
+        opacity: 1;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 0.25;
+        transform: translateX(0) rotate(360deg);
+      }
+    }
+    .mi-animacion {
+      animation: lineaTiempo01 3s infinite;
+    }
+            </code></pre>
+          </div>
+          <section class="box-card mi-animacion">
+            <img src="assets/img/puesta-sol.jpg" alt="Puesta de sol">
+          </section>
+        </div>
+      </article>
+      <hr>
+      <article id="c03-39">
+        <h2>Propiedades de Animación en CSS</h2>
+        <div>
+          <p>
+            <small><strong>animation-timing-function</strong></small> Corresponde a la bezier como se ejecuta la animación pudiendo ser ease, ease-in, ease-out, ease-in-out, linear o cubic-bezier, igual que en timing-function de la propiedad transition. <br>
+            <small><strong>animation-delay</strong></small> Es el retardo para inicio de animaciones por default es 0, puede expresarse en milisegundos o en segundos. <br>
+            <small><strong>animation-iteration-count</strong></small> Cantidad de veces que se repite la animación, por default es 1. Puede ser infinite.<br>
+            <small><strong>animation-direction</strong></small> Posibles valores alternate (alterna los inicios entre from y to uno a uno), reverse (empieza en to y termina en from), alternate-reverse (alterna los inicios entre to y from uno a uno), normal (default)<br>
+            <small><strong>animation-fill-mode</strong></small> posibles valores backwards (al inicio de la animación se queda con los estilos iniciales de la animación), forwards (al fin de la animación se queda con los estilos finalesd de la animación), both (combina forwards y backwards), none (default)
+          </p>
+          <pre><code>
+    .mi-animacion {
+      /* animation: lineaTiempo01 3s infinite; */
+      /* animation: lineaTiempo01 3s cubic-bezier(0.33, 0.92, 0.92, 0.36); */
+      animation-name: lineaTiempo01;
+      animation-duration: 3s;
+      animation-timing-function: cubic-bezier(0.33, 0.92, 0.92, 0.36);
+      animation-timing-function: ease-in-out;
+      animation-delay: 0;
+      animation-delay: 1500ms;
+      animation-iteration-count: infinite;
+      animation-iteration-count: 3;
+      animation-direction: alternate-reverse;
+      animation-direction: alternate;
+      animation-direction: reverse;
+      animation-direction: normal;
+      animation-fill-mode: backwards;
+      animation-fill-mode: forwards;
+      animation-fill-mode: both;
+      animation-play-state: paused;
+      animation-play-state: running;
+      animation: lineaTiempo01 1.5s ease 250ms 6 alternate both running;
+    }            
+          </code></pre>
+        </div>
+      </article>
+      <hr>
+      <article id="c03-40">
+        <h2>Linea de tiempo y fotogramas claves en CSS</h2>
+        <div>
+          <p>
+            La linea de tiempo se establece por porcentajes. En la linea de tiempo se aplica efectos de transformaciones, opacidades, sombras, todos los efectos visuales posibles, etc. El tiempo se lo define en animation-duration y el navegador se encarga de realizar la distribución por fotogramas desde 0% hasta 100%, a mayor animation-duration mas lenta la reproducción. En las siguientes secciones se veran ejemplos prácticos.
+          </p>
+        </div>
+      </article>
+      <hr>
+      <article id="c03-41">
+        <h2>Animaciones Múltiples</h2>
+        <div>
+          <p>A un mismo elemento html se le puede asignar varias animaciones creando cada una y separadas por comas entre una y otra definición de animación al igual que en las transiciones. Cada animación tiene su propio keyframes</p>
+        </div>
+        <div class="box-flex">
+          <div class="box-text">
+            <pre><code>
+  @keyframes multipleAnimation-1 {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @keyframes multipleAnimation-2 {
+    0% { transform: translateY(0); }
+    30% { transform: translateY(-50%); }
+    70% { transform: translateY(50%); }
+    100% { transform: translateY(0); }
+  }
+  .animation-multiple {
+    animation: multipleAnimation-1 2s infinite linear, 
+      multipleAnimation-2 3s 3 ease-in-out;
+  }
+            </code></pre>
+          </div>
+          <section class="box-card animation-multiple"><img src="assets/img/BuenosDias.jpg" alt="Buenos dias"></section>
+        </div>
+      </article>
+      <hr>
+      <article id="c03-42">
+        <h2>Efecto fadein & fadeout</h2>
+        <div>
+          <p>
+            En las siguientes secciones que producen ejemplos donde se aplican transiciones, transformaciones y animaciones. Ejercicio de aparecer y desaparecer las cosas
+          </p>
+          <p align="center"><small><strong>section.box.box-h-300.box-flex.box-flex-wrap > div.fade-in{😎} + div.fade-out{❤️}</strong></small></p>
+        </div>
+        <div class="box-flex">
+          <div class="box-text">
+            <pre><code>
+    .box-h-300 {
+      width: 200px;
+      height: 100px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .fade-in {
+      width: 50%;
+      font-size: 5vw;
+      animation: fadeIn 2s linear infinite alternate both;
+    }
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to { opacity: 0; }
+    }
+    .fade-out {
+      width: 50%;
+      font-size: 5vw;
+      animation: fadeOut 2s linear infinite alternate both;
+    }
+            </code></pre>
+          </div>
+          <section class="box box-h-300 box-flex box-flex-wrap">
+            <div class="fade-in">😎</div>
+            <div class="fade-out">❤️</div>
+          </section>
+        </div>
+      </article>
+      <hr>
+      <article id="c03-43">
+        <h2>Efecto shake (sacudir)</h2>
+        <div>
+          <p>Efecto se ejecuta en el hover. El icono del corazón rojo se obtiene de <a href="https://emojipedia.org/" target="_blank" rel="noopener noreferrer">Emojipedia</a></p>
+          <p align="center"><small><strong>section.box.box-h-300.box-flex.box-flex-wrap > div.shake{☕}</strong></small></p>
+        </div>
+        <div class="box-flex">
+          <div class="box-text">
+            <pre><code>
+  @keyframes shake {
+    10%, 90% { transform: translate(-1px, 0); }
+    20%, 80% { transform: translate(2px, 0); }
+    30%, 50%, 70% { transform: translate(-4px, 0); }
+    40%, 60% { transform: translate(4px, 0); }
+  }
+  .shake {
+    font-size: 10vw;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+  }
+  .shake:hover {
+    animation: shake 1s cubic-bezier(0.36, 0.074, 0.19, 0.97) both;
+    transform: translate(0, 0);
+  }              
+            </code></pre>
+          </div>
+          <section class="box box-h-300 box-flex box-flex-wrap">
+            <div class="shake">☕</div>
+          </section>
+        </div>
+      </article>
+      <hr>
+      <article id="c03-44">
+        <h2>Efecto pulse (pulsaciones) </h2>
+        <div>
+          <p>Efecto se ejecuta infinitamente. El icono del corazón rojo se obtiene de <a href="https://emojipedia.org/" target="_blank" rel="noopener noreferrer">Emojipedia</a></p>
+          <p align="center"><small><strong>section.box.box-h-300.box-flex.box-flex-wrap > div.pulse{❤️} + div.pulse{🏚 Texto 🚊}</strong></small></p>
+        </div>
+        <div class="box-flex">
+          <div class="box-text">
+            <pre><code>
+    @keyframes pulse {
+      from { transform: scale(1.1); }
+      50% { transform: scale(0.8); }
+      to { transform: scale(1); }
+    }
+    .pulse {
+      font-size: 5vw;
+      cursor: pointer;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+      text-align: center;
+      animation: pulse 1s linear infinite both;
+    }              
+            </code></pre>
+          </div>
+          <section class="box box-h-300 box-flex box-flex-wrap">
+            <div class="pulse">❤️</div>
+            <div class="pulse">🏚 Texto 🚊</div>
+          </section>
+        </div>
+      </article>
+      <hr>
+      <article id="c03-45">
+        <h2>❤️ Eres el CSS de mi HTML ❤️</h2>
+        <div>
+          <p>Efecto se ejecuta infinitamente. El icono del corazón rojo se obtiene de <a href="https://emojipedia.org/" target="_blank" rel="noopener noreferrer">Emojipedia</a></p>
+          <p align="center"><small><strong>section.box.box-h-300.box-flex.box-flex-wrap > div.heart</strong></small></p>          
+        </div>
+        <div class="box-flex">
+          <div class="box-text">
+            <pre><code>
+    @keyframes heartColor {
+      10% { background-color: #d00; }
+    }
+    .heart {
+      position: relative;
+      width: 10vw;
+      height: 10vw;
+      margin: auto;
+
+      animation: pulse 1s infinite;
+    }
+    .heart::after,
+    .heart::before {
+      content: "";
+      position: absolute;
+      left: 5vw;
+      top: 0;
+      width: 5vw;
+      height: 8vw;
+      background-color: #a00;
+      transform: rotate(-45deg);
+      transform-origin: 0 100%;
+      border-radius: 5vw 5vw 0;
+      animation: heartColor 1s infinite;
+    }
+    .heart::after {
+      left: 0;
+      transform: rotate(45deg);
+      transform-origin: 100% 100%;
+    }
+            </code></pre>
+          </div>
+          <section class="box box-h-300 box-flex box-flex-wrap">
+            <div class="heart"></div>
+          </section>
+        </div>
+      </article>
+      <hr>
+      <article id="c03-46">
+        <h2>Spinner / Loader animado</h2>
+        <div>
+          <p>Efecto de spinner o loader (cargador) se ejecuta infinitamente. </p>
+          <p align="center"><small><strong>section.box.box-spinner.box-flex.box-flex-wrap > div.spinner + span.spinner-text{CARGANDO...}</strong></small></p>          
+        </div>
+        <div class="box-flex">
+          <div class="box-text">
+            <pre><code>
+    .box-spinner {
+      width: 400px;
+      height: 400px;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    @keyframes spinner {
+      from {  transform: rotate(0deg);    opacity: 0.75; }
+      50% {  opacity: 0.5;  }
+      to { transform: rotate(-360deg);    opacity: 1; }
+    }
+    .spinner {
+      width: 20vw;
+      height: 20vw;
+      margin: auto;
+      border-radius: 50%;
+      border: 2.5vw solid rgba(0, 0, 0, 0.1);
+      border-top-color: var(--bg-half-3);
+      animation: spinner 1s ease-out infinite reverse both;
+      position: absolute;
+      top: auto;
+    }
+    .spinner-text {
+      font-size: 20px;
+      position: absolute;
+      top: auto;
+      font-weight: bold;
+      text-shadow: 1px -1px 0.9px var(--bg-half-3);
+      letter-spacing: 0.1rem;
+    }
+            </code></pre>
+          </div>
+          <section class="box box-spinner box-flex box-flex-wrap">
+            <div class="spinner"></div>
+            <span class="spinner-text">Por favor, espere<br>CARGANDO...</span>
+          </section>
+        </div>
+
+        <h3>Most beautiful simple CSS3 Loading spinner <a href="https://codepen.io/NitrodeXXer/pen/YxrQer">Codepen</a></h3>
+        <div><p align="center"><small><strong>div.loader#loader*4 + div.loader-div > span.loader-wait{Por favor, espere} + span.loader-text{LOADING . . .}</strong></small></p></div>
+        <div class="box-flex">
+          <div class="box-text">
+            <pre><code>
+    .box-h-400 {
+      width: 400px;
+      height: 400px;
+      background-color: var(--bg-hard-1);
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    @keyframes rotate {
+      0% { transform: rotateZ(-360deg); }
+      100% { transform: rotateZ(0deg); }
+    }
+    @keyframes rotate2 {
+      0% { transform: rotateZ(360deg); }
+      100% { transform: rotateZ(0deg); }
+    }
+    .loader {
+      border: 4px solid var(--bg-light-4);
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      top: auto;
+      border-radius: 50%;
+      border-left-color: transparent;
+      border-right-color: transparent;
+      animation: rotate 2s cubic-bezier(0.26, 1.36, 0.74, -0.29) infinite;
+    }
+    #loader2 {
+      border: 4px solid var(--bg-half-3);
+      width: 225px;
+      height: 225px;
+      position: absolute;
+      top: auto;
+      border-left-color: transparent;
+      border-right-color: transparent;
+      animation: rotate2 2s cubic-bezier(0.26, 1.36, 0.74, -0.29) infinite;
+    }
+    #loader3 {
+      border: 4px solid var(--bg-light-5);
+      width: 250px;
+      height: 250px;
+      position: absolute;
+      top: auto;
+      border-left-color: transparent;
+      border-right-color: transparent;
+      animation: rotate 2s cubic-bezier(0.26, 1.36, 0.74, -0.29) infinite;
+    }
+    #loader4 {
+      border: 4px solid var(--bg-hard-2);
+      width: 275px;
+      height: 275px;
+      position: absolute;
+      top: auto;
+      border-left-color: transparent;
+      border-right-color: transparent;
+      animation: rotate2 2s cubic-bezier(0.26, 1.36, 0.74, -0.29) infinite;
+    }
+    .loader-div {
+      width: 180px;
+      height: 180px;
+
+      position: relative;
+      top: auto;
+      border-radius: 50%;
+    }
+    .loader-wait {
+      color: var(--bg-light-5);
+      font-size: 14px;
+      position: absolute;
+      top: 65px;
+      left: 12px;
+      letter-spacing: 0.12rem;
+      text-shadow: 2px -2px 0.3px var(--bg-light-5);
+      opacity: 0.7;
+    }
+    .loader-text {
+      color: var(--bg-light-5);
+      font-size: 20px;
+      position: absolute;
+      top: 90px;
+      letter-spacing: 0.1rem;
+      text-shadow: 2px -2px 0.3px var(--bg-light-5);
+      opacity: 0.7;
+    }
+
+            </code></pre>
+          </div>
+          <section class="box box-h-400 box-flex box-flex-wrap">
+            <div class="loader" id="loader"></div>
+            <div class="loader" id="loader2"></div>
+            <div class="loader" id="loader3"></div>
+            <div class="loader" id="loader4"></div>
+            <div class="loader-div">
+              <span class="loader-wait">Por favor, espere</span>
+              <span class="loader-text">CARGANDO . . .</span>
+            </div>
+          </section>
+        </div>
+      </article>
+      <hr>
+      <article id="c03-47">
+        <h2>Botones Animados (maquetación y micro interacciones) y Gradientes Animados</h2>
+        <div>
+          <p>Se ejecuta con hover. Se tienen tres clases btnAnim (definir los estilos del boton), anim-bottom (define lo referente a formar la linea baja y las transiciones) y las clases to-left, to-center y to-right orientan el movimiento de la transición </p>
+          <p align="center"><small><strong>section.box-card.bx-50 > button.btnAnim.anim-bottom.to-left*3{Animacion Izquierda} + button.btnAnim.anim-bg-gradient{Fondo con Gradiente}</strong></small></p>
+        </div>
+        <div class="box-flex">
+          <div class="box-text">
+            <pre><code>
+    .bx-50 {
+      width: auto;
+      height: 50px;
+    }
+    .btnAnim {
+      position: relative;
+      border: none;
+      border-radius: 0.25rem;
+      padding: 0.2rem;
+      width: 15rem;
+      height: 2.5rem;
+      font-size: 1.25rem;
+      font-weight: bold;
+      cursor: pointer;
+      overflow: hidden;
+      box-shadow: 0.25rem 0.25rem 0.5rem 0.25rem rgba(0, 0, 0, 0.15);
+      background-color: var(--bg-light-5);
+    }
+    .anim-bottom::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 0; /* con 100% se podria apreciar*/
+      height: 0.25rem; /* height es 10% del height de btoAnim */
+      background-color: var(--bg-hard-1);
+      transition: width 0.5s ease, left 0.5s ease, right 0.5s ease;
+    }
+    .anim-bottom:hover:after {
+      width: 100%;
+    }
+    .to-left::after {
+      left: 0;
+    }
+    .to-center::after {
+      left: 50%;
+    }
+    .to-center:hover:after {
+      left: 0;
+    }
+    .to-right::after {
+      right: 0;
+
+    /* BONTON CON FONDO GRADIENTES ANIMADOS */
+    .anim-bg-gradient {
+      background-image: linear-gradient(
+        to right,
+        var(--bg-light-4),
+        var(--bg-half-3),
+        var(--bg-hard-2),
+        var(--bg-light-5)
+      );
+      background-size: 300% 100%;
+      transition: background-position 5s ease-in-out;
+    }
+    .anim-bg-gradient:hover {
+      background-position: 100% 0;
+    }              
+            </code></pre>
+          </div>
+          <section class="box-card bx-50">
+            <button class="btnAnim anim-bottom to-left">Animación Izquierda</button>
+            <button class="btnAnim anim-bottom to-center">Animación Centro</button>
+            <button class="btnAnim anim-bottom to-right">Animación Derecha</button>
+            <button class="btnAnim anim-bg-gradient">Fondo con Gradiente</button>
+          </section>
+        </div>        
+      </article>
+      <hr>
+      <article id="c03-50">
+        <h2>Menú de Pestañas - Tabs (maquetación y animación)</h2>
+        <div>
+          <p align="center"><small><strong>section.box-card>nav.tabs-menu>(input#tab-$[type='radio' name="tabs"]+label[for="tab-$"]{Seccion $})*4+div.tab-bg-hover</strong></small></p>
+        </div>
+        <div class="box-flex">
+          <div class="box-text">
+            <pre><code>
+    .tabs-menu {
+      position: relative;
+      margin: 0 auto;
+      background-color: var(--bg-half-3);
+      padding: 1rem;
+      border-radius: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .tabs-menu input[type="radio"] {
+      display: none;
+    }
+    .tabs-menu label {
+      width: calc(100% / 4 - 0.5rem); /*4 secciones*/
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      cursor: pointer;
+    }
+    .tabs-menu input[type="radio"]:checked + label,
+    .tabs-menu label:hover {
+      color: var(--bg-light-5);
+    }
+    .tab-bg-hover {
+      width: calc(100% / 4 - 0.5rem); /*4 secciones*/
+      height: 2rem;
+      position: absolute;
+      background-image: linear-gradient(90deg, var(--bg-half-3), var(--bg-hard-2));
+      /* background-size: 300% 0; */
+      /* background-position: 100% 0; */
+      border-radius: 0.5rem;
+
+      transition: transform 300ms ease-in-out;
+    }
+    #tab-1:checked ~ .tab-bg-hover {
+      transform: translateX(0);
+    }
+    #tab-2:checked ~ .tab-bg-hover {
+      transform: translateX(100%);
+    }
+    #tab-3:checked ~ .tab-bg-hover {
+      transform: translateX(200%);
+    }
+    #tab-4:checked ~ .tab-bg-hover {
+      transform: translateX(300%);
+    }
+            </code></pre>
+          </div>
+          <section class="box-card">
+            <nav class="tabs-menu">
+              <input type="radio" id="tab-1" name="tabs">
+              <label for="tab-1">Seccion 1</label>
+              <input type="radio" id="tab-2" name="tabs">
+              <label for="tab-2">Seccion 2</label>
+              <input type="radio" id="tab-3" name="tabs">
+              <label for="tab-3">Seccion 3</label>
+              <input type="radio" id="tab-4" name="tabs">
+              <label for="tab-4">Seccion 4</label>
+              <div class="tab-bg-hover"></div>
+            </nav>
+          </section>
+        </div>
+      </article>
+      <hr>
+      <article id="c03-52">
+        <h2>Menú Off Canvas (marcado HTML) y Botón de Hamburguesa Animado</h2>
+        <div class="box-flex">
+          <div class="box-card">
+            <p>
+              Se define Off Canvas porque se encuentra fuera del lienzo del documento. Se debe respetar el orden de la estructura de maquetación siguiente y existir 1° input, 2° label y 3° nav como hermanos en ese orden sino no servira; el nav con los div de contenidos.<br>Se usa checkbox dado que brinda un estado checked css, con checked sacar menu off canvas y en caso contrario se ocultará.<br>Una vez maquetado se diseña el menu de hamburguesa y aplicar animaciones para que las tres barras al pulsar cambie de la barra al tacho <br>
+              El checkbox que activara el boton tiene la clase .off-canvas-btn y la hamburguesa de la etiqueta label vacia con la clase .off-canvas-burger la que se ubica detras del checkbox que esta con opacidad 0, en la que el height se asigna en 0.6rem dado que multiplicado por 5 genera 3rem esto para las 3 rayas del burger y 2 espacios. la linea inicial subir 2 espacios calc(-2 x .6rem), las lineas de arriba y abajo se forman con ::after y ::before. <br>
+              Al ubicar un position:fixed y atributos top, left, bottom, right con valor 0 es como si se estirara el menu .off-canvas-menu al total de la pantalla
+            </p>
+            <p align="center"><small><strong>section.box-card.bx-50 > input.off-canvas-btn[type="checkbox"] + label.off-canvas-burger + nav.off-canvas-menu > div.off-canvas-menu-contenido > a.off-canvas-link[href="#"]{Sección $}*5</strong></small></p>
+          </div>
+          <box-text>
+            <pre><code>
+  .off-canvas-btn {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 999;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    /* opacity: 0.25; */
+    opacity: 0;
+  }
+  .off-canvas-burger {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 998;
+    width: 3rem;
+    height: 0.6rem;
+    background-color: var(--bg-hard-1);
+    border-radius: 0.3rem;
+    transform-origin: top left;
+    transform: rotate(0deg) translate(0, calc(-2 * 0.6rem));
+    transition: transform 500ms ease, background-color 500ms ease,
+      opacity 500ms ease;
+  }
+  .off-canvas-burger::before,
+  .off-canvas-burger::after {
+    content: "";
+    background-color: var(--bg-hard-1);
+    display: block;
+    width: 100%;
+    height: 0.6rem;
+    border-radius: 0.3rem;
+    transition: transform 500ms ease;
+  }
+  .off-canvas-burger::before {
+    transform: rotate(0deg) translate(0, calc(-1.5 * 0.6rem));
+    background-color: var(--bg-half-3);
+    box-shadow: -0.2rem 0.2rem 2.5rem 0.8rem #ff03;
+  }
+  .off-canvas-burger::after {
+    transform: rotate(0deg) translate(0, calc(0.5 * 0.6rem));
+    background-color: var(--bg-hard-2);
+    box-shadow: -0.2rem 0.2rem 2.5rem 0.8rem #ff03;
+  }
+  .off-canvas-btn:checked + .off-canvas-burger {
+    background-color: transparent;
+    opacity: 0.65;
+  }
+  .off-canvas-btn:checked + .off-canvas-burger::before {
+    transform: rotate(45deg) translate(0, 0);
+    background-color: red;
+  }
+  .off-canvas-btn:checked + .off-canvas-burger::after {
+    transform: rotate(-45deg) translate(0.4rem, -0.4rem);
+    background-color: red;
+  }
+            </code></pre>
+          </box-text>
+        </div>
+        <section class="box-card bx-50">
+          <input type="checkbox" class="off-canvas-btn">
+          <label class="off-canvas-burger"></label>
+          <nav class="off-canvas-menu">
+            <div class="off-canvas-menu-contenido">
+              <a href="#" class="off-canvas-link">Sección 1</a>
+              <a href="#" class="off-canvas-link">Sección 2</a>
+              <a href="#" class="off-canvas-link">Sección 3</a>
+              <a href="#" class="off-canvas-link">Sección 4</a>
+              <a href="#" class="off-canvas-link">Sección 5</a>
+            </div>
+          </nav>
+        </section>
+      </article>
+      <hr>
+      <article id="c03-54">
+        <h2>Menú Off Canvas (maquetación y animación)</h2>
+        <div class="box-flex">
+          <div class="box-text">
+            <pre><code>
+    .off-canvas-btn {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      z-index: 999;
+      width: 3rem;
+      height: 3rem;
+      cursor: pointer;
+      /* opacity: 0.25; */
+      opacity: 0;
+    }
+    .off-canvas-burger {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      z-index: 998;
+      width: 3rem;
+      height: 0.6rem;
+      background-color: var(--bg-hard-1);
+      border-radius: 0.3rem;
+      transform-origin: top left;
+      transform: rotate(0deg) translate(0, calc(-2 * 0.6rem));
+      transition: transform 500ms ease, background-color 500ms ease,
+        opacity 500ms ease;
+    }
+    .off-canvas-burger::before,
+    .off-canvas-burger::after {
+      content: "";
+      background-color: var(--bg-hard-1);
+      display: block;
+      width: 100%;
+      height: 0.6rem;
+      border-radius: 0.3rem;
+      transition: transform 500ms ease;
+    }
+    .off-canvas-burger::before {
+      transform: rotate(0deg) translate(0, calc(-1.5 * 0.6rem));
+      background-color: var(--bg-half-3);
+      /* box-shadow: -0.2rem 0.2rem 0.1rem 0.1rem var(--bg-half-3); */
+      border: thin solid var(--bg-light-5);
+    }
+    .off-canvas-burger::after {
+      transform: rotate(0deg) translate(0, calc(0.5 * 0.6rem));
+      background-color: var(--bg-hard-2);
+      /* box-shadow: -0.2rem 0.2rem 0.1rem 0.15rem var(--bg-half-3); */
+      border: thin solid var(--bg-light-5);
+    }
+    .off-canvas-btn:checked + .off-canvas-burger {
+      background-color: transparent;
+      opacity: 0.65;
+    }
+            </code></pre>
+          </div>
+          <div class="box-text">
+            <pre><code>
+    .off-canvas-btn:checked + .off-canvas-burger::before {
+      transform: rotate(45deg) translate(0, 0);
+      background-color: red;
+    }
+    .off-canvas-btn:checked + .off-canvas-burger::after {
+      transform: rotate(-45deg) translate(0.4rem, -0.4rem);
+      background-color: red;
+    }
+
+    .off-canvas-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 997;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--bg-hard-1);
+      opacity: 0.8;
+      transition: transform 500ms ease-in-out;
+      transform: translate(0, -100%); /* Desde arriba */
+      transform: translate(0, 100%); /* Desde abajo */
+      transform: translate(100%, 0); /* Desde Derecha */
+      transform: translate(-100%, 0); /* Desde Izquierda */
+    }
+    .off-canvas-btn:checked ~ .off-canvas-menu {
+      transform: translate(0, 0);
+    }
+    .off-canvas-menu-contenido {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      /* align-items: center; */
+    }
+    .off-canvas-link {
+      padding: 2rem;
+      border-bottom: thin solid var(--bg-hard-1);
+      font-size: 1.5rem;
+      text-decoration: none;
+      text-align: center;
+      color: var(--bg-light-5);
+      font-weight: bold;
+      text-shadow: 0.1rem 0.1rem 0.2rem var(--bg-hard-1);
+      transition: background-color 300ms ease;
+    }
+    .off-canvas-link:first-child {
+      border-top: thin solid var(--bg-hard-1);
+    }
+    .off-canvas-link:hover {
+      background-color: var(--bg-hard-2);
+      opacity: 0.5;
+    }
+            </code></pre>
+          </div>
+        </div>
+      </article>
+      <hr>
+      <article id="c03-55">
+        <h2>Ventana Modal</h2>
+        <div>
+          <p>
+            Partir desde un botón que abra la ventana #modal-1 mediante el href y se tiene un article con el id modal-1 y una clase modal
+          </p>
+          <p align="center"><small><strong>section.box>a[href='#modal-1']{Abrir modal} ^ section#modal-1.modal>div.modal-contenido > a.modal-close[href="#modal-close"]{X} + h3{Esta es una ventana modal} + p{Este es un texto que se presenta en la ventana modal la cual se activa con el boton Abrir ventana modal todo esta contenido en un article con la clase modal y el id modal-1, dentro del cual existen un div.modal-contenido que contiene una enlace con el id #modal-close y clase modal-close y elementos titutlo, parrafo y ul con enlaces.} + ul > li*6 > a[href=""]{Enlace $}</strong></small></p>
+        </div>
+        <section class="box"><a href="#modal-1">Abrir modal</a></section>
+        <section id="modal-1" class="modal">
+          <div class="modal-contenido">
+            <a href="#modal-close" class="modal-close">X</a>
+            <h3>Esta es una ventana modal</h3>
+            <p>Este es un texto que se presenta en la ventana modal la cual se activa con el boton Abrir ventana modal todo esta contenido en un article con la clase modal y el id modal-1, dentro del cual existen un div.modal-contenido que contiene una enlace con el id #modal-close y clase modal-close y elementos titutlo, parrafo y ul con enlaces.</p>
+            <ul>
+              <li><a href="">Enlace 1</a></li>
+              <li><a href="">Enlace 2</a></li>
+              <li><a href="">Enlace 3</a></li>
+              <li><a href="">Enlace 4</a></li>
+              <li><a href="">Enlace 5</a></li>
+              <li><a href="">Enlace 6</a></li>
+            </ul>
+          </div>
+        </section>
+        <div class="box-flex">
+          <div class="box-text">
+            <pre><code>
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 997;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-hard-1-7);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 500ms ease-in-out;
+}
+.modal:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal-contenido {
+  position: relative;
+  border: thick double var(--bg-hard-1);
+  border-radius: 1rem;
+  color: var(--bg-hard-1);
+  padding: 2rem;
+  width: 80%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--bg-light-5);
+}
+            </code></pre>
+          </div>
+          <div class="box-text">
+            <pre><code>
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  width: 2.5rem;
+  height: 2.5rem;
+  /* padding-top: 0.25rem; */
+  line-height: 2.5rem;
+  color: #fff;
+  background-color: #d00;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: background-color 300ms linear, transform 300ms ease-in-out;
+}
+.modal-close:hover {
+  background-color: #a00;
+  transform: scale(1.2);
+}
+
+            </code></pre>
+          </div>
+        </div>
+      </article>
+      <hr>
+      <article id="c03-56">
+        <h2>Intro Películas Star Wars</h2>
+        <div>
+          <p><small><strong>article.star-wars > div.star-wars-contenido > h3{Episode III} + h4{REVENGE OF THE SITH} + p{¡Guerra! La República se derrumba bajo los ataques de los despiadados Lord Sith, Conde Dooku. Hay héroes en ambos lados. El mal está en todas partes.} + p{En un movimiento impresionante, el líder droide diabólico, General Grievous, ha barrido en el capital de la República y secuestrada Canciller Palpatine, líder de el Senado Galáctico.} + p{Como el Ejército Droide Separatista intentos de huir de los sitiados capital con sus valiosos como rehenes, dos Caballeros Jedi conducen un misión desesperada para rescatar a los Canciller cautivo....}</strong></small></p>
+        </div>
+        <div class="box-flex">
+          <div class="box-text">
+            <pre><code>
+@keyframes introStarWars {
+  0% { transform: perspective(100vh) rotateX(15deg) translateY(100%); }
+  100% { transform: perspective(100vh) rotateX(25deg) translateY(-200%); }
+}
+.star-wars {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  color: #ffb13a;
+  background-image: url("../assets/img/stars.gif");
+}
+.star-wars-contenido {
+  margin: 0 auto;
+  width: 80%;
+  text-align: justify;
+  letter-spacing: 0.1rem;
+  animation: introStarWars 20s linear infinite;
+}
+.star-wars h3,
+.star-wars h4 {
+  font-size: 5vw;
+  text-align: center;
+}
+.star-wars p {
+  font-size: 3vw;
+  line-height: 4rem;
+}
+            </code></pre>
+          </div>
+          <div class="box-text">
+            <pre><code>
+
+            </code></pre>
+          </div>
+        </div>
+      </article>
+      <hr>
+      <!-- ((article#c03-$$@2>(h2{titTema}+div+(a.indice[href="cap03.html#indice"]{ 👆  Indice temático})))+hr)*5 -->
+    </div>
+    <div class="star-wars">
+      <div class="star-wars-contenido">
+        <h3>Episode III</h3>
+        <h4>REVENGE OF THE SITH</h4>
+        <p>¡Guerra! La República se derrumba bajo los ataques de los despiadados Lord Sith, Conde Dooku. Hay héroes en ambos lados. El mal está en todas partes.</p>
+        <p>En un movimiento impresionante, el líder droide diabólico, General Grievous, ha barrido en el capital de la República y secuestrada Canciller Palpatine, líder de el Senado Galáctico.</p>
+        <p>Como el Ejército Droide Separatista intentos de huir de los sitiados capital con sus valiosos como rehenes, dos Caballeros Jedi conducen un misión desesperada para rescatar a los Canciller cautivo....</p>
+      </div>
+    </div>
+    <script src="assets/js/cap03.js"></script>
+  </body>
+</html>

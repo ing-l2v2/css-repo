@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Máximo 165 caracteres -->
+    <meta name="description" content="Práctica del modelo de caja en CSS" />
+    <!-- <link rel="stylesheet" href="assets/normalize.css" /> -->
+    <link rel="stylesheet" href="assets/css/modelo-caja.css" />
+    <link rel="canonical" href="https://tudomino.com/la-url-canonical" />
+    <link rel="icon" href="assets/img/animal-bird-domestic-svgrepo-com.svg" />
+    <link
+      rel="apple-touch-icon"
+      href="assets/img/animal-bird-domestic-svgrepo-com.svg"
+    />
+    <meta name="theme-color" content="#F60" />
+    <meta property="og:title" content="Modelo de Caja en CSS" />
+    <meta
+      property="og:description"
+      content="Práctica del modelo de caja en CSS"
+    />
+    <meta
+      property="og:image"
+      content="http://tudominio.com/img/nombre-imagen.png"
+    />
+    <meta property="og:url" content="http://tudominio.com/index.html" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@leonelvilla" />
+    <!-- Entre 55 y 65 caracteres -->
+    <title>Modelo de Caja en CSS</title>
+  </head>
+  <body>
+    <h1>Modelo de Caja en CSS</h1>
+    <footer class="div-uno2">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, labore
+      ratione quos obcaecati culpa quia nisi fuga voluptate, quibusdam, neque
+      amet? Repellendus rem minus debitis ex qui quaerat necessitatibus sit?
+    </footer>
+    <div class="div-dos">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt,
+      aliquid ratione quidem aperiam ex asperiores maxime, voluptates, rerum qui
+      culpa doloribus! Necessitatibus sapiente ipsum sunt accusamus vitae,
+      quaerat optio suscipit!
+    </div>
+
+    <div>
+      <p class="caja-overflow">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum,
+        reiciendis! Illo quia provident porro minima! Ducimus doloremque
+        corrupti maiores eaque, nobis neque autem, quis, eveniet aperiam
+        cupiditate adipisci sequi facilis! Facere minus expedita voluptates ut.
+      </p>
+      <pre><code>
+        .caja-overflow {
+          background-color: limegreen; padding: 10px; margin: 5px; width: 400px; height: 150px; overflow: visible;
+          /* 
+          text-overflow: ellipsis; white-space: nowrap;
+          */
+          overflow: hidden; overflow: scroll; overflow: auto;
+        }
+        .caja-overflow p { width: 500px; margin: 10px; padding: 10px; }
+      </code></pre>
+    </div>
+    <div class="box-sizing-content">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, perferendis
+      sit odio in eveniet molestiae nam modi adipisci accusamus numquam nostrum
+      eius ullam, voluptatem soluta veniam fugiat natus ab quod.
+    </div>
+    <article class="sitio-web">
+      <header>Cabecera</header>
+      <main>Contenido principal</main>
+      <footer>Pie de pagina</footer>
+    </article>
+    <a href="cap02.html#modelo-caja">👆 Regresar al modelo de caja</a><br />
+    <a href="cap02.html#indice">👆 Regresar al indice temático</a>
+  </body>
+</html>

@@ -1,0 +1,180 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.c03f-titulares {
+  background-color: #222;
+  color: #eee;
+  padding: 1rem;
+}
+/* Existe solo una por documento html */
+main {
+  flex-grow: 1;
+}
+.c03f-menu ul {
+  list-style-type: none;
+}
+.c03f-menu ul li {
+  padding: 0.4rem 0.6rem;
+}
+.c03f-menu ul li a {
+  text-decoration: none;
+  color: #eee;
+}
+.c03f-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.c03f-hero-image {
+  min-height: 100vh;
+  min-width: 100vh;
+  background-image: url("https://placeimg.com/1280/720/animals");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+.c03f-hero-image > div {
+  background-color: rgba(0, 0, 0, 0.55);
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.c03f-hero-image div > p:nth-child(1) {
+  font-size: 5vw;
+  font-weight: bolder;
+}
+.c03f-hero-image div > p:nth-child(2) {
+  font-size: 1.5vw;
+  font-weight: bolder;
+  padding: 0.3rem 0;
+}
+.c03f-hero-image div > p:nth-child(3) {
+  font-size: 1.2vw;
+  padding: 0.3rem 0;
+}
+
+.c03f-flex-item {
+  padding: 0 3rem;
+}
+.c03f-flex-item h2 {
+  padding: 0.4rem 0;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bolder;
+}
+.c03f-flex-item > p {
+  padding: 0.3rem 0;
+  font-size: 1.08rem;
+}
+.p-code-div {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.3vw;
+}
+.pre-code-css {
+  font-size: 1.3vw;
+}
+
+.c03f-flex-responsive {
+  display: flex;
+  flex-flow: row wrap;
+}
+.c03f-flex-responsive h2 {
+  padding: 0.2rem 3rem;
+  width: 100%;
+}
+.c03f-flex-responsive div {
+  width: 100%;
+}
+.c03f-flex-responsive div p {
+  text-align: center;
+  font-weight: bold;
+  padding: 0.3rem 0;
+}
+.c03f-flex-responsive-item {
+  flex: 1 1 200px;
+  border: thin solid #eee;
+}
+.c03f-flex-responsive-subtxt {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-around;
+}
+.c03f-flex-responsive-text {
+  font-size: 1.3vw;
+  text-align: left;
+}
+@media print {
+  .noprint {
+    display: none;
+  }
+  pre,
+  .pre-code-css,
+  .p-code-div {
+    font-size: 1.08rem;
+  }
+  .c03f-hero-image {
+    background-image: none;
+    min-width: 0;
+    min-height: 0;
+    color: #000;
+  }
+  .c03f-hero-image > div {
+    background-color: #fff;
+  }
+  .c03f-hero-image div > p:nth-child(1),
+  .c03f-flex-responsive-text {
+    font-size: 2rem;
+  }
+  .c03f-hero-image div > p:nth-child(2),
+  .c03f-hero-image div > p:nth-child(3) {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .c03f-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .c03f-menu ul {
+    display: flex;
+  }
+
+  .c03f-flex-responsive-subtxt {
+    flex-direction: row;
+  }
+  .c03f-container {
+    display: flex;
+    align-items: center;
+  }
+  .c03f-flex-item {
+    flex: 0 0 50%;
+  }
+  .c03f-flex-order-1 {
+    order: 1;
+  }
+  .c03f-flex-row-reverse {
+    flex-direction: row-reverse;
+  }
+}

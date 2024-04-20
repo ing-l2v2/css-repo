@@ -1,0 +1,31 @@
+.t01-acordeon {
+  width: 90%;
+  max-width: 120em;
+  background-color: lightblue;
+  padding: 2em;
+}
+.t01-acordeon .t01-bloque {
+  background-color: red;
+  margin: 0 0 1em;
+  padding: 1em;
+}
+.t01-acordeon .t01-h2 {
+  background-color: lime;
+  margin: 0 0 1em;
+  padding: 1em;
+}
+.t01-acordeon .t01-contenido {
+  background-color: orange;
+
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: all 5s ease;
+}
+
+/* Cuando el t01-bloque, tenga la clase .t01-activo entonces sera visible,
+   notese .t01-bloque.t01-activo van juntos sin espacios y agregado en el
+   div class="bloque activo" */
+.t01-acordeon .t01-bloque.t01-activo .t01-contenido {
+  height: auto;
+}

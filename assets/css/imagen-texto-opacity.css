@@ -1,0 +1,131 @@
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Raleway", sans-erif';
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+p, code{
+  font-size: 1.5rem;
+}
+pre{
+  line-break: normal;
+  white-space: pre-wrap;
+  padding-left: 2rem;
+}
+/* @font-face {
+  font-family: "Raleway";
+  src: url("../assets/fonts/fontsGoogle/MaterialSymbolsOutlinedFILLGRADopszwght.woff2")
+      format("woff2"),
+    url("../assets/fonts/fontsGoogle/MaterialSymbolsRoundedFILLGRADopszwght.woff2")
+      format("woff2"),
+    url("../assets/fonts/fontsGoogle/MaterialSymbolsSharpFILLGRADopszwght.woff2")
+      format("woff2");
+  font-display: swap;
+} */
+
+.raleway {
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+}
+
+#caja-div {
+  height: 100vh;
+  min-height: 850px;
+  min-height: 100%;
+  position: relative; /* ponemos posicion relativa */
+}
+/* Movemos la imagen de fondo al ::beofre */
+#caja-div::before {
+  content: "";
+  background-image: url("../assets/img/favicon.png"),
+    url("../assets/img/puesta-sol.jpg");
+  background-repeat: repeat, no-repeat;
+  background-position: bottom center;
+  background-size: 10%, cover;
+  background: url("../assets/img/arbol.png") no-repeat center bottom,
+    url("../assets/img/aves.png") no-repeat center bottom,
+    url("../assets/img/cielo.png") no-repeat center top;
+  background-size: contain;
+  background-origin: border-box;
+  background-clip: border-box;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  opacity: 0.6;
+}
+.caja-div .div-tit-h1 {
+  padding-top: 50px;
+  text-align: center;
+  letter-spacing: 0.65em;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+}
+.caja-div > h3 {
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 110px;
+  font-size: 1.8rem;
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 6rem;
+  z-index: 3;
+}
+.div-tit-h2 {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.div-tit-h2 div {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: 3;
+}
+@media (min-width: 1200px) {
+  .maximum {
+    float: left;
+    width: 100%;
+  }
+  #caja-div::before {
+    opacity: 0.4;
+  }
+}
+@media (min-width: 768px) {
+  .div-tit-h2 {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+/* cuando el ancho sea menor de 500 pixels */
+@media (max-width: 500px) {
+  /* el ::before tendra una opacidad menor */
+  #caja-div::before {
+    opacity: 0.9;
+  }
+}

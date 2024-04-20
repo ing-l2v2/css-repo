@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Máximo 165 caracteres -->
+    <meta
+      name="description"
+      content="Formato de una composicion de Backgraund con opacidad solo sobre la imagen"
+    />
+    <!-- Fuentes descargadas de google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;0,900;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Fin de fuentes descargadas de google fonts -->
+    <link rel="stylesheet" href="./assets/css/imagen-texto-opacity.css" />
+    <!-- Entre 55 y 65 caracteres -->
+    <title>Background con opacidad y texto sin opacidad</title>
+  </head>
+  <body>
+    <article id="caja-div">
+      <div class="maximum caja-div">
+        <div class="div-tit-h1 raleway">
+          COMPOSICIONES Y OPACIDAD - TITULO PRINCIPAL EN DEFINICION h1
+        </div>
+        <h3 class="raleway">SUBTITULO h3 IDEA COMPLEMENTARIA</h3>
+      </div>
+      <div class="div-tit-h2 raleway">
+        <div>COMPOSICION DE IMAGENES DE FONDO, TITULO EN h2</div>
+      </div>
+    </article>
+    <article>
+      <h2>La estructura de la composicion</h2>
+      <section>
+        <p>
+          Se tienen un contenedor principal <code>article.caja-div</code> dentro
+          del cual existen dos divs hermanos, uno con la combinacion de clases
+          .maximun y .caja-div y el otro con la identificacion div.div-tit-h2.
+        </p>
+        <p>
+          El div con las clases .maximun y .caja-div contine a su vez dos
+          elementos selectores un div.div-tit-h1 y un elemento h3. En la vista
+          siguiente se aprecia la estructura completa del html correspondiente,
+          que fuera descrito:
+        </p>
+        <pre><code>
+          &lt;article id="caja-div"&gt;
+            &lt;div class="maximum caja-div"&gt;
+              &lt;div class="div-tit-h1 raleway"&gt;
+                COMPOSICIONES Y OPACIDAD - TITULO PRINCIPAL EN DEFINICION h1
+              &lt;/div&gt;
+              &lt;h3 class="raleway"&gt;SUBTITULO h3 IDEA COMPLEMENTARIA&lt;/h3&gt;
+            &lt;/div&gt;
+            &lt;div class="div-tit-h2 raleway"&gt;
+              &lt;div>COMPOSICION DE IMAGENES DE FONDO, TITULO EN h2&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/article&gt;         
+        </code></pre>
+      </section>
+    </article>
+    <hr />
+    <article>
+      <h2>CSS aplicado para obener el resultado</h2>
+      <pre><code>
+        html {
+          scroll-behavior: smooth;
+          box-sizing: border-box;
+          margin: 0;
+          font-family: "Raleway", sans-erif';
+        }
+        *,
+        *::before,
+        *::after {
+          box-sizing: inherit;
+        }
+        @font-face {
+          font-family: "Raleway";
+          src: url("../assets/fonts/fontsGoogle/MaterialSymbolsOutlinedFILLGRADopszwght.woff2")
+              format("woff2"),
+            url("../assets/fonts/fontsGoogle/MaterialSymbolsRoundedFILLGRADopszwght.woff2")
+              format("woff2"),
+            url("../assets/fonts/fontsGoogle/MaterialSymbolsSharpFILLGRADopszwght.woff2")
+              format("woff2");
+          font-display: swap;
+        }
+
+        .raleway {
+          font-family: "Raleway", sans-serif;
+          font-size: 1rem;
+        }
+
+        #caja-div {
+          height: 100vh;
+          min-height: 850px;
+          min-height: 100%;
+          position: relative; /* ponemos posicion relativa */
+        }
+        /* Movemos la imagen de fondo al ::before */
+        #caja-div::before {
+          content: "";
+          background-image: url("../assets/img/favicon.png"),
+            url("../assets/img/puesta-sol.jpg");
+          background-repeat: repeat, no-repeat;
+          background-position: bottom center;
+          background-size: 10%, cover;
+          background: url("../assets/img/arbol.png") no-repeat center bottom,
+            url("../assets/img/aves.png") no-repeat center bottom,
+            url("../assets/img/cielo.png") no-repeat center bottom;
+          background-size: contain;
+          background-origin: border-box;
+          background-clip: border-box;
+          background-attachment: fixed;
+          position: absolute;
+          top: 0;
+          left: 0;
+          margin: 0;
+          width: 100%;
+          height: 100vh;
+          z-index: 1;
+          opacity: 0.4;
+        }
+        .caja-div .div-tit-h1 {
+          padding-top: 50px;
+          text-align: center;
+          letter-spacing: 0.65em;
+          font-size: 1rem;
+          font-weight: bold;
+          width: 100%;
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 3;
+        }
+        .caja-div > h3 {
+          text-align: center;
+          padding-top: 10px;
+          margin-bottom: 110px;
+          font-size: 1.8rem;
+          width: 100%;
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 6rem;
+          z-index: 3;
+        }
+        .div-tit-h2 {
+          margin-left: auto;
+          margin-right: auto;
+          padding-left: 20px;
+          padding-right: 20px;
+          font-size: 2rem;
+          font-weight: bold;
+        }
+        .div-tit-h2 div {
+          font-size: 2rem;
+          text-align: center;
+          font-weight: bold;
+          display: block;
+          width: 100%;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          z-index: 3;
+        }
+        @media (min-width: 1200px) {
+          .maximum {
+            float: left;
+            width: 100%;
+          }
+        }
+        @media (min-width: 768px) {
+          .container {
+            padding-left: 50px;
+            padding-right: 50px;
+          }
+        }
+        /* cuando el ancho sea menor de 500 pixels */
+        @media (max-width: 500px) {
+          /* el ::before tendra una opacidad menor */
+          #caja-div::before {
+            opacity: 0.6;
+          }
+        }
+      </code></pre>
+    </article>
+    <hr />
+    <a href="cap02.html#background-style">👆 Regreso al indice tematico</a>
+  </body>
+</html>

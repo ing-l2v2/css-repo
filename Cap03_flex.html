@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Entre 55 y 65 caracteres -->
+    <title>Flex Layout CSS - Primer sistema real de maquetación</title>
+    <!-- Máximo 165 caracteres -->
+    <meta name="description" content="Resumiendo Flex Box Layout CSS" />
+    <meta name="keywords" content="CSS3, ing-l2v2, l2v2-ing, flex, box, layout"/>
+    <!-- Parámetros para CEO -->
+    <link rel="canonical" href="https://tudomino.com/la-url-canonical" />
+    <link rel="icon" href="assets/img/animal-bird-domestic-svgrepo-com.svg" />
+    <link
+      rel="apple-touch-icon"
+      href="assets/img/animal-bird-domestic-svgrepo-com.svg"
+    />
+    <meta name="theme-color" content="#F60" />
+    <meta property="og:title" content="Flex Layout CSS - Primer sistema real de maquetación" />
+    <meta property="og:description" content="Resumiendo Flex Box Layout CSS" />
+    <meta
+      property="og:image"
+      content="http://tudominio.com/img/nombre-imagen.png"
+    />
+    <meta property="og:url" content="http://tudominio.com/index.html" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@leonelvilla" />
+    <!-- Fin de parámetros para CEO -->
+    <link href="./assets/bootstrap5/bootstrap-5.3.0-dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/Cap03_flex.css" />
+    <link rel="stylesheet" href="assets/css/cap03.css">
+  </head>
+  <body>
+    <header class="header">
+      <h1>Flex Layout CSS</h1>      
+      <a href="#indice" class="indice">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        👆 Indice temático
+      </a>
+    </header>
+    <article id="indice">
+      <h2>Indice temático Capítulo 3 FlexBox</h2>
+      <ul role="list" aria-details="Indice de temas">
+        <li role="listitem"><a href="cap02.html" target="_blank">Capítulo 2</a></li>
+        <li role="listitem"><a href="Cap03.html" target="_blank">Capítulo 3</a></li>
+        <li role="listitem"><a href="Cap04.html" target="_blank">Capítulo 4 Grid</a></li>
+        <li role="listitem">
+          <a href="Cap03_flex.html#c03f-01">Introducción</a>
+        </li>
+        <li role="listitem">
+          <a href="Cap03_flex.html#c03f-02">Display</a>
+        </li>
+        <li role="listitem">
+          <a href="Cap03_flex.html#c03f-03">Flex-direction</a>
+        </li>
+        <li role="listitem">
+          <a href="Cap03_flex.html#c03f-04">Flex-wrap</a>
+        </li>
+        <li role="listitem">
+          <a href="Cap03_flex.html#c03f-05">Flex-flow</a>
+        </li>
+        <li role="listitem">
+          <a href="Cap03_flex.html#c03f-06">Justify-content</a>
+        </li>
+        <li role="listitem">
+          <a href="Cap03_flex.html#c03f-07">Align-items</a>
+        </li>
+        <li role="listitem">
+          <a href="Cap03_flex.html#c03f-08">Align-content</a>
+        </li>
+        <li role="listitem">
+          <a href="Cap03_flex.html#c03f-09">Gap, Row-gap y Column-gap</a>
+        </li>
+        <li role="listitem">
+          <a href="Cap03_flex.html#c03f-10">Propiedades para los hijos</a>
+        </li>
+        <li role="listitem">
+          <a href="Cap03_flex.html#c03f-11">Flex-grow</a>
+        </li>
+        <li role="listitem">
+          <a href="Cap03_flex.html#c03f-12">Flex-shrik</a>
+        </li>
+        <li role="listitem">
+          <a href="Cap03_flex.html#c03f-13">Flex-basis</a>
+        </li>
+        <li role="listitem">
+          <a href="Cap03_flex.html#c03f-14">Flex</a>
+        </li>
+        <li role="listitem">
+          <a href="Cap03_flex.html#c03f-15">Order</a>
+        </li>
+        <li role="listitem">
+          <a href="Cap03_flex.html#c03f-16">Align-self</a>
+        </li>
+        <li role="listitem">
+          <a href="c03f-header-footer.html">Maquetación y responsive design con Flexbox</a>
+        </li>
+        <li role="listitem">
+          <a href="Cap03_flex.html#c03f-20">Bootstrap y Flexbox</a>
+        </li>
+      </ul>
+    </article>
+    <article class="flexLayout1" id="c03f-01">
+      <img src="assets/img/flexLoyout01.svg" alt="Ejes de layout flex" />
+      <div class="txtFlexLayout1">
+        <p>
+          <strong>main-axis</strong> : del contenedor flex a lo largo del que se
+          disponen elementos flexibles. Cuidado, no es necesariamente
+          horizontal; Depende de propiedad flex-direction.
+        </p>
+        <p>
+          <strong>main-start | main-end –</strong> Elementos se ubican en el
+          contenedor empezando en main-start hasta el final del eje main-end.
+        </p>
+        <p>
+          <strong>cross-start | cross-end –</strong> Elementos se ubican en el
+          contenedor empezando en cross-start hasta el final del eje cross-end.
+        </p>
+        <p>
+          <strong>cross axis –</strong> El eje perpendicular al main axis es
+          llamado el cross axis. Su dirección depende de dirección del main
+          axis.
+        </p>
+        <p>
+          <strong>main size –</strong> El ancho o alto de un elemento flex lo
+          que este en el main axis, es el main size del elemento. por tanto el
+          tamaño principal puede ser tanto el alto o el ancho del elemento.
+        </p>
+      </div>
+    </article>
+    <article class="propiedad" id="c03f-02">
+      <h2>display</h2>
+      <div class="flexLayout1">
+        <p>
+          Define un contenedor flex; inline o block dependiendo del valor
+          establecido. Habilitando un contexto flex para todos sus hijos.
+        </p>
+        <p>
+          <code>
+            .container { <br />
+            display: flex; /* or inline-flex */ <br />}
+          </code>
+        </p>
+      </div>
+      <h4>Display: flex</h4>
+      <p>Ambas cajas ocupan toda la linea dado que ambas son flex</p>
+      <section class="tema1-container">
+        <article class="tema1-item">Flex item 1</article>
+        <article class="tema1-item">Flex item 2</article>
+        <article class="tema1-item">Flex item 3</article>
+      </section>
+      <section class="tema1-container">
+        <article class="tema1-item">Flex item 1</article>
+        <article class="tema1-item">Flex item 2</article>
+        <article class="tema1-item">Flex item 3</article>
+      </section>
+      <h4>Display: inline-flex</h4>
+      <p>Ambas cajas se alinean dado que ambas son inline-flex, siempre que el ancho del padre lo permita</p>
+      <section class="tema1-container-inlineflex">
+        <article class="tema1-item">Flex item 1</article>
+        <article class="tema1-item">Flex item 2</article>
+        <article class="tema1-item">Flex item 3</article>
+      </section>
+      <section class="tema1-container-inlineflex">
+        <article class="tema1-item">Flex item 1</article>
+        <article class="tema1-item">Flex item 2</article>
+        <article class="tema1-item">Flex item 3</article>
+      </section>
+    </article>
+    <hr />
+    <article class="propiedad" id="c03f-03">
+      <h2>flex-direction</h2>
+      <div class="flexLayout1">
+        <img src="assets/img/flex-direction.svg" alt="Flex-Direction" />
+        <div>
+          <p>
+            .container { flex-direction: row | row-reverse | column |
+            column-reverse; }
+          </p>
+          <ul>
+            <li>
+              <p>
+                <strong>row (default)</strong> distribución de izquierda a
+                derecha en ltr; de derecha a izquierda en rtl.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>row-reverse</strong> derecha a izquierda en ltr y
+                izquierda a derecha en rtl.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>column</strong> Igual que row pero de arriba hacia
+                abajo.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>column-reverse</strong> Igual que row-reverse pero de
+                abajo hacia arriba.
+              </p>
+            </li>
+          </ul>
+          <div class="box-flex-C">
+            <div class="box-flex-C box-flex-wrap-row">
+              <section class="boxC">1</section>
+              <section class="boxC">2</section>
+              <section class="boxC">3</section>
+              <section class="boxC">4</section>
+              <section class="boxC">5</section>
+            </div>
+            <div class="box-text">
+              <pre><code>
+  .box-flex-wrap-row {
+    width: 150px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+              </code></pre>
+            </div>
+          </div>
+          <div class="box-flex-C">
+            <div class="box-text">
+              <pre><code>
+  .box-flex-wrap-row-reverse {
+    width: 150px;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    flex-flow: row-reverse wrap-reverse;
+  }                
+              </code></pre>
+            </div>
+            <div class="box-flex-C box-flex-wrap-row-reverse">
+              <section class="boxC">1</section>
+              <section class="boxC">2</section>
+              <section class="boxC">3</section>
+              <section class="boxC">4</section>
+              <section class="boxC">5</section>
+            </div>
+          </div>
+        </div>
+        <div class="box-flex-C box-flex-wrap-column">
+          <section class="boxC">1</section>
+          <section class="boxC">2</section>
+          <section class="boxC">3</section>
+          <section class="boxC">4</section>
+          <section class="boxC">5</section>
+        </div>
+        <div class="box-flex-C box-flex-wrap-column-reverse">
+          <section class="boxC">1</section>
+          <section class="boxC">2</section>
+          <section class="boxC">3</section>
+          <section class="boxC">4</section>
+          <section class="boxC">5</section>
+        </div>
+      </div>
+
+      <h3>container-row</h3>
+      <section class="tema2-container-row">
+        <article class="tema2-item">Flex item 1</article>
+        <article class="tema2-item">Flex item 2</article>
+        <article class="tema2-item">Flex item 3</article>
+      </section>
+      <h3>container-row-reverse</h3>
+      <section class="tema2-container-row-reverse">
+        <article class="tema2-item">Flex item 1</article>
+        <article class="tema2-item">Flex item 2</article>
+        <article class="tema2-item">Flex item 3</article>
+      </section>
+      <h3>container-row-inline container-row-reverse-inline</h3>
+      <section class="tema2-container-row-inline">
+        <article class="tema2-item">Flex item 1</article>
+        <article class="tema2-item">Flex item 2</article>
+        <article class="tema2-item">Flex item 3</article>
+      </section>
+      <section class="tema2-container-row-reverse-inline">
+        <article class="tema2-item">Flex item 1</article>
+        <article class="tema2-item">Flex item 2</article>
+        <article class="tema2-item">Flex item 3</article>
+      </section>
+      <h3>container-column</h3>
+      <section class="tema2-container-column">
+        <article class="tema2-item">Flex item 1</article>
+        <article class="tema2-item">Flex item 2</article>
+        <article class="tema2-item">Flex item 3</article>
+      </section>
+      <h3>container-column-reverse</h3>
+      <section class="tema2-container-column-reverse">
+        <article class="tema2-item">Flex item 1</article>
+        <article class="tema2-item">Flex item 2</article>
+        <article class="tema2-item">Flex item 3</article>
+      </section>
+      <h3>container-column-inline  container-column-reverse-inline</h3>
+      <section class="tema2-container-column-inline">
+        <article class="tema2-item">Flex item 1</article>
+        <article class="tema2-item">Flex item 2</article>
+        <article class="tema2-item">Flex item 3</article>
+      </section>      
+      <section class="tema2-container-column-reverse-inline">
+        <article class="tema2-item">Flex item 1</article>
+        <article class="tema2-item">Flex item 2</article>
+        <article class="tema2-item">Flex item 3</article>
+      </section>
+      
+    </article>
+    <hr />
+    <article class="propiedad" id="c03f-04">
+      <h2>flex-wrap (envoltorio)</h2>
+      <div class="flexLayout1">
+        <img src="assets/img/flex-wrap.svg" alt="Flex-wrap" />
+        <div>
+          <p>.container { flex-wrap: nowrap | wrap | wrap-reverse; }</p>
+          <ul>
+            <li>
+              <p>
+                <strong>nowrap (default) : </strong> Todos los elementos flex
+                estarán en una línea
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>wrap : </strong> Elementos flexibles se ajustan a varias
+                lineas de arriba a abajo.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>wrap-reverse : </strong> Elementos flex ajustados en
+                multiples lineas de abajo hacia arriba.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+    <hr />
+
+    <article class="propiedad" id="c03f-05">
+      <h2>flex-flow (flujo flexible)</h2>
+      <div class="flexLayout1">
+        <p>.container { flex-flow: column wrap; }</p>
+        <div>
+          <p>Shorthand de flex-direction y flex-wrap</p>
+        </div>
+      </div>
+    </article>
+    <hr />
+
+    <article class="propiedad" id="c03f-06">
+      <h2>justify-content (justificar contenido)</h2>
+      <div class="flexLayout1">
+        <img src="assets/img/flex-justify-content.svg" alt="justify-content" />
+        <div class="box-flex-C box-flex-column">
+          <div>
+            <p>
+              Define alineación a lo largo de eje principal de los elementos hijos y distribuye espacio
+              libre adicional sobrante cuando todos los elementos flex de una
+              línea son inflexibles o son flexibles pero han alcanzado su tamaño
+              máximo
+            </p>
+            <p>
+              .container { justify-content: flex-start | flex-end | center |
+              space-between | space-around | space-evenly | start | end | left |
+              right ... + safe | unsafe; }
+            </p>
+            <p>
+              Items son:
+              <ul>
+                <li>
+                  <p><strong>flex-start (dafault) : </strong>empaquetados hacia el inicio del flex-direction</p>
+                </li>
+                <li>
+                  <p><strong>flex-end : </strong> empaquetados hacia el fin del flex-direction.</p>
+                </li>
+                <li>
+                  <p><strong>center : </strong> centrados a lo largo de la línea</p>
+                </li>
+                <li>
+                  <p><strong>space-between : </strong>distribuidos uniformemente en la línea. Item 1 en inicio de la línea, item último al final de la línea.</p>
+                </li>
+                <li>
+                  <p><strong>space-around</strong> distribuidos uniformemente en la linea. Igual espacio a cada lado de items, empieza con una unidad de espacio</p>
+                </li>
+                <li>
+                  <p><strong>space-evenly</strong> distribuidos de modo que espacio entre dos items y espacio con bordes es igual.</p>
+                </li>
+                <li>
+                  <p><strong>start : </strong> Items se empaquetan hacia el inicio de dirección writing-mode.</p>
+                </li>
+                <li>
+                  <p><strong>end : </strong> Items se empaquetan hacia el fin de dirección writing-mode.</p>
+                </li>
+                <li>
+                  <p><strong>stretch : </strong> Items se ajustan automaticamente al contenedor.</p>
+                </li>
+                <li>
+                  <p><strong>normal : </strong> Se comporta como stretch (excepto en contenedores de varias columnas) o como start (caso ). </p>
+                </li>
+                <li>
+                  <p><strong>safe : </strong> Combinando garantiza que no empuje fuera de la pantalla. Evita desbordamiento, pudiendo ignorar la alineación deseada.</p>
+                </li>
+                <li>
+                  <p><strong>unsafe : </strong> NO evita desbordamiento, aplica alineación deseada</p>
+                </li>
+              </ul>
+            </p>
+          </div>
+          <div class="box-flex-C div-justify">
+            <section class="boxC">1</section>
+            <section class="boxC">2</section>
+            <section class="boxC">3</section>
+          </div>
+        </div>
+      </div>
+    </article>
+    <hr />
+
+    <article class="propiedad" id="c03f-07">
+      <h2>align-items (alinear elementos)</h2>
+      <div class="flexLayout1">
+        <img src="assets/img/flex-align-items.svg" alt="align-items" />
+        <div>
+          <p>Distribucion de elementos flex en el eje cross-axis (transversal). Define la alineación de los hijos en el eje transversal (cross-axis) dentro de cada linea.</p>
+          <p>
+            .container {
+              align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end + ... safe | unsafe;
+            }
+          </p>
+          <p>
+            <ul>
+              <li>
+                <p><strong>stretch (default) : </strong> Estirar para rellenar en contenedor (respeta el min-width/max-width), no deben estar definidos el width ni el height en los elementos hijos.</p>
+              </li>
+              <li>
+                <p><strong>flex-start/start/self-start : </strong> Items hacia el inicio de eje transversal, respetando el flex-direction y el writing-mode respectivo.</p>
+              </li>
+              <li>
+                <p><strong>flex-end/end/self-end : </strong>Items ubicados en el fin de eje transversal, respetando el flex-direction y el writing-mode respectivo.</p>
+              </li>
+              <li>
+                <p><strong>center : </strong> Items centrados en el eje transversal.</p>
+              </li>
+              <li>
+                <p><strong>baseline : </strong>Items alineados como sus líneas bases se alinean</p>
+              </li>
+              <li>
+                <p><strong>safe | unsafe : </strong>evita alineación de elementos de modo que el contenido se vuelva inaccesible</p>
+              </li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </article>
+    <hr />
+    
+    <article class="propiedad" id="c03f-08">
+      <h2>align-content (alinear contenido)</h2>
+      <div class="flexLayout1">
+        <img src="assets/img/flex-align-content.svg" alt="Flex-wrap" />
+        <div>
+          <p>Similar a justify-content pero para eje transversal, pero flex-wrap: wrap o flex-wrap: wrap-reverse. No funciona cuando los hijos estan en UNA sola linea (flex-wrap: nowrap) pero si funciona align-items. Cuando flex-wrap: wrap, funciona align-content y align-items.</p><p>Esta alineacion trabaja como un todo del contenedor.</p>
+          <p>
+            .container {
+              align-content: flex-start | flex-end | center | space-between | space-around | space-evenly | stretch | start | end | baseline | first baseline | last baseline + ... safe | unsafe;
+            }
+          </p>
+          <p>
+            <ul>
+              <li>
+                <p><strong>normal (default): </strong>sin valor</p>
+              </li>
+              <li>
+                <p><strong>flex-start/start:</strong> alinea al inicio del contenedor, flex-start con flex-direction, start con writing-mode</p>
+              </li>
+              <li>
+                <p><strong>flex-end/end:</strong> alinea al final del contenedor, flex-end con flex-direction, end con writing-mode</p>
+              </li>
+              <li>
+                <p><strong>center:</strong> items centrados en el contenedor</p>
+              </li>
+              <li>
+                <p><strong>space-between:</strong> distribuidos uniformemente en la vertical. Item 1 al principio del contenedor, item último al final.</p>
+              </li>
+              <li>
+                <p><strong>space-around: </strong>distribuidos uniformemente. Igual espacio a cada lado de linea, empieza con una unidad de espacio</p>
+              </li>
+              <li>
+                <p><strong>space-evenly:</strong>distribuidos uniformemente mismo espacio de separación.</p>
+              </li>
+              <li>
+                <p><strong>stretch:</strong>lineas se estiran para ocupar espacio restante</p>
+              </li>
+              <li><p><strong>safe | unsafe</strong></p></li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </article>
+    <hr />
+
+    <article class="propiedad" id="c03f-09">
+      <h2>gap, row-gap, column-gap (espacio, espacio entre filas y espacio entre columnas) </h2>
+      <div class="flexLayout1">
+        <img src="assets/img/flex-gap.svg" alt="gap, row-gap, column-gap" />
+        <div class="box-flex-C box-flex-wrap-column">
+          <div>
+            <p>Controla espacio entre elementos flexibles</p>
+            <p><pre><code>
+              .container {
+                display: flex;
+                ...
+                gap: 10px;
+                gap: 10px 20px; /* row-gap (entre filas) column gap (entre columnas) */
+                row-gap: 10px;
+                column-gap: 20px;
+              }
+            </code></pre></p>
+          </div>
+          <div class="box-flex-C div-justify gap">
+            <section class="boxC">1</section>
+            <section class="boxC item-order">2</section>
+            <section class="boxC item-order">3</section>
+            <section class="boxC flex-align-self">4</section>
+            <section class="boxC">5</section>
+            <section class="boxC">6</section>
+            <section class="boxC flex-shrink">7</section>
+            <section class="boxC">8</section>
+            <section class="boxC">9</section>
+            <section class="boxC flex-grow">10</section>
+            <section class="boxC">11</section>
+            <section class="boxC item-order flex-grow">12</section>
+            <section class="boxC flex-shrink">13</section>
+            <section class="boxC flex-grow">14</section>
+          </div>
+        </div>
+      </div>
+    </article>
+    <hr /><hr>
+    <article class="ej-container">
+      <section class="ej-items">Seccion 1</section>
+      <section class="ej-items">Seccion 2</section>
+      <section class="ej-items">Seccion 3</section>      
+      <section class="ej-items">Seccion 4</section>      
+      <section class="ej-items">Seccion 5</section>      
+    </article>
+    <article class="ej-container ej-flex-wrap">
+      <section class="ej-items">Seccion 1</section>
+      <section class="ej-items">Seccion 2</section>
+      <section class="ej-items">Seccion 3</section>
+      <section class="ej-items">Seccion 4</section>
+      <section class="ej-items">Seccion 5</section>
+      <section class="ej-items">Seccion 6</section>
+      <section class="ej-items">Seccion 7</section>
+      <section class="ej-items">Seccion 8</section>
+      <section class="ej-items">Seccion 9</section>
+      <section class="ej-items">Seccion 10</section>
+      <section class="ej-items">Seccion 11</section>
+      <section class="ej-items">Seccion 12</section>
+      <section class="ej-items">Seccion 13</section>
+      <section class="ej-items">Seccion 14</section>
+    </article>
+    <hr>
+    
+    <article class="propiedad" id="c03f-10">
+      <h2>Properties for the Children (flex items)</h2>
+      <h2 id="c03f-11">flex-grow (crecimiento flexible)</h2>
+      <div class="flexLayout1">
+        <img src="assets/img/flex-grow.svg" alt="Flex-wrap" />
+        <div>
+          <p>Cuando la caja contenedor padre tenga espacio sobrante los hijos podran aprovechar ese espacio dado que flex-grow es la habilidad o el factor de crecimiento, valor por defecto es 0. NO se aceptan valores negativos.</p>
+          <p>Se establece valor sin unidades como proporción, no negativos, define la capacidad de crecimiento de un elemento flexible si es necesario, debe aplicarse al item. Por default es 0</p>
+          <p>
+            El resultado se observa cuando el padre dispone de espacio disponible, Ej. padre dispone de 700px libres, existen tres hijos cada uno de 100px, si al primero y al tercero se le asignan flex-grow: 1 y al segundo un flex-grow: 2, entonces se toma los 700/4 = 175px, al primiero y al tercero creceria hasta 175px + 100px = 275px en tanto que el segundo tendría 2*175px+100px=450px, osea 2*275px + 450px = 1000px.
+          </p>
+          <p><pre><code>
+            .item {
+              flex-grow: 4; /* default 0, ocuparia 4 veces el tamaño de otros items */
+            }
+          </code></pre></p>
+        </div>
+      </div>
+    </article>
+    <hr />
+
+    <article class="propiedad" id="c03f-12">
+      <h2>flex-shrink</h2>
+      <div class="flexLayout1">
+        <div>
+          <p>
+            Cuando la caja padre flexbox ya no tiene espacio e incluso este siendo mas pequeña del tamaño de sus hijos va a ser la habilidad o el factor de que un item se encoga si fuese necesario. NO acepta valores negativos. Valor por defecto 1.
+          </p>
+          <p>
+            Si flex-shrink: 0 se apaga la capacidad de encogerse de los items hijos.
+          </p>
+          <p>
+            Ej.: Si inicialmente el padre tiene un width de 1000px y cada hijo tiene un ancho de 300px y al hijo 2, 3 y 1 se aplica un flex-shrink de 3, 2 y 1 respectivamente, la suma de los tres width de hijos es 900px. Luego al padre se le redimensiona el ancho a 600px, entonces la reduccion es de 900px - 600px = 300px sería la proporción sobre la que se aplica y sería 300px/(1 + 3 + 2) = 50px quedando el hijo 1 (300px - 50px = 250px), el hijo 2 (300px - 3 * 50px = 150px) y el hijo 3 (300px - 2 * 50px = 200px). <br>
+            Si el flex-shrink del hijo 1 se establece en 0 entonces al aplicar la misma reduccion el ancho del hijo 2 y 3 quedarían 300px/5 = 60px, width de 1, 2 y 3 respectivamente quedaría 300px, (300 - (3 * 60px)) = 120px y (300 - (2 * 60px)) = 180px
+          </p>
+        </div>
+        <div>
+          <p><pre><code>
+    .ej-items {
+      width: 300px;
+      background-color: #666;
+      text-align: center;
+      padding: auto;
+      border: medium solid #999;
+      flex-grow: 0;
+      flex-shrink: 0;   /* Sin reducción */
+      flex-basis: auto;
+    }
+    .ej-items:nth-child(3) {
+      flex-grow: 0;
+      flex-shrink: 2;   /* con reducción */
+    }
+    .ej-items:nth-child(2) {
+      flex-grow: 0;
+      flex-shrink: 3;   /* con reducción */
+    }
+          </code></pre></p>
+        </div>
+      </div>
+    </article>
+    <hr />
+
+    <article class="propiedad" id="c03f-13">
+      <h2>flex-basis (base flexible)</h2>
+      <div class="flexLayout1">
+        <div>
+          <p>
+            Define tamaño predeterminado de un item antes de distribuir espacio restante, valores con unidades o palabras claves. Si es auto, el espacio adicional se distribuye en función de flex-grow. Por default es auto (lo que mida el contenido).
+          </p>
+          <p>
+            Es el tamaño del elemento hijo dentro de la linea (fila si la flex-direction es row o columna si el column) de la caja padre flexbox. Si la flex-direction es row entonces flex-basis representara el width, caso contrario representa el height. Por cascada anula a las propiedades width y height, pero width y height no anulan por cascada un flex-basis.
+          </p>
+        </div>
+        <div>
+          <p><pre><code>
+            .item {
+              flex-basis: Npx | X% | auto; /* default auto */              
+            }
+          </code></pre></p>
+        </div>
+      </div>
+    </article>
+    <hr />
+
+    <article class="propiedad" id="c03f-14">
+      <h2>flex</h2>
+      <div class="flexLayout1">
+        <div>
+          <p>Es un shorthand de flex-grow flex-shrink y flex-basis</p>
+          <p>El segundo y tercer parámetro son opcionales. Default es 0 1 auto. Para un valor flex: 5 quiere decir flex-grow: 5; flex-shrink: 1; flex-basis: 0%</p>
+        </div>
+        <div>
+          <p><pre><code>
+            .item {
+              flex: none | [ <'flex-grow'> <'flex-shrink'> || <'flex-basis'> ]
+              flex: 0 1 auto;
+              flex: 0 1 150px;
+            }            
+          </code></pre></p>
+        </div>
+      </div>
+    </article>
+    <hr />
+
+    <article class="propiedad" id="c03f-15">
+      <h2>order</h2>
+      <div class="flexLayout1">
+        <img src="assets/img/flex-order.svg" alt="Flex-wrap" />
+        <div>
+          <p>
+            Los items hijos de un contenedor flex se presentan en orden de origen default 0, representa el orden que tendrán los elementos hijos en la caja flexbox, acepta valores positivos y negativos. Un valor menor siempre irá antes que un valor mayor.
+          </p>
+          <p>Si cualquier elemento toma un orden 1 se desplazara al final dado que todos tienen el mismo orden: 0</p>
+          <p><pre><code>
+    .ej-items:nth-child(4) {
+      order: -1;
+    }
+    .ej-items:nth-child(5) {
+      order: 2;
+    }
+    .ej-items:nth-child(2) {
+      order: 1;
+    }
+          </code></pre></p>
+        </div>
+      </div>
+    </article>
+    <hr />
+
+    <article class="propiedad" id="c03f-16">
+      <h2>align-self (alinearse)</h2>
+      <div class="flexLayout1">
+        <img src="assets/img/flex-align-self.svg" alt="Flex-wrap" />
+        <div>
+          <p>
+            Permite anular la alineacion predeterminada o la establecida por align-items para items individuales. Similar al align-items para las cajas padres. Alineación en el eje transversal. Por default es stretch.
+          </p>
+          <p>
+            .item {
+              align-self: auto | flex-start | flex-end | center | baseline | stretch;
+            }            
+          </p>
+          <p>
+            <ul>
+              <li>
+                <p><strong>stretch (default) : </strong> Estirar para rellenar en contenedor (respeta el min-width/max-width).</p>
+              </li>
+              <li>
+                <p><strong>flex-start/start/self-start : </strong> Items hacia el inicio de eje transversal, respetando el flex-direction y el writing-mode respectivo.</p>
+              </li>
+              <li>
+                <p><strong>flex-end/end/self-end : </strong>Items ubicados en el fin de eje transversal, respetando el flex-direction y el writing-mode respectivo.</p>
+              </li>
+              <li>
+                <p><strong>center : </strong> Items centrados en el eje transversal.</p>
+              </li>
+              <li>
+                <p><strong>baseline : </strong>Items alineados como sus líneas bases se alinean</p>
+              </li>
+              <li>
+                <p><strong>safe | unsafe : </strong>evita alineación de elementos de modo que el contenido se vuelva inaccesible</p>
+              </li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </article>
+    <hr />
+    <article class="propiedad" id="c03f-17">
+      <h2>Maquetación y Responsive Design con Flexbox</h2>
+      <div class="container">
+        <article class="row">
+          <section class="border col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Item 1</section>
+          <section class="border col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Item 2</section>
+          <section class="border col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Item 3</section>
+          <section class="border col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Item 4</section>
+          <section class="border col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Item 5</section>
+          <section class="border col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Item 6</section>
+          <section class="border col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Item 7</section>
+          <section class="border col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Item 8</section>
+          <section class="border col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Item 9</section>
+          <section class="border col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Item 10</section>
+          <section class="border col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Item 11</section>
+          <section class="border col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Item 12</section>
+          <section class="border col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Item 13</section>
+          <section class="border col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Item 14</section>
+          <section class="border col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Item 15</section>
+          <section class="border col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Item 16</section>
+          <section class="border col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Item 17</section>
+          <section class="border col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Item 18</section>
+          <section class="border col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Item 19</section>
+        </article>
+      </div>
+      <br>
+      <div class="f0317-container">
+        <div class="f0317-flex-container">
+          <div class="f0317-flex-item">Item 1</div>
+          <div class="f0317-flex-item">Item 2</div>
+          <div class="f0317-flex-item">Item 3</div>
+          <div class="f0317-flex-item">Item 4</div>
+          <div class="f0317-flex-item">Item 5</div>
+          <div class="f0317-flex-item">Item 6</div>
+          <div class="f0317-flex-item">Item 7</div>
+          <div class="f0317-flex-item">Item 8</div>
+          <div class="f0317-flex-item">Item 9</div>
+          <div class="f0317-flex-item">Item 10</div>
+          <div class="f0317-flex-item">Item 11</div>
+          <div class="f0317-flex-item">Item 12</div>
+          <div class="f0317-flex-item">Item 13</div>
+          <div class="f0317-flex-item">Item 14</div>
+          <div class="f0317-flex-item">Item 15</div>
+          <div class="f0317-flex-item">Item 16</div>
+          <div class="f0317-flex-item">Item 17</div>
+          <div class="f0317-flex-item">Item 18</div>
+          <div class="f0317-flex-item">Item 19</div>
+        </div>
+      </div>
+    </article>
+    <hr>
+    <article class="propiedad" id="c03f-18">
+      <h2>Casos Prácticos con Flexbox I</h2>
+    </article>    
+    <hr>
+    <article class="propiedad" id="c03f-19">
+      <h2>Casos Prácticos con Flexbox II</h2>
+    </article>
+    <hr>
+    <article class="propiedad" id="c03f-20">
+      <h2>Bootstrap y Flexbox</h2>
+    </article>
+    <hr>
+<!--     <article class="propiedad">
+      <h2></h2>
+      <div class="flexLayout1">
+        <img src="assets/img/flex-wrap.svg" alt="Flex-wrap" />
+        <div>
+          <p></p>
+        </div>
+      </div>
+    </article>
+    <hr />
+ -->
+</body>
+</html>

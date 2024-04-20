@@ -1,0 +1,1 @@
+Tipo para un objeto de tipo archivo <class '_io.TextIOWrapper'>

@@ -1,0 +1,22 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: sans-serif;
+}
+h1 {
+  color: navy;
+}
+h2 {
+  background-color: orangered;
+}
+/*
+img {
+  max-width: 100%;
+  max-height: auto;
+}
+*/
+iframe {
+  width: 80%;
+  height: 400px;
+}

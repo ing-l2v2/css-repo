@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Máximo 165 caracteres -->
+    <meta name="description" content="Tipografia animada de texto CSS" />
+    <!-- Entre 55 y 65 caracteres -->
+    <title>Fire | Texto animado Typography</title>
+    <link rel="stylesheet" href="assets/efectosAnimadosText.css" />
+    <!-- Fuentes descargadas de google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;0,900;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Fin de fuentes descargadas de google fonts -->
+
+    <!-- Parámetros para CEO -->
+    <link rel="canonical" href="https://tudomino.com/la-url-canonical" />
+    <link
+      rel="icon"
+      href="../../assets/img/animal-bird-domestic-svgrepo-com.svg"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="../../assets/img/animal-bird-domestic-svgrepo-com.svg"
+    />
+    <meta name="theme-color" content="#F60" />
+    <meta property="og:title" content="Efectos animados CSS" />
+    <meta property="og:description" content="Generando efectos animados" />
+    <meta
+      property="og:image"
+      content="http://tudominio.com/img/nombre-imagen.png"
+    />
+    <meta property="og:url" content="http://tudominio.com/index.html" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@leonelvilla" />
+    <!-- Fin de parámetros para CEO -->
+  </head>
+  <body>
+    <div class="textAnimado">
+      <h2>Fuego</h2>
+    </div>
+    <svg>
+      <filter id="fire">
+        <feTurbulence
+          id="turbulence"
+          baseFrequency="0.1 0.1"
+          numOctaves="2"
+          seed="3"
+        >
+          <animate attributeName="baseFrequency" dur="10s" values="0.1 0.1; 0.12 0.2" repeatCount="indefinite">
+        </feTurbulence>
+        <feDisplacementMap in="SourceGraphic" scale="25"></feDisplacementMap>
+      </filter>
+    </svg>
+  </body>
+</html>

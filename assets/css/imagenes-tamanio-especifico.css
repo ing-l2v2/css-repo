@@ -1,0 +1,16 @@
+img {
+  max-width: 100%;
+  /* height: auto; */
+}
+
+.tarjeta {
+  width: 400px;
+  border: medium solid black;
+  padding: 0;
+}
+.tarjeta img {
+  overflow: unset;
+  overflow-clip-margin: unset;
+  padding: 0;
+  margin: 0;
+}

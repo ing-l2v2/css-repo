@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="es-EC">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="En esta pagina se esta aprendiendo los fundamentos de HTML"
+    />
+    <meta name="keywords" content="CSS3, ing-l2v2, l2v2-ing, introduccion, fundamentos, HTML"/>
+    <!-- Máximo 165 caracteres -->
+    <title>Reforzando HTML</title>
+    <!-- Entre 55 y 65 caracteres -->
+    <link rel="stylesheet" href="assets/estilos.css" />
+    <link rel="canonical" href="https://tudomino.com/la-url-canonical">
+    <link rel="icon" href="assets/img/world-continents.png">
+    <link rel="apple-touch-icon" href="assets/img/world-continents.png">
+    <meta name="theme-color" content="#F60">
+    <meta property="og:title" content="Reforzando HTML">
+    <meta property="og:description" content="En esta pagina se esta aprendiendo los fundamentos de HTML">
+    <meta property="og:image" content="http://tudominio.com/img/nombre-imagen.png">
+    <meta property="og:url" content="http://tudominio.com/index.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@leonelvilla">
+  </head>
+  <body>
+    <h1>Reforzando HTML</h1>
+    <h2 id="html">Etiquetas desconocidas</h2>
+    <abbr title="HiperText Markup Language">HTML</abbr>
+
+    <img
+      src="assets/img/world-continents.png"
+      width="320"
+      height="160"
+      orgwidth="320"
+      orgheight="160"
+      usemap="#world-continents"
+    />
+    <map name="world-continents">
+      <area
+        title="North America"
+        href="https://en.wikipedia.org/wiki/North_America"
+        shape="poly"
+        coords="48,89,67,69,77,49,140,0,68,0,6,10,4,31,16,69"
+      />
+      <area
+        title="South America"
+        href="https://en.wikipedia.org/wiki/South_America"
+        shape="poly"
+        coords="48,88,61,74,119,99,95,160,66,159"
+      />
+      <area
+        title="Europe"
+        href="https://en.wikipedia.org/wiki/Europe"
+        shape="poly"
+        coords="124,49,145,46,158,50,187,43,198,6,146,1,115,21"
+      />
+      <area
+        title="Africa"
+        href="https://en.wikipedia.org/wiki/Africa"
+        shape="poly"
+        coords="121,53,140,47,169,51,186,77,196,80,188,137,156,136,138,97,118,86"
+      />
+      <area
+        title="Asia"
+        href="https://en.wikipedia.org/wiki/Asia"
+        shape="poly"
+        coords="166,50,184,77,201,74,215,91,258,108,263,87,283,74,297,8,192,3,191,29,187,46,170,42"
+      />
+      <area
+        title="Australia"
+        href="https://en.wikipedia.org/wiki/Australia_(continent)"
+        shape="poly"
+        coords="257,107,263,85,314,89,316,137,294,151,249,132,248,114"
+      />
+    </map>
+    <h3 id="indice">Indice temático</h3>
+    <ul>
+      <li><a href="#html">Abreviaciones</a></li>
+      <li><a href="#html2">Encabezados</a></li>
+      <li><a href="#txtBasicas">Etiquetas de texto básicas</a></li>
+      <li><a href="#txtSemanticas">Etiquetas de texto semánticas</a></li>
+      <li>
+        <a href="#tagFormateo"
+          >Etiquetas de formateo con &lt;pre&gt;, &lt;code&gt;</a
+        >
+      </li>
+      <li>
+        <a href="#tagSemanticasEstructurales"
+          >Etiquetas Semanticas Estructurales</a
+        >
+      </li>
+      <li><a href="#tagBloque">Etiquetas de bloque VS Etiquetas de linea</a></li>
+      <li><a href="#tagCSS">Estilos CSS en HTML</a></li>
+      <li><a href="#tagJS">Scripts en HTML</a></li>
+      <li><a href="#tagImg">Imagenes</a></li>
+      <li><a href="#tagFigure">Figuras</a></li>
+      <li><a href="#tagListas">Listas</a>
+        <ul>
+          <li><a href="#ol">Listas ordenadas</a></li>
+          <li><a href="#ul">Listas desordenadas</a></li>
+          <li><a href="#dl">Listas de definiciones</a></li>
+        </ul>
+      </li>
+      <li><a href="#tagTablas">Tablas</a></li>
+      <li><a href="#tagLinks">Enlaces Especiales</a></li>
+      <li><a href="#elementos-interactivos">Elementos interactivos</a></li>
+      <li><a href="#audio-video">Audio y Video</a></li>
+      <li><a href="#iframes">Iframes</a></li>
+      <li><a href="#formularios">Elementos de formularios</a></li>
+      <li><a href="#metaetiquetas-seo">Metaetiquetas para SEO y Móviles</a></li>
+      <li><a href="#metaetiquetas-redes-sociales">Metaetiquetas para redes sociales</a></li>
+      <li><a href="#accesibilidad-web">Accesibilidad Web</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+    <hr />
+    <h2 id="tml2">Encabezados</h2>
+    <h2>Encabezados de nivel 2</h2>
+    <h3>Encabezados de nivel 3</h3>
+    <h4>Encabezados de nivel 4</h4>
+    <h5>Encabezados de nivel 5</h5>
+    <h6>Encabezados de nivel 6</h6>
+    <a href="#indice">👆</a>
+    <hr />
+    <h2 id="txtBasicas">Etiquetas de texto básicas</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, beatae,
+      itaque ratione deserunt labore nihil illo totam quae tempore sit ex
+      quaerat. Culpa aliquam, placeat ipsum mollitia iusto labore debitis
+      veritatis cum possimus itaque, numquam voluptatem provident a rerum unde
+      recusandae. Tempore sint voluptate numquam quos sequi ullam, nesciunt
+      magnam!
+    </p>
+    <p>Negrita &lt;b&gt; de bold <b>Bold</b>, en html5 se recomienda usar &lt;mark&gt;</p>
+    <p>Italica &lt;i&gt; de italic <i>Italic</i>, en html5 se debe usar &lt;em&gt;</p>
+    <p>Subrayado &lt;u&gt; de underline <u>Underline</u></p>
+    <p>Superindice con &lt;sup&gt; por ejemplo ecuacion E = mc<sup>2</sup></p>
+    <p>Subindice con &lt;sub&gt; por ejemplo H<sub>2</sub>O</p>
+    <p>
+      Marcado con &lt;mark&gt; <mark>para marcatexto</mark>, notese el
+      resaltador
+    </p>
+    <p>
+      Letras pequeñas con &lt;small&gt;
+      <small>Para contratos o letras pequeñas</small> como la expuesta
+    </p>
+    <a href="#indice">👆</a>
+    <hr />
+    <h2 id="txtSemanticas">Etiquetas de texto semánticas</h2>
+    <p>
+      Tag &lt;strong&gt; para <strong>definir un texto como importante</strong>,
+      similar a bold pero denota importancia <br />
+      Enfasis &lt;em&gt; : <em>Este texto hace énfasis</em>, similar a
+      italic (&lt;i&gt;).<br />
+      El juego empieza a las <time>2023-04-12T21:00</time> o
+      <datetime>2023-04-12T21:00</datetime>      
+    </p>    
+    <pre><code>&lt;time datetime="2023-09-06" pubdate&gt;Publicado el 06-09-2023&lt;/time&gt;</code></pre>
+    <time datetime="2023-09-06" pubdate>Publicado el 06-09-2023</time>
+    
+    <blockquote cite="Leonel Villa">
+      Para sacar o presentar una cita o referencia con &lt;blockquote&gt; y debe
+      continuar con la referencia del autor de la cita mediante &lt;cite&gt;.
+      Ej.
+    </blockquote>
+    <blockquote>Yo solo se que nada se</blockquote>
+    <cite>Sócrates</cite>
+    <hr />
+    <a href="#indice">👆</a>
+    <h2 id="tagFormateo">
+      Etiquetas de formateo con &lt;pre&gt;, &lt;code&gt;
+    </h2>
+    <pre>
+      Tareas por hacer
+        - HTML
+        - Revisar contenidos
+          - Ejecutar ejemplos
+          - CSS
+          -Ubicar el video
+          - Revisar contenidos
+          - Ejecutar ejemplos
+          </pre
+    >
+    <code> function sumar (a, b){ return a + b; } </code>
+    <a href="#indice">👆</a>
+    <hr />
+    <h2 id="tagSemanticasEstructurales">Etiquetas semanticas estructurales</h2>
+    <div>&lt;div&gt; es un etiqueta contenedora que no tiene semántica</div>
+    <header>&lt;header&gt; Cabecera de un sitio web o de una seccion</header>
+    <main>
+      &lt;main&gt; Define la seccion principal del documento, solo puede existir
+      una etiqueta main por documento
+    </main>
+    <footer>
+      &lt;footer&gt; - Pie de pagina de un sitio web o de una seccion
+    </footer>
+    <article>
+      &lt;article&gt; - Representa una seccion de autocontenido (que por si sola
+      se explica)
+    </article>
+    <aside>
+      &lt;aside&gt; - Representa un contenido complementario o secundario
+    </aside>
+    <section>&lt;section&gt; - Representa un seccion de contenido</section>
+    <nav>
+      &lt;nav&gt; - Representa una navegación, conjunto de enlaces que formen un
+      menú de navegación o una botonera
+    </nav>
+    <address>
+      &lt;address&gt; - Representa una información de contacto. <br />
+      Infinite Loop,<br />Cuppernico, CA<br />95104, USA &frac14; &#135; <br>
+      Generalmente una url mediante anchor &lt;a&gt;
+    </address>
+
+    <a href="#indice">👆</a>
+    <hr />
+    <h2 id="tagBloque">Etiquetas de bloque VS Etiquetas de linea</h2>
+    <div style="background-color: yellow; color: red">
+      &lt;div&gt; es la etiqueta de bloque más representativa, una etiqueta de
+      bloque genera saltos de linea con sus etiquetas hermanas.
+    </div>
+    <span style="background-color: greenyellow">
+      &lt;span&gt; es la etiqueta de línea más representativa, solo ocupa el
+      espacio necesario que tiene su contenido.
+    </span>
+    <span> Hola soy otra span</span>
+    <br>
+    <a href="#indice">👆</a>
+    <hr />
+    <h2 id="tagCSS">Estilos CSS en HTML</h2>
+    <div>
+      Para vincular hojas de estilo al documento html se usa
+      <strong> &lt;link rel="stylesheet" href="aserts/estilos.css"&gt; </strong>
+    </div>
+    <a href="#indice">👆</a>
+    <hr />
+    <h2 id="tagJS">Scripts en HTML</h2>
+    <div>
+      Para vincular un archivo js al documento html se usa
+      <strong>
+        &lt;script src="assets/codigos.js" module&gt;&lt;/script&gt;
+      </strong>
+    </div>
+    <a href="#indice">👆</a>
+    <hr />
+    <h2 id="tagImg">Imagenes</h2>
+    <div>
+      <pre><code>
+        &lt;img
+          src="assets/img/PeriodicTables2.png"
+          alt="Tabla periódica de elementos html"
+        /&gt;
+        &lt;img
+          src="assets/img/cld-cloud-phone-svgrepo-com.svg"
+          alt="Desde svgrepo.com"
+        /&gt;
+      </code></pre>
+    </div>
+    <img
+      src="assets/img/PeriodicTables2.png"
+      alt="Tabla periódica de elementos html"
+    />
+    <img
+      src="assets/img/cld-cloud-phone-svgrepo-com.svg"
+      alt="Desde svgrepo.com"
+    />
+    <a href="#indice">👆</a>
+    <hr />
+    <h2 id="tagFigure">Figuras</h2>
+    <div>
+      Compuesta por etiqueta &lt;figure&gt; que contiene &lt;img&gt; y
+      &lt;figcaption&gt;
+
+      <pre>
+        <code>
+          &lt;figure&gt;
+            &lt;img
+              src="assets/img/PeriodicTables2.png"
+              alt="Tabla Periodica de los Elementos HTML"
+            /&gt;
+            &lt;figcaption>Tabla Periodica de los Elementos HTML&lt;/figcaption&gt;
+          &lt;/figure&gt;
+        </code>
+      </pre>
+    </div>
+    <figure>
+      <img
+        src="assets/img/PeriodicTables2.png"
+        alt="Tabla Periodica de los Elementos HTML"
+      />
+      <figcaption>Tabla Periodica de los Elementos HTML</figcaption>
+    </figure>
+    <a href="#indice">👆</a>
+    <hr />
+    <h2 id="tagListas">Listas</h2>
+    <h3 id="ol">Listas Ordenadas</h3>
+    <div>
+      Observar las variables del elemento ol tales como <strong>start</strong>,
+      <strong>reversed</strong> y <strong>type</strong>
+      <pre><code>
+        &lt;ol start="8" reversed type="I"&gt;
+          &lt;li>Primavera&lt;/li&gt;
+          &lt;li>Verano&lt;/li&gt;
+          &lt;li>Otoño&lt;/li&gt;
+          &lt;li>Invierno&lt;/li&gt;
+        &lt;/ol&gt;
+      </code></pre>
+      <ol start="8" reversed type="I">
+        <li>Primavera</li>
+        <li>Verano</li>
+        <li>Otoño</li>
+        <li>Invierno</li>
+      </ol>
+    </div>
+    <a href="#indice">👆</a>
+    <h3 id="ul">Listas desordenadas</h3>
+    <div>
+      Variable type presente por omisión disc, circle, square
+      <pre>
+        <code>
+          &lt;ul type="square"&gt;
+            &lt;li>Respaldar base de datos&lt;/li&gt;
+            &lt;li>Respaldar fuente de app&lt;/li&gt;
+            &lt;li>Ejecutar actualizacion de rama&lt;/li&gt;
+            &lt;li>Ejecutar scripts&lt;/li&gt;
+          &lt;/ul&gt;
+        </code>
+      </pre>
+      <ul type="square">
+        <li>Respaldar base de datos</li>
+        <li>Respaldar fuente de app</li>
+        <li>Ejecutar actualizacion de rama</li>
+        <li>Ejecutar scripts</li>
+      </ul>
+    </div>
+    <a href="#indice">👆</a>
+    <hr />
+    <h3 id="dl">Listas de definición</h2>
+    <div>
+      Se compone de el tag dl (definition list), contiene el termino en tag dt
+      (definition term) y en la definicion o datos con el tag dd (definition
+      data)
+      <pre><code>
+        &lt;dl&gt;
+          &lt;dt&gt;HTML&lt;/dt&gt;
+          &lt;dd&gt;Hipertext Markup Languege - Lenguaje de marcado que define el contenido de la web&lt;/dd&gt;
+          &lt;dt&gt;JS&lt;/dt&gt;
+          &lt;dd&gt;JavaScript&lt;/dd&gt;
+          &lt;dt&gt;WEB&lt;/dt&gt;
+          &lt;dd&gt;The part of the Internet that contains websites and web pages&lt;/dd>
+          &lt;dt&gt;CSS&lt;/dt&gt;
+          &lt;dd&gt;Es un lenguaje de definición que da estilos al código HTML.&lt;/dd&gt;
+        &lt;/dl&gt;
+      </code></pre>
+      <dl>
+        <dt>HTML</dt>
+        <dd>
+          Hipertext Markup Languege - Lenguaje de marcado que define el
+          contenido de la web
+        </dd>
+        <dt>JS</dt>
+        <dd>JavaScript</dd>
+        <dt>WEB</dt>
+        <dd>The part of the Internet that contains websites and web pages</dd>
+        <dt>CSS</dt>
+        <dd>Es un lenguaje de definición que da estilos al código HTML.</dd>
+      </dl>
+    </div>
+    <a href="#indice">👆</a>
+    <hr />
+    <h2 id="tagTablas">Tablas</h2>
+    <div>
+      Se crean con la etiqueta table
+      <table>
+        <thead>
+          <tr>
+            <th colspan="3">Tabla de los santos de Athenas</th>
+          </tr>
+          <tr>
+            <th>Nombre</th>
+            <th>Constelación</th>
+            <th>Tipo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ikki</td>
+            <td>Fenix</td>
+            <td>Bronce</td>
+          </tr>
+          <tr>
+            <td>Shaina</td>
+            <td rowspan="2">Ofiuko</td>
+            <td>Plata</td>
+          </tr>
+          <tr>
+            <td>Odiseo</td>
+            <td rowspan="2">Dorado</td>
+          </tr>
+          <tr>
+            <td>Saga</td>
+            <td>Geminis</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th colspan="3">
+              <small>Saint Seiya fue creado por Masami Kurumada</small>
+            </th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <a href="#indice">👆</a>
+    <hr />
+    <h2 id="tagLinks">Enlaces Especiales</h2>
+    <div>
+      Para enlaces especiales como envio de correo o telefono se usa el protocolo mailto o el protocolo tel correspondiente
+      <pre><code>
+        &lt;a href="mailto:llvilla@espol.edu.ec"&gt;Enlace a correo electrónico&lt;/a&gt;
+        &lt;a href="tel:+593963882510"&gt;Enlace a teléfono celular&lt;/a&gt;
+        &lt;a href="https://api.whatsapp.com/send?phone=+593963882510&text=Hola"&gt;Enlace mensaje de texto Whatsapp&lt;/a:api&gt;
+      </code></pre>
+      <a href="mailto:llvilla@espol.edu.ec">Enlace a correo electrónico</a>
+      <br>
+      <a href="tel:+593963882510">Enlace a telefono celular</a>
+      <br>
+      <a href="https://api.whatsapp.com/send?phone=+593963882510&text=Hola">Enlace mensaje de texto Whatsapp</a:api>
+    </div>
+    <a href="#indice">👆</a>
+    <hr>
+    <h2 id="elementos-interactivos">Elementos interactivos</h2>
+    <div>
+      Botones
+      <button onclick="alert('Hola haz clickeado el boton')">Este es un botón</button>
+      <br>
+      Acordeon se forma con la tag details (con atributo booleano open, al cargarse se encuentra abierto) que contiene una tag summary y una tag contenedora como una div, un parrafo, un article, etc.
+      <pre><code>
+        &lt;details open&gt;
+          &lt;summary&gt;Título del acordeón&lt;/summary&gt;
+          &lt;article&gt;
+            &lt;h3&gt;Contenido del acordeón&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo adipisci repellendus ducimus, qui ullam ipsum unde labore beatae culpa, atque minima. Impedit numquam a perferendis soluta aliquid exercitationem odio nobis.&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident nostrum labore recusandae et cupiditate tempore, accusamus expedita ipsam temporibus, vel autem maiores pariatur! Aut cupiditate cum saepe dolorum eveniet quisquam?&lt;/p&gt;
+          &lt;/article&gt;
+        &lt;/details&gt;
+      </code></pre>
+      <details>
+        <summary>Título del acordeón</summary>
+        <article>
+          <h3>Contenido del acordeón</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo adipisci repellendus ducimus, qui ullam ipsum unde labore beatae culpa, atque minima. Impedit numquam a perferendis soluta aliquid exercitationem odio nobis.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident nostrum labore recusandae et cupiditate tempore, accusamus expedita ipsam temporibus, vel autem maiores pariatur! Aut cupiditate cum saepe dolorum eveniet quisquam?</p>
+        </article>
+      </details>
+      Ventana modal en fase experimental con el tag dialog
+      <dialog open>Esta es una ventana modal en HTML</dialog>
+    </div>    
+    <a href="#indice">👆</a>
+    <hr>
+    <h2 id="audio-video">Audio y Video</h2>
+    <div>
+      Audio y Video operan con los tag sinonimos y se requieren las propiedades controls y preload opcional muted, son de tipo inline no block. En Video se puede agregar atributo poster para definir la imagen inicial previo a reproducción
+      <pre>
+        <code>
+          &lt;audio src="assets/media/Si tu fueras mi mujer - Lorenzo Santamaria.mp3" controls muted preload&gt;Melodia musical&lt;/audio&gt;
+          &lt;video src="assets/media/DUST IN THE WIND - Kansas.mp4" controls preload="auto" muted poster="assets/img/world-continents.png"&gt;&lt;/video&gt;
+        </code>
+      </pre>
+      <audio src="assets/media/Si tu fueras mi mujer - Lorenzo Santamaria.mp3" controls muted preload>Melodia musical</audio>
+      <br>
+      <video src="assets/media/DUST IN THE WIND - Kansas.mp4" controls preload="auto"  poster="assets/img/world-continents.png"></video>
+    </div>
+    <br>
+    <a href="#indice">👆</a>
+    <hr>
+    <h2 id="iframes">Iframes</h2>
+    <div>
+      Incrustar elemento que venga de otra pagina, ej. cargar pdf, son elementos de linea <br>
+      <pre><code>
+        &lt;iframe src="assets/media/Emmet-cheatsheet-a5.pdf" frameborder="2"&gt;&lt;/iframe&gt;
+      </code></pre>
+      <iframe src="assets/media/Emmet-cheatsheet-a5.pdf" frameborder="2"></iframe>
+      <br>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d2124.839138232201!2d-79.89080169739765!3d-2.1155097568399177!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sec!4v1680716709983!5m2!1ses!2sec" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <a href="#indice">👆</a>
+    <hr>
+    <h2 id="formularios">Formularios</h2>
+    <h3>Elementos de Formulario</h3>
+    <div>
+      input
+      <pre><code>
+        &lt;input type="text"&gt;
+        &lt;input type="text" value="Texto no modificable" readonly disabled&gt;
+        &lt;input type="password" placeholder="Ingresa tu clave"&gt;
+        &lt;input type="checkbox"&gt;
+        &lt;input type="radio"&gt;
+        &lt;input type="date"&gt;
+        &lt;input type="color"&gt;
+        &lt;input type="button" value="Boton"&gt;
+        &lt;input type="submit"&gt;
+        &lt;input type="reset"&gt;
+        &lt;input type="file"&gt;
+        &lt;input type="file" multiple&gt;
+        &lt;input type="hidden"&gt;
+        &lt;input type="email"&gt;
+        &lt;input type="number"&gt;
+        &lt;input type="tel"&gt;
+        &lt;input type="search"&gt;
+        &lt;textarea cols="30" rows="10"&gt;&lt;/textarea&gt;
+        Para Select opcional multiple para selecciones de mas de una opcion
+        &lt;select name="" id="" multiple&gt;
+          &lt;option value="1"&gt;HTML&lt;/option&gt;
+          &lt;option value="2"&gt;JS&lt;/option&gt;
+        &lt;/select&gt;        
+      </code></pre>
+
+      <input type="text">
+      <input type="text" value="Texto no modificable" readonly disabled>
+      <input type="password" placeholder="Ingresa tu clave">
+      <input type="checkbox">
+      <input type="radio">
+      <input type="date">
+      <input type="color">
+      <input type="button" value="Boton">
+      <input type="submit">
+      <input type="reset">
+      <input type="file">
+      <input type="file" multiple>
+      <input type="hidden">
+      <input type="email">
+      <input type="number">
+      <input type="tel">
+      <input type="search">
+      <textarea cols="30" rows="4"></textarea>
+      <select name="" id="">
+        <option value="1">HTML</option>
+        <option value="2">JS</option>
+      </select>
+      <h3>Ejemplo de Formularios</h3>
+      <div>
+        Para el form el action es hacia donde se enviara el formulario
+        <pre>
+          <code>
+            &lt;form action="" method="post" autocomplete="off"&gt;
+              &lt;label for="usuario"&gt;Usuario: &lt;/label&gt;
+              &lt;input type="text" name="usuario" id="usuario" pattern="^[A-Za-z]+$" title="El campo solo acepta letras" placeholder="Escriba su nombre" required&gt;
+              &lt;label for="password"&gt;Password: &lt;/label&gt;
+              &lt;input type="password" name="password" id="password"&gt; 
+              &lt;h4&gt;Tienes sueño&lt;/h4&gt;
+              &lt;label&gt;
+                &lt;input type="radio" name="consulta" value="yes" required&gt;
+                Si
+              &lt;/label&gt;
+              &lt;label&gt;
+                &lt;input type="radio" name="consulta" value="no"&gt;
+                No
+              &lt;/label&gt;
+              &lt;h4>Lenguajes&lt;/h4&gt;
+              &lt;label&gt;
+                &lt;input type="checkbox" name="lenguaje" value="js"&gt;
+                JavaScript
+              &lt;/label&gt;
+              &lt;label&gt;
+                &lt;input type="checkbox" name="lenguaje" value="php"&gt;
+                PHP
+              &lt;/label&gt;
+              &lt;h4&gt;Contrato de licencia&lt;/h4&gt;
+              &lt;label&gt;
+                &lt;input type="checkbox" name="contrato" required>
+                Aceptas el contrato de licencia?
+              &lt;/label&gt;
+              &lt;input type="submit"&gt;
+              &lt;input type="reset"&gt;
+            &lt;/form&gt;
+          </code>
+        </pre>
+      </div>
+      <form autocomplete="off">
+        <label for="usuario">Usuario: </label>
+        <input type="text" name="usuario" id="usuario" pattern="^[A-Za-z]+$" title="El campo solo acepta letras" placeholder="Escriba su nombre" required>
+        <br>
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password" placeholder="Escriba su password"> 
+        <br>
+        <h4>Tienes sueño</h4>
+        <label>
+          <input type="radio" name="consulta" value="yes" required>
+          Si
+        </label>
+        <label>
+          <input type="radio" name="consulta" value="no">
+          No
+        </label>
+        <h4>Lenguajes</h4>
+        <label>
+          <input type="checkbox" name="lenguaje" value="js">
+          JavaScript
+        </label>
+        <label>
+          <input type="checkbox" name="lenguaje" value="php">
+          PHP
+        </label>
+        <h4>Contrato de licencia</h4>
+        <label>
+          <input type="checkbox" name="contrato" required>
+          Aceptas el contrato de licencia?
+        </label>
+        <br>
+        <input type="submit">
+        <br>
+        <input type="reset">
+      </form>
+    </div>
+    <a href="#indice">👆👆</a>
+    <hr>
+    <h2 id="metaetiquetas-seo">Metaetiquetas para SEO y Móviles</h2>
+    <div>
+      <pre><code>
+        &lt;meta
+          name="description"
+          content="En esta pagina se esta aprendiendo los fundamentos de HTML"
+        /&gt;
+        &lt;link rel="canonical" href="https://tudomino.com/la-url-canonical"&gt;
+        &lt;link rel="icon" href="assets/img/world-continents.png"&gt;
+        &lt;link rel="apple-touch-icon" href="assets/img/world-continents.png"&gt;
+        &lt;meta name="theme-color" content="#F60"&gt;
+        PARA SEO, cuidar que enlaces a otros sitios contengan target="_blank" y rel="noopener noreferrer nofollow"
+      </code></pre>
+    </div>
+    <a href="#indice">👆</a>      
+    <hr>
+    <h2 id="metaetiquetas-redes-sociales">Metaetiquetas para redes sociales</h2>
+    <div>
+      Referencia en la página oficial de <a href="https://ogp.me" target="_blank" rel="noopener noreferrer nofollow>https://ogp.me</a> The Open Graph protocol, para revisar
+      <pre><code>
+        &lt;meta property="og:title" content="Reforzando HTML"&lt;
+        &lt;meta property="og:description" content="En esta pagina se esta aprendiendo los fundamentos de HTML"&lt;
+        &lt;meta property="og:image" content="http://tudominio.com/img/nombre-imagen.png"&lt;
+        &lt;meta property="og:url" content="http://tudominio.com/index.html"&lt;
+        &lt;meta name="twitter:card" content="summary"&gt;
+        &lt;meta name="twitter:site" content="@leonelvilla"&gt;
+      </code></pre>
+    </div>
+    <a href="#indice">👆</a>      
+    <hr>
+    <h2 id="accesibilidad-web">Accesibilidad Web</h2>
+    <div>
+      aria-label: accesibility reach internet label <br>
+      role: Para accesibilidad con lectores para personas con cierta discapacidad visual <br>
+      tabindex: para navegar por prioridad entre textos o campos
+      <pre><code>
+        &lt;ul <strong>role="list"</strong>&gt;
+          &lt;li <strong>tabindex = "1" role = "listitem"</strong>&gt;
+            &lt;a <strong>role = "link" aria-label = "Consultar sobre accesibilidad de un sitio web, lectura en español."</strong> href="https://web.dev/accessible" target="_blank" rel="noopener noreferrer nofollow"&gt;
+              Accesible para Todos - Español
+            &lt;/a&gt; https://web.dev/accessible
+          &lt;/li&gt;
+          &lt;li tabindex="2" role="listitem"&gt;
+            &lt;a role="link" aria-label="Consultar sobre accesibilidad de un sitio web, lectura en ingles" href="https://html5accessibility.com" target="_blank" rel="noopener noreferrer nofollow"&gt;
+              HTML5 Accessibility - Inglés
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li tabindex="3" role="listitem"&gt;
+            &lt;a role="link" aria-label="Pautas de accesibilidad en W3.org, Primer borrador, lectura en inglés" href="https://www.w3.org/blog/news/archives/8889" target="_blank" rel="noopener noreferrer nofollow"&gt;
+              W3.org Blog de noticias - Pautas sobre accesibilidad - Ingles
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li tabindex="3" role="listitem"&gt;
+            &lt;a role="link" aria-label="Canal youtube de la Web Accessibility Initiative (WAI), videos en inglés" href="https://www.youtube.com/@w3cwebaccessibilityinitiat992" target="_blank" rel="noopener noreferrer nofollow"&gt;
+              Web Accessibility Initiative (WAI) - Ingles - videos youtube
+            &lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      </code></pre>
+      <ul role="list">
+        <li tabindex="1" role="listitem">
+          <a role = "link" aria-label = "Consultar sobre accesibilidad de un sitio web, lectura en español." href="https://web.dev/accessible" target = "_blank" rel = "noopener noreferrer nofollow">
+            Accesible para Todos - Español
+          </a> https://web.dev/accessible
+        </li>
+        <li tabindex="2" role="listitem">
+          <a role="link" aria-label="Consultar sobre accesibilidad de un sitio web, lectura en ingles" href="https://html5accessibility.com" target="_blank" rel="noopener noreferrer nofollow">
+            HTML5 Accessibility - Inglés
+          </a> https://html5accessibility.com
+        </li>
+        <li tabindex="3" role="listitem">
+          <a role="link" aria-label="Diseño y desarrollo de accesibilidad en W3.org/wai, lectura en español" href="https://www.w3.org/WAI/design-develop/es" target="_blank" rel="noopener noreferrer nofollow">
+            W3.org WAI - Diseño y desarrollo - Español
+          </a>
+        </li>
+        <li tabindex="4" role="listitem">
+          <a role="link" aria-label="Pautas de accesibilidad en W3.org, Primer borrador, lectura en inglés" href="https://www.w3.org/blog/news/archives/8889" target="_blank" rel="noopener noreferrer nofollow">
+            W3.org Blog de noticias - Pautas sobre accesibilidad - Ingles
+          </a>
+        </li>
+        <li tabindex="5" role="listitem">
+          <a role="link" aria-label="Canal youtube de la Web Accessibility Initiative (WAI), videos en inglés" href="https://www.youtube.com/@w3cwebaccessibilityinitiat992" target="_blank" rel="noopener noreferrer nofollow">
+            Web Accessibility Initiative (WAI) - Ingles - videos youtube
+          </a>
+        </li>
+      </ul>
+    </div>
+    <a href="#indice">👆</a>      
+    <hr>
+    <h2 id="referencias">Referencias</h2>
+    <div>
+      <ul>
+        <li tabindex="6" role="listitem">
+          <a role="link" aria-label="Referencia rádida HTML" href="https://htmlreference.io/" target="_blank" rel="noopener noreferrer nofollow">
+            htmlreference.io
+          </a> Referencia rápida HTML
+        </li>
+        <li tabindex="6" role="listitem">
+          <a role="link" aria-label="Referencia MDN HTML: Lenguaje de etiquetas de hipertexto" href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" rel="noopener noreferrer nofollow">
+            MDN :: HTML: Lenguaje de etiquetas de hipertexto
+          </a>
+        </li>
+        <li tabindex="7" role="listitem">
+          <a role="link" aria-label="Tabla Periodica de los elementos HTML" href="https://allthetags.com/" target="_blank" rel="noopener noreferrer nofollow">
+            All the tags
+          </a>
+        </li>
+        <li tabindex="8" role="listitem">
+          <a role="link" aria-label="Tabla Periodica de los elementos HTML por Josh Duck" href="https://esquareda.com/notebook/periodic-table-of-the-elements-by-josh-duck" target="_blank" rel="noopener noreferrer nofollow">
+            Periodic Table of the Elements by Josh Duck
+          </a>
+        </li>        
+        <li tabindex="9" role="listitem">
+          <a role="link" aria-label="Lectura sobre Protocolos para redes sociales" href="https://ogp.me" target="_blank" rel="noopener noreferrer nofollow">
+            The Open Graph protocol
+          </a> Metaetiquetas de Redes Sociales
+        </li>
+        <li tabindex="10" role="listitem">
+          <a role = "link" aria-label = "Consultar sobre accesibilidad de un sitio web, lectura en español." href="https://web.dev/accessible" target = "_blank" rel = "noopener noreferrer nofollow">
+            Accesible para Todos - Español
+          </a> https://web.dev/accessible
+        </li>
+        <li tabindex="11" role="listitem">
+          <a role="link" aria-label="Consultar sobre accesibilidad de un sitio web, lectura en ingles" href="https://html5accessibility.com" target="_blank" rel="noopener noreferrer nofollow">
+            HTML5 Accessibility - Inglés
+          </a> https://html5accessibility.com
+        </li>
+        <li tabindex="12" role="listitem">
+          <a role="link" aria-label="Diseño y desarrollo de accesibilidad en W3.org/wai, lectura en español" href="https://www.w3.org/WAI/design-develop/es" target="_blank" rel="noopener noreferrer nofollow">
+            W3.org WAI - Diseño y desarrollo - Español
+          </a>
+        </li>
+        <li tabindex="13" role="listitem">
+          <a role="link" aria-label="Pautas de accesibilidad en W3.org, Primer borrador, lectura en inglés" href="https://www.w3.org/blog/news/archives/8889" target="_blank" rel="noopener noreferrer nofollow">
+            W3.org Blog de noticias - Pautas sobre accesibilidad - Ingles
+          </a>
+        </li>
+        <li tabindex="14" role="listitem">
+          <a role="link" aria-label="Canal youtube de la Web Accessibility Initiative (WAI), videos en inglés" href="https://www.youtube.com/@w3cwebaccessibilityinitiat992" target="_blank" rel="noopener noreferrer nofollow">
+            Web Accessibility Initiative (WAI) - Ingles - videos youtube
+          </a>
+        </li>
+        <li tabindex="15" role="listitem">
+          <a role="link" aria-label="Caracteristicas del SEO On-Page, articulo en inglés" href="https://www.elegantthemes.com/blog/wordpress/on-page-seo-checklist" target="_blank" rel="noopener noreferrer nofollow">
+            On-page SEO - Search Engine Optimization - Inglés
+          </a>
+        </li>
+        <li tabindex="16" role="listitem">
+          <a role="link" aria-label="Repositorio de vectores SVG, articulo en inglés" href="https://www.svgrepo.com/" target="_blank" rel="noopener noreferrer nofollow">
+            Repositorio de vectores SVG - Inglés
+          </a>
+        </li>
+        <li tabindex="17" role="listitem">
+          <a role="link" aria-label="Repositorio de emojis, articulo en inglés" href="https://emojipedia.org/" target="_blank" rel="noopener noreferrer nofollow">
+            Repositorio de Emojis - Inglés
+          </a>
+        </li>
+      </ul>
+    </div>
+    <a href="#indice">👆</a>      
+    <hr>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <script src="assets/codigos.js" module></script>
+  </body>
+</html>

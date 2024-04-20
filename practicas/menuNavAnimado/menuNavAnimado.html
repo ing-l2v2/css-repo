@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Máximo 165 caracteres -->
+    <meta
+      name="description"
+      content="Implementacion de un menú de navegación horizontal animado con curvas, HTML, CSS y JavaScript"
+    />
+    <!-- Entre 55 y 65 caracteres -->
+    <title>Menú de navegación animado CSS</title>
+
+    <link rel="stylesheet" href="assets/menuNavAnimado.css" />
+    <!-- Parámetros para CEO -->
+    <link rel="canonical" href="https://tudomino.com/la-url-canonical" />
+    <link rel="icon" href="assets/img/animal-bird-domestic-svgrepo-com.svg" />
+    <link
+      rel="apple-touch-icon"
+      href="assets/img/animal-bird-domestic-svgrepo-com.svg"
+    />
+    <meta name="theme-color" content="#F60" />
+    <meta property="og:title" content="Menú de navegación animado CSS" />
+    <meta
+      property="og:description"
+      content="Implementacion de un menú de navegación horizontal animado con curvas, HTML, CSS y JavaScript"
+    />
+    <meta
+      property="og:image"
+      content="http://tudominio.com/img/nombre-imagen.png"
+    />
+    <meta property="og:url" content="http://tudominio.com/index.html" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@leonelvilla" />
+    <!-- Fin de parámetros para CEO -->
+  </head>
+  <body>
+    <div class="navegacion">
+      <ul>
+        <li class="list linkActivo">
+          <a href="#">
+            <span class="icon"> <ion-icon name="home-outline"></ion-icon> </span
+            ><span class="text">Home</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon">
+              <ion-icon name="person-outline"></ion-icon>
+            </span>
+            <span class="text">Perfil</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon">
+              <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+            </span>
+            <span class="text">Mensaje</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon">
+              <ion-icon name="images-outline"></ion-icon>
+            </span>
+            <span class="text">Fotos</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon">
+              <ion-icon name="settings-outline"></ion-icon>
+            </span>
+            <span class="text">Ajustes</span>
+          </a>
+        </li>
+        <div class="indicador"></div>
+      </ul>
+    </div>
+
+    <!-- Scripts de ionicons https://www.youtube.com/watch?v=ArTVfdHOB-M -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- Fin Scripts de ionicons -->
+    <script src="assets/script.js" />
+  </body>
+</html>

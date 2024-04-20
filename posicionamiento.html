@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/posicionamiento.css" />
+    <!-- Máximo 165 caracteres -->
+    <meta name="description" content="Practica sobre posicionamientos CSS" />
+    <!-- Entre 55 y 65 caracteres -->
+    <title>Posicionamiento en CSS</title>
+    <link rel="canonical" href="https://tudomino.com/la-url-canonical" />
+    <link rel="icon" href="assets/img/animal-bird-domestic-svgrepo-com.svg" />
+    <link
+      rel="apple-touch-icon"
+      href="assets/img/animal-bird-domestic-svgrepo-com.svg"
+    />
+    <meta name="theme-color" content="#F60" />
+    <meta property="og:title" content="Reforzando con CSS" />
+    <meta property="og:description" content="Conceptos para iniciar en CSS" />
+    <meta
+      property="og:image"
+      content="http://tudominio.com/img/nombre-imagen.png"
+    />
+    <meta property="og:url" content="http://tudominio.com/index.html" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@leonelvilla" />
+  </head>
+  <body>
+    <h1>Posicionamiento en CSS</h1>
+    <div class="static">
+      Posicionamiento static - position por omision, no funciona top, left,
+      bottom ni right de posicionamiento
+    </div>
+    <div class="relative">
+      Posicionamiento relativo - mantiene su espacio en el orden natural
+      original del HTML pero se mueve si el parametro es top hacia abajo Npx y
+      para left se moveria hacia la derecha N pixeles, generando efecto como si
+      saliera del ancho de la pagina la misma cantidad de pixeles definidos para
+      top y/o para left. Se nota en este ejemplo que aunque exite un top, left,
+      bottom y right, solo toma en consideracion el top y el left si comenta el
+      top y el left toma en cuenta el bottom y el right. Si son negativos
+      provocan efecto inverso.
+      <section class="absolute">
+        Caja absolta con ancestro relativo - Seccion con posicion absolute
+        dentro del div con class relative
+      </section>
+    </div>
+    <div class="absolute">
+      Posicionamiento absoluto - No mantiene su espacio, no mantiene
+      dimensiones, respecto del HTML
+    </div>
+    <div class="fixed">
+      Posicionamiento Fijo - valor de position: fixed. Usado para barras de
+      menus y para pies de paginas
+    </div>
+    <div class="sticky">
+      Posicionamiento Pagajoso - Como hijo, con padre el body
+    </div>
+    <section class="sticky-padre">
+      <div class="sticky-child">
+        Caja Pegajosa - como hija de la section sticky-padre
+      </div>
+    </section>
+    <a href="cap02.html#posicionamiento-css"
+      >👆 Regresar al posicionamiento en css</a
+    ><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <a href="cap02.html#indice">👆 Regresar al indice temático</a>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+.menu-nav ul {
+  font-family: sans-serif;
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+.menu-nav > ul > li {
+  float: left;
+}
+.menu-nav ul li a {
+  background: #0c9ba0;
+  color: #fff;
+  display: block;
+  border: thin solid;
+  padding: 10px 12px;
+  text-decoration: none;
+}
+.menu-nav ul li a:hover {
+  background: #0fbfc6;
+}
+/* Por defecto todos los submenús no serán visibles usar display: none*/
+.menu-nav ul li ul {
+  display: none;
+  position: absolute;
+  min-width: 140px;
+}
+.menu-nav ul li:hover > ul {
+  display: block;
+}
+.menu-nav ul li ul li {
+  position: relative;
+}
+.menu-nav ul li ul li ul {
+  right: -140px;
+  top: 0;
+}
+/* Por defecto la flecha este oculta en todos los elementos del menú*/
+.menu-nav li .menu-flecha {
+  font-size: 9px;
+  padding-left: 6px;
+  display: none;
+}
+/* Usar psuedo-clase :not en combinación con :last-child para excluir todos los elementos del menu que no contengan submenus*/
+.menu-nav li a:not(:last-child) .menu-flecha {
+  display: inline;
+}

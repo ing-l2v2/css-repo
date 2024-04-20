@@ -1,0 +1,8 @@
+Escribiendo en archivo de Texto type(sourceFile)  <class '_io.TextIOWrapper'>  cp1252
+Referenciando la ruta relativa del archivo mediante el comando 
+  sourceFile = open('./assets/python_course/recursos/archivo escrito desde python.txt', 'w+')
+Referencia en https://realpython.com/read-write-files-python/#opening-and-closing-a-file-in-python
+Dentro del mismo archivo se puede agregar lineas usando el modo a
+Confirmandose que esta linea se agrega al final
+Notese que el comando es similar con la diferencia del modo 
+  sourceFile = open('./assets/python_course/recursos/archivo escrito desde python.txt', 'a+')

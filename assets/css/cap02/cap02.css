@@ -1,0 +1,726 @@
+@import url("cap02_2.css");
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  /* background: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(moccasin),
+    to(lightblue)
+  ); */
+  background: linear-gradient(45deg, moccasin, lightblue);
+}
+body {
+  margin: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+p,
+div,
+article {
+  font-size: 1.5rem;
+  text-indent: 1rem;
+  padding: 0.3rem 1rem;
+  margin: 0;
+}
+code {
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+}
+pre {
+  line-break: normal;
+  white-space: pre-wrap;
+  margin: 0;
+  padding: 0;
+  padding-left: 1rem;
+}
+
+/* Declaracion de variables personalizadas */
+:root {
+  /* Combinacion celeste amarillo */
+  --bg-caA: #4dbdeb;
+  --bg-caB: #fff;
+  --bg-caC: #dfeeee;
+  --bg-caD: #ffe08c;
+  /* Combinacion Complementarios sobre blanco */
+  --bg-cbA: #d6680b;
+  --bg-cbB: #ffffff;
+  --bg-cbC: #0054dc;
+  --bg-cbD: #424242;
+  /* Combinacion Pasteles Calidos y Azul Nilo */
+  --bg-pcanA: #03363d;
+  --bg-pcanB: #174d4d;
+  --bg-pcanC: #ffffff;
+  --bg-pcanD: #f8f9f9;
+  /* Combinacion Rojo Enérgico */
+  --bg-reA: #0f1618;
+  --bg-reB: #dc191b;
+  --bg-reC: #ffffff;
+  --bg-reD: #ededed;
+  /* Combinacion Tonos Terrosos */
+  --bg-ttA: #333333;
+  --bg-ttB: #beab72;
+  --bg-ttC: #f9f9f4;
+  --bg-ttD: #de2229;
+  /* Combinación sutil y profesional */
+  --bg-spA: #90afc5; /* mist */
+  --bg-spB: #336b87; /* stone */
+  --bg-spC: #2a3132; /* shadow */
+  --bg-spD: #763626; /* autumn foliage */
+
+  --bg-color-base1: var(--bg-spA);
+  --bg-color-base2: var(--bg-spB);
+  --bg-color-base3: var(--bg-spC);
+  --bg-color-base4: var(--bg-spD);
+
+  --form-text-color: #666;
+  --form-success-color: #4caf50;
+  --form-error-color: #f44336;
+  --form-bg-color: #eee;
+  --form-border-color: #222;
+  --form-placeholder-color: #006999;
+}
+
+h1 {
+  /* color: goldenrod; */
+  color: orangered;
+  background-color: black;
+}
+
+p,
+div {
+  color: midnightblue;
+  font-family: sans-serif;
+}
+
+#parrafo-dos {
+  background-color: skyblue;
+  /* margin: 30px 10px; */
+  padding: 10px 30px;
+}
+.text-20 {
+  font-size: 20px;
+}
+.text-32 {
+  font-size: 32px;
+}
+
+.hijos-directos > li {
+  background-color: thistle;
+}
+
+.hijos-descendientes b {
+  background-color: thistle;
+}
+
+.hermanos-general ~ li {
+  background-color: thistle;
+}
+
+.hermanos-adyacentes + li {
+  background-color: thistle;
+}
+
+.selectores-atributos a[href] {
+  color: orangered;
+}
+
+.selectores-atributos a[target="_blank"] {
+  font-weight: bold;
+}
+
+.selectores-atributos a[href*="indice"] {
+  font-size: 24px;
+  background-color: navajowhite;
+  color: black;
+}
+
+.selectores-atributos a[href^="http:"] {
+  font-size: 25px;
+  background-color: navy;
+  color: white;
+  text-decoration: none;
+}
+
+.selectores-atributos a[href$=".com"] {
+  font-size: 16px;
+  color: lightblue;
+  text-decoration: none;
+}
+
+.selectores-atributos a[class~="cursos"] {
+  text-decoration: none;
+  background-color: midnightblue;
+}
+
+.selectores-atributos a[class|="menu"] {
+  font-style: italic;
+}
+
+/* Selector universal */
+* {
+  font-family: sans-serif;
+}
+
+/* Pseudoclases de elementos de formularios */
+.form-pseudoclases *:required {
+  border-color: yellow;
+}
+.form-pseudoclases *:valid {
+  border-color: green;
+}
+.form-pseudoclases *:invalid {
+  border-color: red;
+}
+.form-pseudoclases *:focus {
+  background-color: skyblue;
+}
+.form-pseudoclases *:disabled {
+  background-color: pink;
+}
+
+/* Pseudoclases de enlaces */
+.menu-pseudoclases a:link {
+  color: blue;
+}
+.menu-pseudoclases a:active {
+  color: gray;
+}
+.menu-pseudoclases a:visited {
+  color: olive;
+}
+.menu-pseudoclases a:hover {
+  background-color: orange;
+}
+
+.p-pseudoclases:hover {
+  font-size: 20px;
+}
+
+#indice:target {
+  background-color: limegreen;
+}
+#referencias:target {
+  background-color: lightgreen;
+}
+#selectores-avanzados:target {
+  background-color: lightgreen;
+}
+#selectores-basicos:target {
+  background-color: lightgreen;
+}
+#pseudoclases:target {
+  background-color: lightgreen;
+}
+#pseudo-elementos:target {
+  background-color: lightgreen;
+}
+#algoritmo-css:target {
+  background-color: lightgreen;
+}
+#prefijos-navegadores:target {
+  background-color: lightgreen;
+}
+#modelo-caja:target {
+  background-color: lightgreen;
+}
+#posicionamiento-css:target {
+  background-color: lightgreen;
+}
+#colors:target {
+  background-color: lightgreen;
+}
+#unidades-medida:target {
+  background-color: lightgreen;
+}
+#variables-funciones:target {
+  background-color: lightgreen;
+}
+#estilos-tipografia:target {
+  background-color: lightgreen;
+}
+#border-outlines:target {
+  background-color: lightgreen;
+}
+#background-style:target {
+  background-color: lightgreen;
+}
+
+.resaltador {
+  background-color: lightyellow;
+  padding: 0.12rem;
+  color: darkblue;
+  font-weight: bold;
+}
+
+/* Estilos por posición */
+.listas-pseudoclases li:first-child {
+  color: green;
+}
+.listas-pseudoclases li:last-child {
+  color: pink;
+}
+.listas-pseudoclases li:nth-child(2) {
+  color: navy;
+}
+.listas-pseudoclases li:nth-child(4n) {
+  font-size: 20px;
+  font-style: italic;
+}
+.listas-pseudoclases li:nth-child(3n + 1) {
+  font-weight: bold;
+}
+.listas-pseudoclases li:nth-child(even) {
+  background-color: yellow;
+}
+.listas-pseudoclases li:nth-child(odd) {
+  background-color: orange;
+}
+
+.articulo-pseudocodigo p:first-of-type {
+  background-color: lightcoral;
+}
+.articulo-pseudocodigo p:last-of-type {
+  background-color: lightgreen;
+}
+.articulo-pseudocodigo p:nth-last-of-type(even) {
+  background-color: lightseagreen;
+}
+.articulo-pseudocodigo *:not(p) {
+  background-color: beige;
+}
+
+span[data-sm-tooltip] {
+  position: relative;
+  text-decoration: overline;
+  color: #00f;
+  cursor: help;
+}
+span[data-sm-tooltip]:hover::after,
+span[data-sm-tooltip]:focus::after {
+  content: attr(data-sm-tooltip);
+  position: absolute;
+  left: 0;
+  top: 24px;
+  left: auto;
+  top: auto;
+  min-width: 200px;
+  border: 1px #aaaaaa solid;
+  border-radius: 10px;
+  background-color: #ffffcc;
+  padding: 12px;
+  color: #000000;
+  font-size: 14px;
+  z-index: 1;
+}
+
+.clsProducto::before {
+  content: " ✔ ";
+}
+.clsProducto::after {
+  content: " ❤ ";
+}
+.clsPrecio::before {
+  content: "$ ";
+  font-weight: bold;
+}
+.clsPrecio::after {
+  content: " USD ";
+  font-weight: bold;
+}
+
+blockquote {
+  background-color: burlywood;
+  font-size: 20px;
+}
+#cita-marco {
+  background-color: lightgreen;
+}
+#cita-marco {
+  background-color: var(--bg-color-base4) !important;
+}
+blockquote.cita-marco {
+  background-color: tomato;
+}
+.cita-marco {
+  background-color: cornflowerblue;
+  border-left: var(--bg-color-base3) 4px double;
+  padding: 15px;
+  padding-left: 18px;
+  margin-left: 30px;
+}
+
+.cita-marco cite {
+  background-color: aquamarine;
+  /* background-color: inherit; */
+  font-size: 24px;
+  font-size: initial;
+  border-style: inherit;
+  border-color: inherit;
+  padding-left: inherit;
+  border-style: initial;
+}
+
+.p-display-property {
+  padding: 0 20px;
+  margin: 0 10px;
+}
+
+.precode-float {
+  background-color: burlywood;
+  margin-top: 20px;
+}
+.precode-float > * {
+  width: 50%;
+  /* height: 250px; */
+  border: thin solid red;
+  box-sizing: border-box;
+  float: left;
+  /* float: inline-end; */
+}
+.clear-float {
+  clear: both;
+}
+.citas {
+  background-color: var(--bg-color-base2);
+  border-left: thick solid var(--bg-color-base3);
+  color: var(--bg-caD);
+  font-size: 16px;
+  padding: 8px 10px;
+}
+
+@font-face {
+  font-family: "Chalet";
+  src: url(../assets/Chalet.woff) format("woff");
+}
+.chalet {
+  font-family: "Chalet", sans-serif;
+  font-size: 1.4em;
+}
+
+@font-face {
+  font-family: "PecitaWoff";
+  src: url(../assets/Pecita.woff) format("woff");
+  font-display: swap;
+}
+.pecita {
+  font-family: "PecitaWoff", cursive;
+  font-size: 2rem;
+}
+
+.raleway {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+}
+
+.contenedor-overflow {
+  background-color: blanchedalmond;
+  border: thin solid black;
+  padding: 1rem;
+  width: 60vw;
+  overflow: hidden;
+  font-size: 1.5rem;
+}
+.simpleline-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.multiline-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal; /* let the text wrap preserving spaces */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* start showing ellipsis when 3rd line is reached */
+  word-break: keep-all;
+  word-spacing: 0.6rem;
+}
+
+@font-face {
+  font-family: "GoogleIcon";
+  src: url(../assets/fonts/fontsGoogle/MaterialSymbolsOutlinedFILLGRADopszwght.woff2)
+    format("woff2");
+  src: url(../assets/fonts/fontsGoogle/MaterialSymbolsRoundedFILLGRADopszwght.woff2)
+    format("woff2");
+  src: url(../assets/fonts/fontsGoogle/MaterialSymbolsSharpFILLGRADopszwght.woff2)
+    format("woff2");
+  font-style: normal;
+}
+
+.icon-thin {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.5rem; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}
+.icon-thick {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.5rem; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}
+.icon-2 {
+  font-size: 2rem;
+}
+.icon-2-5 {
+  font-size: 2.5rem;
+}
+.icon-1-5 {
+  font-size: 1.5rem;
+}
+
+.box {
+  background-color: lightslategray;
+  width: 80%;
+  height: 102vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: thick solid red;
+}
+.border-radius {
+  /* border-radius: 2rem; */
+  border-radius: 1rem 4rem 2rem;
+  border-top-left-radius: unset;
+  border-bottom-right-radius: unset;
+}
+.border-radius-circulo {
+  background-color: black;
+  width: 5rem;
+  height: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  border-radius: 50%;
+}
+.border-eliptico {
+  border-radius: 4rem 4rem 2rem / 2rem 1rem 2rem;
+}
+.outlines {
+  height: 42vh;
+  height: auto;
+  outline-offset: 1rem;
+  outline-offset: -0.81rem;
+  outline-width: 3px;
+  outline-style: groove;
+  outline-color: #0054dc;
+}
+
+.background {
+  width: 80%;
+  margin: 1rem auto;
+  border-radius: 1rem;
+  border: 1rem solid darkcyan;
+  background-color: rgba(0, 191, 255, 0.5);
+  background-image: url("../assets/img/puesta-sol.jpg");
+  background-size: cover;
+  background-size: contain;
+  background-size: 300px 200px;
+  background-repeat: repeat-x;
+  background-repeat: space;
+  background-repeat: no-repeat;
+  background-position: calc(78vw - 300px) top;
+  background-clip: content-box;
+  background-clip: border-box;
+  background-clip: padding-box;
+  background-origin: padding-box;
+  background-origin: content-box;
+  background-origin: border-box;
+}
+.background > p {
+  padding: 2rem;
+  padding: 0rem 0.6rem;
+}
+
+.img-multiples {
+  width: 50%;
+  height: 30vh;
+  background-image: url("../assets/img/favicon.png"),
+    url("../assets/img/puesta-sol.jpg");
+  background-repeat: repeat, no-repeat;
+  background-size: 10%, cover;
+  opacity: 0.1;
+}
+.img-multiples > div {
+  color: black;
+}
+
+.bg-art {
+  width: 1000px;
+  height: 700px;
+  background: url("../assets/img/arbol.png") no-repeat center bottom,
+    url("../assets/img/aves.png") no-repeat center bottom fixed,
+    url("../assets/img/cielo.png") no-repeat center top;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+.tarjeta {
+  width: 400px;
+  border: medium solid black;
+  padding: 0;
+}
+.tarjeta img {
+  overflow-clip-margin: unset;
+  overflow: unset;
+  object-fit: cover;
+  object-position: 10%;
+  padding: 0;
+  margin: 0;
+}
+
+.lists {
+  list-style-type: georgian;
+  list-style-type: armenian;
+  list-style-type: decimal-leading-zero;
+  /* list-style-position: inside;
+  list-style-position: outside; */
+  list-style-type: lower-greek;
+}
+.lists li {
+  list-style-type: none;
+}
+.lists li::before {
+  content: "";
+  display: inline-block;
+  width: 3rem;
+  height: 1.4rem;
+  background-image: url("/assets/img/favicon.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.text-column-4 {
+  column-count: 4;
+  column-gap: 2rem;
+  column-rule: thick solid #2a3132;
+  column-width: 100px;
+  list-style-type: lower-greek;
+  list-style-position: inside;
+}
+
+.tabla {
+  border-collapse: separate;
+  border-spacing: 1rem;
+  empty-cells: hide;
+}
+.tabla th,
+.tabla td {
+  border: thin solid #333333;
+}
+
+.contact-form {
+  border: thin solid #000;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+  width: 80%;
+  background-color: var(--form-bg-color);
+  border: thin solid var(--form-border-color);
+}
+.contact-form > * {
+  display: block;
+  width: 100%;
+  margin-bottom: 2rem;
+  font-family: sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.35rem;
+  color: var(--form-text-color);
+  /* DEFINE COLOR AL CURSOR EN CADA ELEMENTO DEL FORM */
+  caret-color: var(--form-placeholder-color);
+}
+.contact-form input[type="submit"] {
+  margin-bottom: 0;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--form-placeholder-color);
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #fff;
+}
+.contact-form input[type="submit"]:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+.contact-form textarea {
+  resize: none;
+}
+.contact-form > *::placeholder {
+  color: var(--form-placeholder-color);
+}
+.contact-form > *[required]:invalid {
+  border: thick solid var(--form-error-color);
+}
+.contact-form > *[required]:valid {
+  border: thick solid var(--form-success-color);
+}
+
+.apila-container {
+  width: 300px;
+  height: 650px;
+  background-color: blue;
+}
+.apila-item {
+  width: 300px;
+  height: 200px;
+  border: 1px solid #000;
+  text-align: center;
+  margin: 10px auto;
+}
+.apila-item-1 {
+  background-color: #999;
+  margin: 10px auto;
+  position: relative;
+  top: 50px;
+  left: 170px;
+  z-index: -5;
+  text-align: right;
+}
+.apila-item-2 {
+  background-color: red;
+  /*   position: relative;
+  z-index: 1;
+ */
+  margin: 10px auto;
+}
+.apila-item-3 {
+  background-color: green;
+  margin: 10px auto;
+}
+.apila-item-4 {
+  background-color: yellow;
+  margin: 10px auto;
+}
+.apila-title {
+  position: relative;
+  z-index: 100;
+}

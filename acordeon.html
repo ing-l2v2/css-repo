@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acordeon</title>
+    <link rel="stylesheet" href="./assets/css/acordeon.css" />
+    <script defer src="./assets/js/acordeon.js"></script>
+  </head>
+  <body>
+    <h1>Acordeón</h1>
+    <!-- div.t01-acordeon>div.t01-bloque*2>h2.t01-h2{Titular $}+p.t01-contenido{Soy el contenido $ para el titular $} -->
+    <div>
+      <p>
+        En el js al dar click en el titular se agregara la clase t01-activo al
+        div.t01-bloque
+      </p>
+    </div>
+    <div class="t01-acordeon">
+      <div class="t01-bloque">
+        <h2 class="t01-h2">Codigo CSS</h2>
+        <p class="t01-contenido">div.t01-acordeon>div.t01-bloque*2>h2.t01-h2{Titular $}+p.t01-contenido{Soy el contenido $ para el titular $}</p>
+        <div class="t01-contenido">
+          <p><pre><code>
+  .t01-acordeon {
+    width: 90%;
+    max-width: 120em;
+    background-color: lightblue;
+    padding: 2em;
+  }
+  .t01-acordeon .t01-bloque {
+    background-color: red;
+    margin: 0 0 1em;
+    padding: 1em;
+  }
+  .t01-acordeon .t01-h2 {
+    background-color: lime;
+    margin: 0 0 1em;
+    padding: 1em;
+  }
+  .t01-acordeon .t01-contenido {
+    background-color: orange;
+
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: height 500ms ease;
+  }
+
+  /* Cuando el t01-bloque, tenga la clase .t01-activo entonces sera visible,
+    notese .t01-bloque.t01-activo van juntos sin espacios y agregado en el
+    div class="bloque activo" */
+  .t01-acordeon .t01-bloque.t01-activo .t01-contenido {
+    height: 4em;
+  }            
+          </code></pre></p>
+        </div>
+      </div>
+      <div class="t01-bloque">
+        <h2 class="t01-h2">Contenido de acordeon.js</h2>
+        <div class="t01-contenido">
+          <p><pre><code>
+    /*use strict*/
+    const t01Bloque = document.querySelectorAll(".t01-bloque");
+    const t01H2 = document.querySelectorAll(".t01-h2");
+
+    /* Cuando se hace click en .t01-h2
+      1. Quitar la clase .t01-activo de todos los .t01-bloque
+      2. Luego se debe añadir la clase .t01-activo al bloque con la posición del .t01-h2 */
+
+    /* Recorriendo TODOS los .t01-h2 */
+    t01H2.forEach((cadaH2, indiceH2) => {
+      /* Asignando un CLICK a cada .t01-h2 */
+      t01H2[indiceH2].addEventListener("click", () => {
+        /* Recorriendo todos los bloques .t01-bloque */
+        t01Bloque.forEach((cadaBloque, indiceBloque) => {
+          /* Quitando la clase .t01-activo de todos los bloques */
+          t01Bloque[indiceBloque].classList.remove("t01-activo");
+        });
+        /* Añadir la clase .t01-activo al bloque cuya posición sea igual al del .t01-h2 */
+        t01Bloque[indiceH2].classList.add("t01-activo");
+      });
+    });
+          </code></pre></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
